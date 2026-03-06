@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e9e5112823b7d6f4d841c84dab5e7b08
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325697
+  packageName: Feel Speak Lite (Dialogue System)
+  packageVersion: 1.1.0
+  assetPath: Assets/StylishEsper/FeelSpeak/Scripts/Graph/Connection.cs
+  uploadId: 830328

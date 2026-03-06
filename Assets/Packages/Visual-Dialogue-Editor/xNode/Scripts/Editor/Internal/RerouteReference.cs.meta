@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 399f3c5fb717b2c458c3e9746f8959a3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 301202
+  packageName: Simple Visual Dialogue Editor
+  packageVersion: 1.1
+  assetPath: Assets/Visual-Dialogue-Editor/xNode/Scripts/Editor/Internal/RerouteReference.cs
+  uploadId: 795572

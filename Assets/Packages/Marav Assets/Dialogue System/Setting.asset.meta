@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0ed85fb12b8d7084e844e8d82ddfec5c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 312875
+  packageName: Dialofy - Easy Dialogue System
+  packageVersion: 1.0.0
+  assetPath: Assets/Marav Assets/Dialogue System/Setting.asset
+  uploadId: 756265

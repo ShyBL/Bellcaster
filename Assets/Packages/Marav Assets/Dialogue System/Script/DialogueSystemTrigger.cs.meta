@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 429055929a0a8f54cbb08a1c6dc674bd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ch: {fileID: 11400000, guid: 0ed85fb12b8d7084e844e8d82ddfec5c, type: 2}
+  - director: {instanceID: 0}
+  - dialogueFile_CSV: {instanceID: 0}
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: d8da18c3bd1dc794b90bc4337f89b8ca, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 312875
+  packageName: Dialofy - Easy Dialogue System
+  packageVersion: 1.0.0
+  assetPath: Assets/Marav Assets/Dialogue System/Script/DialogueSystemTrigger.cs
+  uploadId: 756265

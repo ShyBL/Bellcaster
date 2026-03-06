@@ -1,0 +1,30 @@
+.field {
+    margin-top: 4px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+}
+
+.heading {
+    margin-top: 20px;
+    margin-right: 0;
+    margin-bottom: 4px;
+    margin-left: 0;
+    -unity-font-style: bold;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 4px;
+}
+
+.h2 {
+    padding-top: 4px;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 4px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    -unity-font-style: bold;
+}

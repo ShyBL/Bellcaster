@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 77b20b515346e1944afe5328901ef93e
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 312875
+  packageName: Dialofy - Easy Dialogue System
+  packageVersion: 1.0.0
+  assetPath: Assets/Marav Assets/Dialogue System/Demo/DialogueFiles/owl eyes.xml
+  uploadId: 756265

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InterpretationXL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DialogueLines>
+    <GUID>9d00ef8e-79ab-434f-a4e9-6901ea17b262</GUID>
+    <output_GUID>28f4d3b6-42ac-4299-85bf-b3174a4bb973</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Start</action>
+    <position>
+      <x>-175</x>
+      <y>-45</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>574104f8-3ba3-4c20-a30b-8fba3093246f</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Trigger</action>
+    <position>
+      <x>3727</x>
+      <y>-201</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>28f4d3b6-42ac-4299-85bf-b3174a4bb973</GUID>
+    <output_GUID>9d8098f9-34f1-439d-9fe2-90becd1492a9</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>112</x>
+      <y>-73</y>
+    </position>
+    <animation>Defaul</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Hola Mundo.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Hello World</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>9d8098f9-34f1-439d-9fe2-90becd1492a9</GUID>
+    <output_GUID>0fb64361-a2ba-4685-ae04-57263432ddce</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>455</x>
+      <y>-73</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Hola Mundo?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Hello World?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>0fb64361-a2ba-4685-ae04-57263432ddce</GUID>
+    <output_GUID>08b8ec39-511e-4957-bd15-4e753af0dce3</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>786</x>
+      <y>-73</y>
+    </position>
+    <animation>No</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Discúlpame un momento Nick, estoy contigo en breves.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Excuse me a moment Nick, I'll be with you shortly.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>08b8ec39-511e-4957-bd15-4e753af0dce3</GUID>
+    <output_GUID>d4e24531-899a-4fef-9929-cd482c84e2f9</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>HideLeft</action>
+    <position>
+      <x>1118</x>
+      <y>-73</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>d4e24531-899a-4fef-9929-cd482c84e2f9</GUID>
+    <output_GUID>9d14d9a5-6c8e-40a4-bd7c-6ac5cc61f8b1</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>1267</x>
+      <y>29</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Bueno, primero, muchas gracias por adquirir este asset. Espero que le sea de mucha ayuda y que no encuentres dificultades en su implementación.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Well, first of all, thank you very much for acquiring this asset. I hope it will be very helpful and that you will not encounter any difficulties in its implementation.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>b886955f-3a8f-465d-92f1-7d8db8e9780f</GUID>
+    <Switch_outputs_GUIDs>
+      <Switch_output>
+        <GUID>bc498d77-c64c-442c-abcd-addb1274320d</GUID>
+        <translations>
+          <translation>
+            <id>Español</id>
+            <text>Informar error o dar sugerencia</text>
+          </translation>
+          <translation>
+            <id>English</id>
+            <text>Report error or give suggestion</text>
+          </translation>
+        </translations>
+      </Switch_output>
+      <Switch_output>
+        <GUID>aa701654-c73f-4144-9565-c55cd401be76</GUID>
+        <translations>
+          <translation>
+            <id>Español</id>
+            <text>Seguir con la demo</text>
+          </translation>
+          <translation>
+            <id>English</id>
+            <text>Continue with the demo</text>
+          </translation>
+        </translations>
+      </Switch_output>
+    </Switch_outputs_GUIDs>
+    <action>Switch</action>
+    <position>
+      <x>2573</x>
+      <y>-73</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>9d14d9a5-6c8e-40a4-bd7c-6ac5cc61f8b1</GUID>
+    <output_GUID>b886955f-3a8f-465d-92f1-7d8db8e9780f</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>2095</x>
+      <y>-73</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Si encuentras algún error, no duces en informarlo, también aceptamos  sugerencias.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>If you find any error, do not hesitate to inform us, we also accept suggestions.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>bc498d77-c64c-442c-abcd-addb1274320d</GUID>
+    <output_GUID>2b7edbb6-0851-4bae-a9fa-5f70340e4a94</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>3067</x>
+      <y>-201</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Muchas gracias por su colaboración</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Thank you very much for your cooperation</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>2b7edbb6-0851-4bae-a9fa-5f70340e4a94</GUID>
+    <output_GUID>574104f8-3ba3-4c20-a30b-8fba3093246f</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>3403</x>
+      <y>-201</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Allá vamos.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>here we go.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>aa701654-c73f-4144-9565-c55cd401be76</GUID>
+    <output_GUID>efc3e94d-0587-4e7f-972e-e926f547ebc0</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>3024</x>
+      <y>240</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Perfecto, oye Nick.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Perfect, hey Nick.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>efc3e94d-0587-4e7f-972e-e926f547ebc0</GUID>
+    <output_GUID>b3e7fe64-83ff-4ec5-bbd4-c2fbda70fd74</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>3355</x>
+      <y>240</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Dígame?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>What is it?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>b3e7fe64-83ff-4ec5-bbd4-c2fbda70fd74</GUID>
+    <output_GUID>2f4d9679-0288-43b2-be44-f322ac7ba194</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>3671</x>
+      <y>240</y>
+    </position>
+    <animation>LoL</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Toma, es una invitación a la fiesta de Gatsby. 
+...
+Ve allá y disfruta. Esta hacia la derecha.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Here, it's an invitation to Gatsby's party. 
+...
+Go over there and enjoy. It's to the right.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>2f4d9679-0288-43b2-be44-f322ac7ba194</GUID>
+    <output_GUID>0099c99f-a9e7-4f0a-a0f7-4cea01a2a24b</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>4014</x>
+      <y>240</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>También, puedes entretenerte con las últimas características implementadas en este asset detrás de ti.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Also, you can entertain yourself with the latest features implemented in this asset behind you.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>0099c99f-a9e7-4f0a-a0f7-4cea01a2a24b</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>4580</x>
+      <y>240</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Oh, muchas Gracias.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Oh, thank you very much.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <lenguageSelectOnColumns>0</lenguageSelectOnColumns>
+</InterpretationXL>

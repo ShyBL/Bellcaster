@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d58e79be453eb894f8f1cd83fbe51bb9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325697
+  packageName: Feel Speak Lite (Dialogue System)
+  packageVersion: 1.1.0
+  assetPath: Assets/StylishEsper/FeelSpeak/Scripts/FeelSpeakInitializer.cs
+  uploadId: 830328

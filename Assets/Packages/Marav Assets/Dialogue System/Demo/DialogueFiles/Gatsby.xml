@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InterpretationXL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DialogueLines>
+    <GUID>dd9a2d01-c6a7-4409-a706-d587255b4485</GUID>
+    <output_GUID>d6cb7312-5e71-4223-bb67-81a7c1f5bf33</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Start</action>
+    <position>
+      <x>0</x>
+      <y>0</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>d6cb7312-5e71-4223-bb67-81a7c1f5bf33</GUID>
+    <output_GUID>b7a8343b-8bfc-4c72-8c77-d554050a228e</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Jay Gatsby</characterId>
+    <position>
+      <x>225</x>
+      <y>-22</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Se está divirtiendo Campeón?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Having fun Champion?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>b7a8343b-8bfc-4c72-8c77-d554050a228e</GUID>
+    <output_GUID>806748c2-7e17-4e09-9f63-fe690cacd019</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>542</x>
+      <y>0</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Bueno, esto es impresionante. No suelo asistir a fiestas tan grandes como esta.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Well, this is impressive. I don't usually attend parties as big as this one.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>806748c2-7e17-4e09-9f63-fe690cacd019</GUID>
+    <output_GUID>5404110f-59f4-438e-8734-26efa860d691</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Jay Gatsby</characterId>
+    <position>
+      <x>985</x>
+      <y>0</y>
+    </position>
+    <animation>LoL</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Verdad que sí? Gatsby sabe cómo hacer las cosas a lo grande.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Right? Gatsby knows how to do things in a big way.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>5404110f-59f4-438e-8734-26efa860d691</GUID>
+    <output_GUID>5068c98a-ea90-4a84-ac88-b4fe9dca3ee6</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>1354</x>
+      <y>0</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Por cierto, ¿Sabe dónde puedo encontrar al señor Gatsby? Me gustaría darle las gracias por invitarme.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>By the way, do you know where I can find Mr. Gatsby? I would like to thank him for inviting me.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>5068c98a-ea90-4a84-ac88-b4fe9dca3ee6</GUID>
+    <output_GUID>78cbf2c5-c96d-4f55-8bf5-656642d89708</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Jay Gatsby</characterId>
+    <position>
+      <x>1903</x>
+      <y>0</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Yo soy Gatsby.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>I am Gatsby.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>78cbf2c5-c96d-4f55-8bf5-656642d89708</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>2250</x>
+      <y>0</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>wow</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>wow</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <lenguageSelectOnColumns>0</lenguageSelectOnColumns>
+</InterpretationXL>

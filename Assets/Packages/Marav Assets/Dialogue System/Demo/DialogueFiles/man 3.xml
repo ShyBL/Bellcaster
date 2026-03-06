@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InterpretationXL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DialogueLines>
+    <GUID>1eaa3527-32ed-4186-afda-a2ae63958403</GUID>
+    <output_GUID>a99617f0-0c0c-4ce4-9b30-e3c49d933c0b</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Start</action>
+    <position>
+      <x>0</x>
+      <y>0</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>a99617f0-0c0c-4ce4-9b30-e3c49d933c0b</GUID>
+    <output_GUID>ca8a2e88-32a5-4e33-b73f-6a07322eec38</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>???</characterId>
+    <position>
+      <x>203</x>
+      <y>-32</y>
+    </position>
+    <variantSpriteId>man 3</variantSpriteId>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Oye Nick, Las Chicas ricas no se acuestan con pobretones</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Hey Nick, rich girls don't sleep with poor guys.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>ca8a2e88-32a5-4e33-b73f-6a07322eec38</GUID>
+    <output_GUID>83c6bb4e-2e2f-4fb9-ae6a-31be7c10dff7</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Jordan Baker</characterId>
+    <position>
+      <x>559</x>
+      <y>-32</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Je je </text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Heh heh </text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>83c6bb4e-2e2f-4fb9-ae6a-31be7c10dff7</GUID>
+    <output_GUID>856c16f3-ed7f-4beb-b61d-f6438db66ec6</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>???</characterId>
+    <position>
+      <x>890</x>
+      <y>-32</y>
+    </position>
+    <variantSpriteId>man 3</variantSpriteId>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Vamonos Jordan</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Let's go Jordan</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>856c16f3-ed7f-4beb-b61d-f6438db66ec6</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>1219</x>
+      <y>-32</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>...</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>...</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <lenguageSelectOnColumns>0</lenguageSelectOnColumns>
+</InterpretationXL>

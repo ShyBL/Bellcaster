@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InterpretationXL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DialogueLines>
+    <GUID>9e545b47-8cd2-422b-8fb6-e0f8f681dca2</GUID>
+    <output_GUID>9257e324-3901-4720-aa23-88ca36b147d4</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Animation</action>
+    <position>
+      <x>1828</x>
+      <y>-18</y>
+    </position>
+    <animation>Defaul</animation>
+    <orientation>Left</orientation>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>96e19548-97c0-4dcb-a726-a1227490b370</GUID>
+    <output_GUID>4e8299c2-a510-421c-86a9-728f8c18df59</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Start</action>
+    <position>
+      <x>-311</x>
+      <y>21</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>9ea73711-5cce-415f-ac45-a18b82afe7e0</GUID>
+    <output_GUID>b0b5292c-67f7-43f4-9684-88f30d73df51</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Animation</action>
+    <position>
+      <x>934</x>
+      <y>-18</y>
+    </position>
+    <animation>LoL</animation>
+    <orientation>Left</orientation>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>4e8299c2-a510-421c-86a9-728f8c18df59</GUID>
+    <output_GUID>1660f423-7642-4001-8a22-49d858961abd</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>???</characterId>
+    <position>
+      <x>-71</x>
+      <y>-18</y>
+    </position>
+    <variantSpriteId>woman 2</variantSpriteId>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Holiiii, estás bonito ¿Cómo te llama?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Hi, you look nice, what's he calling you?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>1660f423-7642-4001-8a22-49d858961abd</GUID>
+    <output_GUID>0f008cac-3389-41b7-9925-d587e572b6e5</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>266</x>
+      <y>-18</y>
+    </position>
+    <animation>No</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Ni... Nick Carraway, eeeeh, hola</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Ni... Nick Carraway, eeeeh, hello</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>0f008cac-3389-41b7-9925-d587e572b6e5</GUID>
+    <output_GUID>9ea73711-5cce-415f-ac45-a18b82afe7e0</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>???</characterId>
+    <position>
+      <x>606</x>
+      <y>-18</y>
+    </position>
+    <variantSpriteId>woman 2</variantSpriteId>
+    <animation>LoL</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>jejeje</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>hehehe</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>b0b5292c-67f7-43f4-9684-88f30d73df51</GUID>
+    <output_GUID>163ee4e6-3584-4676-a53e-be01a89730b6</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>???</characterId>
+    <position>
+      <x>1152</x>
+      <y>-18</y>
+    </position>
+    <variantSpriteId>woman 2</variantSpriteId>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Desearía que la IA de generación de fuera mejor. </text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>I wish the generation AI was better. </text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>163ee4e6-3584-4676-a53e-be01a89730b6</GUID>
+    <output_GUID>9e545b47-8cd2-422b-8fb6-e0f8f681dca2</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>???</characterId>
+    <position>
+      <x>1507</x>
+      <y>-18</y>
+    </position>
+    <variantSpriteId>woman 2</variantSpriteId>
+    <animation>No</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Así pudiera ver tu expresión de nervioso</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>So I could see your nervous expression</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>9257e324-3901-4720-aa23-88ca36b147d4</GUID>
+    <output_GUID>30601fba-5a3c-4176-b28c-e59a7f0e1f03</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>???</characterId>
+    <position>
+      <x>2050</x>
+      <y>-18</y>
+    </position>
+    <variantSpriteId>woman 2</variantSpriteId>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>No, el nodo de "Animation" no es lo mismo</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>No, the “Animation” node is not the same.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>499bcb4d-7db2-4d4c-a694-4f5bfd57f232</GUID>
+    <output_GUID>c3d8a266-a8dc-4d75-aab6-0d091f240009</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>HideRight</action>
+    <position>
+      <x>2705</x>
+      <y>-18</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>c3d8a266-a8dc-4d75-aab6-0d091f240009</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>2877</x>
+      <y>-18</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>ok ... eso fue raro.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>ok ... that was weird.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>30601fba-5a3c-4176-b28c-e59a7f0e1f03</GUID>
+    <output_GUID>499bcb4d-7db2-4d4c-a694-4f5bfd57f232</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>???</characterId>
+    <position>
+      <x>2362</x>
+      <y>-18</y>
+    </position>
+    <variantSpriteId>woman 2</variantSpriteId>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Bueno, ahora haré un "Hide Right", adivina que hace guapo.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Well, now I'll do a "Hide Right", guess what makes handsome.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <lenguageSelectOnColumns>0</lenguageSelectOnColumns>
+</InterpretationXL>

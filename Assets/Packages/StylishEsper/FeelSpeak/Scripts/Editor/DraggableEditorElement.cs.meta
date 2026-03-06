@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 7e7de89a7e87ca84f8e11418afe5720a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325697
+  packageName: Feel Speak Lite (Dialogue System)
+  packageVersion: 1.1.0
+  assetPath: Assets/StylishEsper/FeelSpeak/Scripts/Editor/DraggableEditorElement.cs
+  uploadId: 830328

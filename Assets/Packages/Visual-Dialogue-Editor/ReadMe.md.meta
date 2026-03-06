@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f94029e611dd1a3439d9a31416011637
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 301202
+  packageName: Simple Visual Dialogue Editor
+  packageVersion: 1.1
+  assetPath: Assets/Visual-Dialogue-Editor/ReadMe.md
+  uploadId: 795572

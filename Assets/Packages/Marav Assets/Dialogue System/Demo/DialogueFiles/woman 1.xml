@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InterpretationXL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DialogueLines>
+    <GUID>d46673ec-5cac-4168-a013-dc4352800a11</GUID>
+    <output_GUID>acb3303f-e8d8-4b7f-b67e-305141b5f539</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Start</action>
+    <position>
+      <x>0</x>
+      <y>0</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>447729ff-7582-4fea-b7c7-6a4b456e2ed2</GUID>
+    <output_GUID>a7b572fa-a233-48aa-84d0-f49e8af9aab5</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Start</action>
+    <position>
+      <x>1365</x>
+      <y>-97</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>acb3303f-e8d8-4b7f-b67e-305141b5f539</GUID>
+    <output_GUID>9557ef61-b18d-44cb-b63b-78a75faa54f0</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>???</characterId>
+    <position>
+      <x>203</x>
+      <y>-53</y>
+    </position>
+    <variantSpriteId>woman 1</variantSpriteId>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Hola</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Hello</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>9557ef61-b18d-44cb-b63b-78a75faa54f0</GUID>
+    <output_GUID>ac2aa17b-5454-45fc-8b96-6e4b4d357a3e</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>527</x>
+      <y>-53</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Buenas noches señorita.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Good evening, Miss.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>ac2aa17b-5454-45fc-8b96-6e4b4d357a3e</GUID>
+    <output_GUID>d97fa7a7-81d1-4c28-b1c3-0d2be426a33f</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>???</characterId>
+    <position>
+      <x>862</x>
+      <y>-53</y>
+    </position>
+    <variantSpriteId>woman 1</variantSpriteId>
+    <animation>LoL</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Oye ¿Qué trabajas?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Hey, what are you working on?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>d97fa7a7-81d1-4c28-b1c3-0d2be426a33f</GUID>
+    <output_GUID>a7b572fa-a233-48aa-84d0-f49e8af9aab5</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>1179</x>
+      <y>-42</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Soy corredor de bolsa</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>I am a stockbroker</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>a7b572fa-a233-48aa-84d0-f49e8af9aab5</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>???</characterId>
+    <position>
+      <x>1578</x>
+      <y>-42</y>
+    </position>
+    <variantSpriteId>woman 1</variantSpriteId>
+    <animation>No</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>ew, que asco, gente pobre</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>ew, disgusting, poor people</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <lenguageSelectOnColumns>0</lenguageSelectOnColumns>
+</InterpretationXL>

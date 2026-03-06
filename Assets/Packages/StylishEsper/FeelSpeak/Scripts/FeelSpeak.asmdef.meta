@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 184d202eac4d38d46ac677cff23a8a2e
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325697
+  packageName: Feel Speak Lite (Dialogue System)
+  packageVersion: 1.1.0
+  assetPath: Assets/StylishEsper/FeelSpeak/Scripts/FeelSpeak.asmdef
+  uploadId: 830328

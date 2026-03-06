@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 85f6f570600a1a44d8e734cb111a8b89
+timeCreated: 1519049802
+licenseType: Store
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 301202
+  packageName: Simple Visual Dialogue Editor
+  packageVersion: 1.1
+  assetPath: Assets/Visual-Dialogue-Editor/xNode/Scripts/Editor/Resources/ScriptTemplates/xNode_NodeTemplate.cs.txt
+  uploadId: 795572

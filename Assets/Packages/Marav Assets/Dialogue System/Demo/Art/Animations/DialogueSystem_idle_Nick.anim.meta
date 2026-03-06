@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b36b0cf1074603044909810922389147
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 312875
+  packageName: Dialofy - Easy Dialogue System
+  packageVersion: 1.0.0
+  assetPath: Assets/Marav Assets/Dialogue System/Demo/Art/Animations/DialogueSystem_idle_Nick.anim
+  uploadId: 756265

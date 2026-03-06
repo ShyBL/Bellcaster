@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 22fc5bbdde6916c4c93a8b1530de3239
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_VisualTreeAsset: {fileID: 9197481963319205126, guid: 435efc1bd6f60c64b831c8c6d7d43012,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325697
+  packageName: Feel Speak Lite (Dialogue System)
+  packageVersion: 1.1.0
+  assetPath: Assets/StylishEsper/FeelSpeak/Scripts/Editor/SpeakerEditor.cs
+  uploadId: 830328

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8ba739680a806634ca561d6ce2cf137c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325697
+  packageName: Feel Speak Lite (Dialogue System)
+  packageVersion: 1.1.0
+  assetPath: Assets/StylishEsper/FeelSpeak/Prefabs/uGUI/DialogueBox.prefab
+  uploadId: 830328

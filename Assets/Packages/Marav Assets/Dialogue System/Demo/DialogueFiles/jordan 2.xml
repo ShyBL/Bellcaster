@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InterpretationXL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DialogueLines>
+    <GUID>839515bf-2461-4d77-b094-11f99491430d</GUID>
+    <output_GUID>272a0215-4279-4604-b38d-fa69a30d2404</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Start</action>
+    <position>
+      <x>0</x>
+      <y>0</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>272a0215-4279-4604-b38d-fa69a30d2404</GUID>
+    <output_GUID>60ec7a28-653e-45b0-9270-0224f3855b7d</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Jordan Baker</characterId>
+    <position>
+      <x>192</x>
+      <y>0</y>
+    </position>
+    <animation>LoL</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Oye, ¿Por qué no puedo aparecer del lado izquierdo de la pantalla?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Hey, why can't I appear on the left side of the screen?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>60ec7a28-653e-45b0-9270-0224f3855b7d</GUID>
+    <output_GUID>cad1b8af-75e9-428e-a7e9-3502830a9fbc</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>593</x>
+      <y>0</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>No lo sé, supongo que por orden visual, es decir, si el protagonista siempre aparece en la izquierda, eso ayuda visualmente a entenderlo todo mejor.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>I don't know, I guess by visual order, that is, if the protagonist always appears on the left, that helps visually to understand everything better.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>cad1b8af-75e9-428e-a7e9-3502830a9fbc</GUID>
+    <output_GUID>be721939-5948-49fd-b5c1-1366498e06d0</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Jordan Baker</characterId>
+    <position>
+      <x>1375</x>
+      <y>0</y>
+    </position>
+    <animation>No</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Aun así quiero estar de ese lado.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>I still want to be on that side.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>be721939-5948-49fd-b5c1-1366498e06d0</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>1692</x>
+      <y>0</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>En ese caso, espera a que se agregue, siempre se están añadiendo nuevas funciones en este asset.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>In that case, wait for it to be added, new features are always being added to this asset.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <lenguageSelectOnColumns>0</lenguageSelectOnColumns>
+</InterpretationXL>

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cb9d4e1dd07a3534b809ba26264b2015
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 301202
+  packageName: Simple Visual Dialogue Editor
+  packageVersion: 1.1
+  assetPath: Assets/Visual-Dialogue-Editor/Demo/Extra Dialogue Graph.asset
+  uploadId: 795572

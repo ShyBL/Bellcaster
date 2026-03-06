@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InterpretationXL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DialogueLines>
+    <GUID>c01f841f-bd81-496f-8b2a-5c1657e7e04b</GUID>
+    <output_GUID>e49f7db1-fec2-4dcc-ad6d-3b60be317044</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Start</action>
+    <position>
+      <x>0</x>
+      <y>0</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>e49f7db1-fec2-4dcc-ad6d-3b60be317044</GUID>
+    <output_GUID>c3b95d0d-3e65-4f24-9aae-f2ba0c2ac544</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>179</x>
+      <y>-15</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Hola? ¿Qué pasó? se te ve enojada.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Hello? What happened? You look angry.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>c3b95d0d-3e65-4f24-9aae-f2ba0c2ac544</GUID>
+    <output_GUID>46a9c964-b367-4377-be35-033d3dbb21b8</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>???</characterId>
+    <position>
+      <x>527</x>
+      <y>-15</y>
+    </position>
+    <variantSpriteId>woman 1</variantSpriteId>
+    <animation>No</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Si, el dev no dejo ninguna forma de bajar las escaleras</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Yes, the dev left no way down the stairs.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>46a9c964-b367-4377-be35-033d3dbb21b8</GUID>
+    <output_GUID>d0827910-945c-49a9-8484-83441e7b3204</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>867</x>
+      <y>-15</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Ah, ¿si?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Oh, yeah?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>d0827910-945c-49a9-8484-83441e7b3204</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>???</characterId>
+    <position>
+      <x>1204</x>
+      <y>-15</y>
+    </position>
+    <variantSpriteId>woman 1</variantSpriteId>
+    <animation>Defaul</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Si, de hecho, si puedes leer esto, tú tampoco puedes.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Yes, in fact, if you can read this, neither can you.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <lenguageSelectOnColumns>0</lenguageSelectOnColumns>
+</InterpretationXL>

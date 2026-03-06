@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 2fd590b2e9ea0bd49b6986a2ca9010ab
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 301202
+  packageName: Simple Visual Dialogue Editor
+  packageVersion: 1.1
+  assetPath: Assets/Visual-Dialogue-Editor/xNode/Scripts/Editor/Drawers/Odin/InputAttributeDrawer.cs
+  uploadId: 795572

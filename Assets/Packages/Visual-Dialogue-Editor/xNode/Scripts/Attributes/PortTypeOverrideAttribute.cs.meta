@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 1410c1437e863ab4fac7a7428aaca35b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 301202
+  packageName: Simple Visual Dialogue Editor
+  packageVersion: 1.1
+  assetPath: Assets/Visual-Dialogue-Editor/xNode/Scripts/Attributes/PortTypeOverrideAttribute.cs
+  uploadId: 795572

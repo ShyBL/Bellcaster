@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1e4302dd6b8349147be5c2bd974eae83
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 312875
+  packageName: Dialofy - Easy Dialogue System
+  packageVersion: 1.0.0
+  assetPath: Assets/Marav Assets/Dialogue System/Demo/DialogueFiles/Gatsby.xml
+  uploadId: 756265

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 29e1bc76a99b3124b8a3376e09d54338
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325697
+  packageName: Feel Speak Lite (Dialogue System)
+  packageVersion: 1.1.0
+  assetPath: Assets/StylishEsper/FeelSpeak/Animations/EmotionBubble/Open2D.anim
+  uploadId: 830328

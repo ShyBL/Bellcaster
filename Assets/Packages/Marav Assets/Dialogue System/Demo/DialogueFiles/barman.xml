@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InterpretationXL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DialogueLines>
+    <GUID>73d706af-a6c4-4725-a9d3-ee43ccea3893</GUID>
+    <output_GUID>e6869bfa-2214-44e7-8e13-9f39346f8f2d</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Start</action>
+    <position>
+      <x>0</x>
+      <y>0</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>e6869bfa-2214-44e7-8e13-9f39346f8f2d</GUID>
+    <output_GUID>58df0cbc-2e7d-41c8-a101-ce4a758595fb</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>240</x>
+      <y>-34</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Buenas noches, ¿Has visto al señor Gatsby?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Good evening, have you seen Mr. Gatsby?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>58df0cbc-2e7d-41c8-a101-ce4a758595fb</GUID>
+    <output_GUID>b1e77fea-e229-4416-a1a0-b02e0b7b4211</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Barman</characterId>
+    <position>
+      <x>577</x>
+      <y>-34</y>
+    </position>
+    <animation>No</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Gatsby? No lo sé, dices que es primo segundo del Káiser o algo así.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Gatsby? I don't know, you say he's the Kaiser's second cousin or something.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>b1e77fea-e229-4416-a1a0-b02e0b7b4211</GUID>
+    <output_GUID>a3222053-034e-4dca-88f4-06d6e9b20176</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Barman</characterId>
+    <position>
+      <x>1007</x>
+      <y>-34</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Oye, ya que estamos aquí. </text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Hey, while we're here. </text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>a3222053-034e-4dca-88f4-06d6e9b20176</GUID>
+    <output_GUID>037a9033-6aeb-4f5d-a724-1d6f59146bfc</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Barman</characterId>
+    <position>
+      <x>1455</x>
+      <y>-34</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Te gustaría un 75% de descuento en el próximo Asset de Marav Studios?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Would you like a 75% discount on the next Marav Studios Asset?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>037a9033-6aeb-4f5d-a724-1d6f59146bfc</GUID>
+    <output_GUID>a72eb3c6-cc8b-4051-8945-c0153a5704d7</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Barman</characterId>
+    <position>
+      <x>1933</x>
+      <y>-34</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>sh, toma este código cayado.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>sh, take this code key.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>a72eb3c6-cc8b-4051-8945-c0153a5704d7</GUID>
+    <output_GUID>a0b69c56-0462-4d83-86a0-c8e7aeeb1091</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>2277</x>
+      <y>-34</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>si, a ha</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>yes, a ha</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>a0b69c56-0462-4d83-86a0-c8e7aeeb1091</GUID>
+    <output_GUID>12cd1745-e5c8-4709-9aea-98a397c71513</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Barman</characterId>
+    <position>
+      <x>2615</x>
+      <y>-34</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>[Cuando salga el próximo, lo agrego]</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>[When the next one comes out, I will add it].</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>12cd1745-e5c8-4709-9aea-98a397c71513</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>3057</x>
+      <y>-34</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Gracias, pases buena noche.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Thank you, have a good night.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <lenguageSelectOnColumns>0</lenguageSelectOnColumns>
+</InterpretationXL>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InterpretationXL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DialogueLines>
+    <GUID>75bc18d7-d059-4ff4-9e96-45c56fd9bc16</GUID>
+    <output_GUID>25fce84c-1a8b-4968-a690-0ba401e64b78</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Start</action>
+    <position>
+      <x>10</x>
+      <y>-21</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>514aca6b-d3e8-45d5-9290-bfc0e3e0dd5d</GUID>
+    <Switch_outputs_GUIDs>
+      <Switch_output>
+        <GUID>f0e0226b-92d0-4890-a7c1-a08b30304f4f</GUID>
+        <translations>
+          <translation>
+            <id>Español</id>
+            <text>Rompí algo</text>
+          </translation>
+          <translation>
+            <id>English</id>
+            <text>I broke something</text>
+          </translation>
+        </translations>
+      </Switch_output>
+      <Switch_output>
+        <GUID>49dcf3c3-193a-4bef-b347-bc61f543d591</GUID>
+        <translations>
+          <translation>
+            <id>Español</id>
+            <text>No sé algo</text>
+          </translation>
+          <translation>
+            <id>English</id>
+            <text>I don't know something</text>
+          </translation>
+        </translations>
+      </Switch_output>
+    </Switch_outputs_GUIDs>
+    <action>Switch</action>
+    <position>
+      <x>1302</x>
+      <y>-43</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>7bbeb8ee-a521-484f-a27a-96dad39508c4</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Trigger</action>
+    <position>
+      <x>1992</x>
+      <y>252</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>25fce84c-1a8b-4968-a690-0ba401e64b78</GUID>
+    <output_GUID>211b0c31-e4fc-46f3-862f-a6912675f6c5</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>208</x>
+      <y>-43</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Qué haces tan atrás Nick?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>What are you doing so far back, Nick?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>211b0c31-e4fc-46f3-862f-a6912675f6c5</GUID>
+    <output_GUID>8805c94f-a93e-49de-9289-7a612daf5007</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>547</x>
+      <y>-43</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Bueno ... yo ... pasó algo ... te vas a reír.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Well... I... something happened... you're going to laugh.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>8805c94f-a93e-49de-9289-7a612daf5007</GUID>
+    <output_GUID>514aca6b-d3e8-45d5-9290-bfc0e3e0dd5d</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>899</x>
+      <y>-43</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Está bien Nick, tranquilo, dime ¿Qué pasa?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>All right Nick, take it easy, tell me what's going on?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>f0e0226b-92d0-4890-a7c1-a08b30304f4f</GUID>
+    <output_GUID>21d2038c-76d9-4e4a-a8e9-fac856b86144</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>1563</x>
+      <y>-193</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Valla, me sorprende que este diálogo siga funcionando.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Wow, I'm surprised this dialogue still works.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>49dcf3c3-193a-4bef-b347-bc61f543d591</GUID>
+    <output_GUID>7bbeb8ee-a521-484f-a27a-96dad39508c4</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>1540</x>
+      <y>273</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Pues mira el tutorial, lee la documentación. Sabes, vamos al link mejor.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>So take a look at the tutorial, read the documentation. You know, let's go to the link better.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>21d2038c-76d9-4e4a-a8e9-fac856b86144</GUID>
+    <output_GUID>8c8ac2ae-06f8-421f-897a-3e058321aec2</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>1921</x>
+      <y>-193</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Bueno, simplemente vuelve a importar el proyecto</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Well, just re-import the project</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>8c8ac2ae-06f8-421f-897a-3e058321aec2</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>2253</x>
+      <y>-193</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>No te compliques.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Don't complicate things.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <lenguageSelectOnColumns>0</lenguageSelectOnColumns>
+</InterpretationXL>

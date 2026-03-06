@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InterpretationXL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DialogueLines>
+    <GUID>914d3894-fada-4fba-887f-e63fbd30ef09</GUID>
+    <output_GUID>9b2b6cc7-8443-4e31-bc1a-f1a1107ba409</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Start</action>
+    <position>
+      <x>-224</x>
+      <y>-232</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>9b2b6cc7-8443-4e31-bc1a-f1a1107ba409</GUID>
+    <output_GUID>25be0a78-77ca-44a8-af29-aa8837a4863d</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>-29</x>
+      <y>-264</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Hola?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Hello?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>21630eed-ac47-433d-89ab-2e8cdf88dfdc</GUID>
+    <output_GUID>24cdf588-7437-4935-8183-124b79afcaec</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>4971</x>
+      <y>-415</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>oh, ok</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>oh, ok</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>d430558e-53fe-4dc2-a992-b4c7461152e6</GUID>
+    <Switch_outputs_GUIDs>
+      <Switch_output>
+        <GUID>24869179-e662-47aa-9d18-34b286c00a55</GUID>
+        <translations>
+          <translation>
+            <id>Español</id>
+            <text>¿Como hago que un personaje de la escena hable?</text>
+          </translation>
+          <translation>
+            <id>English</id>
+            <text>How do I make a character in the scene talk?</text>
+          </translation>
+        </translations>
+      </Switch_output>
+      <Switch_output>
+        <GUID>adf5f679-8d4b-4723-8c06-7f22b004cd22</GUID>
+        <translations>
+          <translation>
+            <id>Español</id>
+            <text>Eeeeeh, no, está bien, adiós</text>
+          </translation>
+          <translation>
+            <id>English</id>
+            <text>Eeeeeh, no, okay, bye-bye.</text>
+          </translation>
+        </translations>
+      </Switch_output>
+    </Switch_outputs_GUIDs>
+    <action>Switch</action>
+    <position>
+      <x>5771</x>
+      <y>-436</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>25be0a78-77ca-44a8-af29-aa8837a4863d</GUID>
+    <output_GUID>0a69fba0-49d7-4553-8502-7926aa9352d0</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>301</x>
+      <y>-264</y>
+    </position>
+    <animation>Defaul</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Buenas noches, ¿Comó te va?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Good evening, how are you doing?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>0a69fba0-49d7-4553-8502-7926aa9352d0</GUID>
+    <output_GUID>23fd8e73-8b09-43ac-ad5a-914a0323bee8</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>622</x>
+      <y>-264</y>
+    </position>
+    <animation>No</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Todo bien, noche tranquila. Mira, me preguntaba una cosa</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>All good, quiet night. Look, I was wondering about something</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>23fd8e73-8b09-43ac-ad5a-914a0323bee8</GUID>
+    <output_GUID>df28e615-729d-47b3-9d3f-c95c2df24d33</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>975</x>
+      <y>-264</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Cómo implemento este asset en mi proyecto?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>How do I implement this asset in my project?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>df28e615-729d-47b3-9d3f-c95c2df24d33</GUID>
+    <output_GUID>3fa09268-1fc9-4493-958c-1fedbfa16eb4</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>1317</x>
+      <y>-264</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Bueno, ¿Qué deseas saber?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Well, what do you want to know?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>3fa09268-1fc9-4493-958c-1fedbfa16eb4</GUID>
+    <Switch_outputs_GUIDs>
+      <Switch_output>
+        <GUID>aff5688c-90bd-4a7c-8b1a-707640875c99</GUID>
+        <translations>
+          <translation>
+            <id>Español</id>
+            <text>Ver tutorial en youtube</text>
+          </translation>
+          <translation>
+            <id>English</id>
+            <text>See tutorial on youtube</text>
+          </translation>
+        </translations>
+      </Switch_output>
+      <Switch_output>
+        <GUID>42ea39a8-d463-4026-82b7-a505832f3cc7</GUID>
+        <translations>
+          <translation>
+            <id>Español</id>
+            <text>¿Cómo integro la interfaz?</text>
+          </translation>
+          <translation>
+            <id>English</id>
+            <text>How do I integrate the interface?</text>
+          </translation>
+        </translations>
+      </Switch_output>
+      <Switch_output>
+        <GUID>24869179-e662-47aa-9d18-34b286c00a55</GUID>
+        <translations>
+          <translation>
+            <id>Español</id>
+            <text>¿Cómo creo nuevos diálogos?</text>
+          </translation>
+          <translation>
+            <id>English</id>
+            <text>How do I create new dialogs?</text>
+          </translation>
+        </translations>
+      </Switch_output>
+      <Switch_output>
+        <GUID>878c3ea3-c181-464a-8854-8184a0d6ee86</GUID>
+        <translations>
+          <translation>
+            <id>Español</id>
+            <text>¿Cómo creo nuevos personajes?</text>
+          </translation>
+          <translation>
+            <id>English</id>
+            <text>How do I create new characters?</text>
+          </translation>
+        </translations>
+      </Switch_output>
+      <Switch_output>
+        <GUID>c47674ef-5861-469a-a462-db43ff4ded8f</GUID>
+        <translations>
+          <translation>
+            <id>Español</id>
+            <text>Otro ...</text>
+          </translation>
+          <translation>
+            <id>English</id>
+            <text>Other ...</text>
+          </translation>
+        </translations>
+      </Switch_output>
+    </Switch_outputs_GUIDs>
+    <action>Switch</action>
+    <position>
+      <x>1666</x>
+      <y>-264</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>aff5688c-90bd-4a7c-8b1a-707640875c99</GUID>
+    <output_GUID>c55a7616-72a3-4f66-8eeb-c8e1450a0998</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>2085</x>
+      <y>-676</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Sabia decisión.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Wise decision.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>42ea39a8-d463-4026-82b7-a505832f3cc7</GUID>
+    <output_GUID>b8365ad6-ec51-4588-8194-3f86f76289df</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>2542</x>
+      <y>-414</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>fácil, te diriges a la "Hierarchy", has click derecho -&gt; UI / Dialogue System Canvas</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>easy, you go to the “Hierarchy”, right click -&gt; UI / Dialogue System Canvas</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>b8365ad6-ec51-4588-8194-3f86f76289df</GUID>
+    <output_GUID>730cb850-d3ad-472c-877c-a8e46b462b19</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>2990</x>
+      <y>-414</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Lo logras ver?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Can you see it?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>730cb850-d3ad-472c-877c-a8e46b462b19</GUID>
+    <output_GUID>436f76a8-e8d2-4ce1-8aed-40fc0a3ad744</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>3310</x>
+      <y>-414</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Un momento ...</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>One moment ...</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>436f76a8-e8d2-4ce1-8aed-40fc0a3ad744</GUID>
+    <output_GUID>b8d77051-1107-472e-b775-c9260dc14baa</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>3626</x>
+      <y>-414</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Es la primera opción dentro de UI</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>It is the first option within UI</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>b8d77051-1107-472e-b775-c9260dc14baa</GUID>
+    <output_GUID>681b6b2b-d437-4745-8dfe-a6ca7fb8d753</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>3952</x>
+      <y>-414</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>ah sí, lo encontré ¿Qué sigue?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>ah yes, I found it What's next?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>681b6b2b-d437-4745-8dfe-a6ca7fb8d753</GUID>
+    <output_GUID>9ea03e56-f8cf-4158-8554-376a3c32890f</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>4287</x>
+      <y>-414</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Nada, eso tiene todo lo necesario para funcionar</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Nothing, it has everything it needs to work</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>9ea03e56-f8cf-4158-8554-376a3c32890f</GUID>
+    <output_GUID>21630eed-ac47-433d-89ab-2e8cdf88dfdc</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>4633</x>
+      <y>-414</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Cualquier diálogo que se ejecute se mostrará sin problemas</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Any dialog that is executed will be displayed without problems.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>24cdf588-7437-4935-8183-124b79afcaec</GUID>
+    <output_GUID>d430558e-53fe-4dc2-a992-b4c7461152e6</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>5317</x>
+      <y>-436</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Por cierto, si lo modificas, se modifica en todo el proyecto, cuidado con eso.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>By the way, if you modify it, it is modified in the whole project, be careful with that.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>adf5f679-8d4b-4723-8c06-7f22b004cd22</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>6249</x>
+      <y>-415</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Pase buenas noches</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Have a good night</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>24869179-e662-47aa-9d18-34b286c00a55</GUID>
+    <output_GUID>b905cb84-48b4-46f7-adb5-58328212e59c</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>2506</x>
+      <y>34</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Bien, Primero, la escena. Selecciona el personaje que va a hablar y añade el componente "Dialogue system Trigger"</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Well, first, the scene. Select the character that is going to speak and add the component “Dialogue system Trigger”.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>b905cb84-48b4-46f7-adb5-58328212e59c</GUID>
+    <output_GUID>8635bb5e-9dd8-4c49-a002-ded9de4bf64f</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>3143</x>
+      <y>36</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Claro, si tienes un sistema que los ejecute, que es lo recomendable.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Of course, if you have a system that runs them, which is recommended.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>8635bb5e-9dd8-4c49-a002-ded9de4bf64f</GUID>
+    <output_GUID>5bad6764-56df-4613-b55b-df1713cf657a</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>3538</x>
+      <y>36</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>De lo contrario, añade el componente "Dialogue system Interaction". Automáticamente, te añade el  "Dialogue system Trigger"</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Otherwise, add the “Dialogue system Interaction” component. Automatically, it adds the “Dialogue system Trigger”.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>5bad6764-56df-4613-b55b-df1713cf657a</GUID>
+    <output_GUID>95a379ce-81d4-42ba-a2f0-570a83cfd4d4</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>4176</x>
+      <y>36</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>En el componente "Dialogue system Trigger" verás un botón que dice "Create New DialogueFile" ¿Lo ves?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>In the “Dialogue system Trigger” component you will see a button that says “Create New DialogueFile” Do you see it?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>95a379ce-81d4-42ba-a2f0-570a83cfd4d4</GUID>
+    <output_GUID>7e66d48f-38cd-4f52-82ed-c2ba662a76f0</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>4784</x>
+      <y>36</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Si, lo veo</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Yes, I see it</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>7e66d48f-38cd-4f52-82ed-c2ba662a76f0</GUID>
+    <output_GUID>911d1b8f-6846-4f20-a1dc-26da1cde8824</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>5108</x>
+      <y>36</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Hazle click, dale un nombre al archivo y guárdalo dentro del proyecto.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Click on it, name the file and save it inside the project.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>911d1b8f-6846-4f20-a1dc-26da1cde8824</GUID>
+    <output_GUID>1c66156e-655b-4ba8-b0a2-9730a9ad237d</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>5508</x>
+      <y>36</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Está bien ... Listo</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Okay ... Ready</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>1c66156e-655b-4ba8-b0a2-9730a9ad237d</GUID>
+    <output_GUID>c14b244d-b564-4756-b326-0d5e02f7d4af</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>5842</x>
+      <y>36</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Ahora el botón dice "Open Dialogue Editor" esto te permite editar ese diálogo</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Now the button says “Open Dialogue Editor” this allows you to edit that dialogue.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>c14b244d-b564-4756-b326-0d5e02f7d4af</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>6291</x>
+      <y>36</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Y eso es todo, sé creativo.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>And that's it, be creative.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>c47674ef-5861-469a-a462-db43ff4ded8f</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>2119</x>
+      <y>620</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>En ese caso, sigue con las otras versiones</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>In this case, continue with the other versions</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>878c3ea3-c181-464a-8854-8184a0d6ee86</GUID>
+    <output_GUID>91dcfb90-73aa-4791-a82b-f58e33b63398</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>2542</x>
+      <y>473</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Oye, muy bonitos estos personajes, pero necesito eliminarlos y crear los míos propios.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Hey, very nice these characters, but I need to eliminate them and create my own.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>91dcfb90-73aa-4791-a82b-f58e33b63398</GUID>
+    <output_GUID>3b868d30-bfb1-4211-a013-28a388c33029</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>3059</x>
+      <y>473</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Claro, sin problemas, Primero te diré lo que no puedes hacer.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Sure, no problem, I'll tell you what you can't do first.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>3b868d30-bfb1-4211-a013-28a388c33029</GUID>
+    <output_GUID>76047c17-7318-4434-b62b-76afceddac83</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>3457</x>
+      <y>473</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>NO ELIMINES EL ARCHIVO "setting"</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>DO NOT DELETE THE FILE “setting”.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>76047c17-7318-4434-b62b-76afceddac83</GUID>
+    <output_GUID>313e8616-f860-4b21-bb5b-a251cf8d425f</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>3777</x>
+      <y>473</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Tampoco puedes tener dos setting en el proyecto.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Nor can you have two settings in the project.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>313e8616-f860-4b21-bb5b-a251cf8d425f</GUID>
+    <output_GUID>a48a243a-eef5-42b8-b806-459650bfe739</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>4107</x>
+      <y>473</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Para editar el setting ve a la barra superior:
+Window/Dialogue System/Setting</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>To edit the setting go to the top toolbar:
+Window/Dialogue System/Setting</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>a48a243a-eef5-42b8-b806-459650bfe739</GUID>
+    <output_GUID>ecfe8734-27ef-45a5-9111-a158f9def7d2</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>4428</x>
+      <y>473</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>También hay un botón en la ventana de "Dialogue editor" que te lleva al mismo sitio.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>There is also a button in the “Dialogue editor” window that takes you to the same place.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>ecfe8734-27ef-45a5-9111-a158f9def7d2</GUID>
+    <output_GUID>aa32e30b-ea5d-4272-8b65-c7bd933f2407</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>4900</x>
+      <y>473</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>En setting puedes editarlo todo.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>In setting you can edit everything.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>aa32e30b-ea5d-4272-8b65-c7bd933f2407</GUID>
+    <output_GUID>3cd350af-5457-4847-af12-5c5972390bca</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>5214</x>
+      <y>473</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Todo?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>All?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>3cd350af-5457-4847-af12-5c5972390bca</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>5548</x>
+      <y>459</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Todo.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>All.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>c55a7616-72a3-4f66-8eeb-c8e1450a0998</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Trigger</action>
+    <position>
+      <x>2478</x>
+      <y>-676</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <lenguageSelectOnColumns>0</lenguageSelectOnColumns>
+</InterpretationXL>

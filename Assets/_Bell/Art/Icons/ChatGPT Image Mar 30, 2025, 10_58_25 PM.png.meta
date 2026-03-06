@@ -1,0 +1,396 @@
+fileFormatVersion: 2
+guid: e9a786892fddda247b15d9b134e0b41c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1777348140091928676
+    second: ChatGPT Image Mar 30, 2025, 10_58_25 PM_0
+  - first:
+      213: 6198433971137589193
+    second: ChatGPT Image Mar 30, 2025, 10_58_25 PM_1
+  - first:
+      213: 4637043239616518836
+    second: ChatGPT Image Mar 30, 2025, 10_58_25 PM_2
+  - first:
+      213: -8536237089568430941
+    second: ChatGPT Image Mar 30, 2025, 10_58_25 PM_3
+  - first:
+      213: 5178746075109720879
+    second: ChatGPT Image Mar 30, 2025, 10_58_25 PM_4
+  - first:
+      213: 4882889603034581962
+    second: ChatGPT Image Mar 30, 2025, 10_58_25 PM_5
+  - first:
+      213: 5153075328313763954
+    second: ChatGPT Image Mar 30, 2025, 10_58_25 PM_6
+  - first:
+      213: 9148620368649765045
+    second: ChatGPT Image Mar 30, 2025, 10_58_25 PM_7
+  - first:
+      213: -8124199737334376323
+    second: ChatGPT Image Mar 30, 2025, 10_58_25 PM_8
+  - first:
+      213: -1732858186887501293
+    second: ChatGPT Image Mar 30, 2025, 10_58_25 PM_9
+  - first:
+      213: 598871551878122799
+    second: ChatGPT Image Mar 30, 2025, 10_58_25 PM_10
+  - first:
+      213: 2391124834975798952
+    second: ChatGPT Image Mar 30, 2025, 10_58_25 PM_11
+  - first:
+      213: 7916695627968866876
+    second: ChatGPT Image Mar 30, 2025, 10_58_25 PM_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Radish
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 572
+        width: 233
+        height: 370
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 460716477b86aa810800000000000000
+      internalID: 1777348140091928676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Can
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 622
+        width: 356
+        height: 305
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba187122461a5040800000000000000
+      internalID: 4637043239616518836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pizza
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 598
+        width: 353
+        height: 310
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a462cd0891398980800000000000000
+      internalID: -8536237089568430941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spoon
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 594
+        width: 208
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f230ddcfd1a9ed740800000000000000
+      internalID: 5178746075109720879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottle
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 582
+        width: 188
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acb035a293283c340800000000000000
+      internalID: 4882889603034581962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gas
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 118
+        width: 197
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d78dcdbf16b014f80800000000000000
+      internalID: -8124199737334376323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 131
+        width: 247
+        height: 299
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2d48c3e08e9f4800800000000000000
+      internalID: 598871551878122799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 153
+        width: 304
+        height: 272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a6d8526e5bfe2120800000000000000
+      internalID: 2391124834975798952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tire
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 128
+        width: 257
+        height: 299
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3ae8fbaab0cddd60800000000000000
+      internalID: 7916695627968866876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copper
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 161
+        width: 283
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7316575134d79ef438ff230bef3133d7
+      internalID: 150224785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d4c47330758d42f4d81a9ff90aade1b9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Bottle: 4882889603034581962
+      Can: 4637043239616518836
+      ChatGPT Image Mar 30, 2025, 10_58_25 PM_1: 6198433971137589193
+      ChatGPT Image Mar 30, 2025, 10_58_25 PM_13: -1825777614
+      ChatGPT Image Mar 30, 2025, 10_58_25 PM_15: -1471299331
+      ChatGPT Image Mar 30, 2025, 10_58_25 PM_16: -1371725690
+      ChatGPT Image Mar 30, 2025, 10_58_25 PM_17: -708958274
+      ChatGPT Image Mar 30, 2025, 10_58_25 PM_6: 5153075328313763954
+      ChatGPT Image Mar 30, 2025, 10_58_25 PM_7: 9148620368649765045
+      ChatGPT Image Mar 30, 2025, 10_58_25 PM_9: -1732858186887501293
+      Copper: 150224785
+      Gas: -8124199737334376323
+      Pizza: -8536237089568430941
+      Radish: 1777348140091928676
+      Sheet: 2391124834975798952
+      Spoon: 5178746075109720879
+      Spring: 598871551878122799
+      Tire: 7916695627968866876
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

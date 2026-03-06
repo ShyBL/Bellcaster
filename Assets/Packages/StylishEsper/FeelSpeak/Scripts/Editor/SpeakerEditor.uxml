@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/StylishEsper/FeelSpeak/Scripts/Editor/FeelSpeakEditorWindow.uss?fileID=7433441132597879392&amp;guid=969b658e04aa5874da55c7d872c2c3ac&amp;type=3#FeelSpeakEditorWindow" />
+    <ui:VisualElement name="Content" style="flex-grow: 1; flex-direction: row; margin-top: 10px; margin-bottom: 25px;">
+        <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: center;">
+            <ui:Label tabindex="-1" text="Character" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+            <Esper.FeelSpeak.Editor.CharacterElement class="character" style="margin-right: 0; margin-bottom: 20px;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: center;">
+            <ui:Label tabindex="-1" text="Dialogue" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+            <Esper.FeelSpeak.Editor.DialogueElement class="dialogue" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <uie:ObjectField label="Voice Audio Source" name="VoiceAudioSourceField" type="UnityEngine.AudioSource, UnityEngine.AudioModule" class="field" />
+    <uie:ObjectField label="In Range Indicator" name="InRangeIndicatorField" type="UnityEngine.GameObject, UnityEngine.CoreModule" class="field" />
+</ui:UXML>

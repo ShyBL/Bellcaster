@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InterpretationXL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DialogueLines>
+    <GUID>33003037-2252-4a54-9744-50718ed3695a</GUID>
+    <output_GUID>41654363-0f0c-4777-a996-b9bae7a4a5e7</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Start</action>
+    <position>
+      <x>0</x>
+      <y>0</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>de9ed664-a907-4b80-bdbf-d99393d24ab8</GUID>
+    <output_GUID>6b90d0cc-66c5-4937-bcc8-bffd7853f834</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Start</action>
+    <position>
+      <x>17</x>
+      <y>378</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>0b835f12-65e6-4079-bedb-e74ce2e94103</GUID>
+    <output_GUID>0dfd84ce-e1a6-4c79-8b73-ec608e37bcfb</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Start</action>
+    <position>
+      <x>0</x>
+      <y>660</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>41654363-0f0c-4777-a996-b9bae7a4a5e7</GUID>
+    <output_GUID>3a73b026-c49a-4d94-82f4-cc08c7c5bcbc</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>300</x>
+      <y>-115</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Linea 1</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Line 1</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>0dfd84ce-e1a6-4c79-8b73-ec608e37bcfb</GUID>
+    <output_GUID>3a73b026-c49a-4d94-82f4-cc08c7c5bcbc</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>300</x>
+      <y>750</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Linea 3</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Line 3</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>6b90d0cc-66c5-4937-bcc8-bffd7853f834</GUID>
+    <output_GUID>3a73b026-c49a-4d94-82f4-cc08c7c5bcbc</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>300</x>
+      <y>322</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Linea 2</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Line 2</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>3a73b026-c49a-4d94-82f4-cc08c7c5bcbc</GUID>
+    <output_GUID>03f21026-c3ca-44a7-8f26-819aebf4ead8</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>762</x>
+      <y>393</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Linea Qué?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Line What?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>03f21026-c3ca-44a7-8f26-819aebf4ead8</GUID>
+    <output_GUID>d6a3d31c-ab60-4302-89da-0dfd2c2c0323</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>1126</x>
+      <y>393</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Hola Nick, estoy probando la función de diálogos aleatorios.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Hi Nick, I am testing the random dialogs feature.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>d6a3d31c-ab60-4302-89da-0dfd2c2c0323</GUID>
+    <output_GUID>20f16f03-5c35-4a51-b0cb-1bac2b7f18c0</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>1494</x>
+      <y>393</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Genial, ¿Cómo se aplica?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Great, how to apply?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>20f16f03-5c35-4a51-b0cb-1bac2b7f18c0</GUID>
+    <output_GUID>0eb9415c-186f-4ec9-a26a-1c040019f022</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>1810</x>
+      <y>393</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Solo tienes que poner dos o más "Start" en el "Dialogue Editor", automáticamente se elige uno de forma aleatoria para empezar.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Just put two or more “Start” in the “Dialogue Editor”, it automatically chooses one at random to start.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>0eb9415c-186f-4ec9-a26a-1c040019f022</GUID>
+    <output_GUID>8d5e3c6b-1729-4f25-b105-463c9032ecca</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>2522</x>
+      <y>393</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿No te parece cómodo y simple?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Doesn't it seem comfortable and simple?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>8d5e3c6b-1729-4f25-b105-463c9032ecca</GUID>
+    <output_GUID>71e1f841-2467-4595-b89a-dac467c82523</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>2884</x>
+      <y>393</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Si ¿Qué otros consejos de usabilidad tienes?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Yes What other usability tips do you have?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>71e1f841-2467-4595-b89a-dac467c82523</GUID>
+    <output_GUID>e8492282-8aa8-4afb-b7ee-1bbc0a36bd82</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>3221</x>
+      <y>393</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Claro, Primero, siempre ten encendido el Auto Save. Y también, cuando termines de editar, dale a Save para estar seguros</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Of course, first, always have Auto Save turned on. And also, when you're done editing, hit Save to be safe.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>e8492282-8aa8-4afb-b7ee-1bbc0a36bd82</GUID>
+    <output_GUID>334901c2-45af-4608-add3-743d19dbd43e</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>3875</x>
+      <y>393</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>El Auto Save funciona en la gran mayoria de casos, pero dandole a Save aseguras tu trabajo al 100%</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Auto Save works in the vast majority of cases, but hitting Save secures your work 100%.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>334901c2-45af-4608-add3-743d19dbd43e</GUID>
+    <output_GUID>d61b9ee8-cd6d-44b1-bdd7-7e094c18c72c</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>4454</x>
+      <y>393</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Segundo, en el "Dialogue Editor", con click derecho puede crear nodos. Estos se crearán donde tengas el cursor. </text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Second, in the “Dialogue Editor”, with right click you can create nodes. These will be created where you have the cursor. </text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>d61b9ee8-cd6d-44b1-bdd7-7e094c18c72c</GUID>
+    <output_GUID>0931ed94-456d-4cbc-a233-0025fc4e3e70</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>5077</x>
+      <y>393</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Tercero, en mi opinión, la mejor forma de trabajar es, seleccionar tu idioma en el "Dialogue Editor" y comenzar a escribir.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Third, in my opinion, the best way to work is to select your language in the “Dialogue Editor” and start writing.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>0931ed94-456d-4cbc-a233-0025fc4e3e70</GUID>
+    <output_GUID>9a8e6073-88ab-498e-9954-0266a219c0dc</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>5739</x>
+      <y>393</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Claro, tienes que saber de antemano lo que escribirás.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Of course, you have to know in advance what you will write.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>9a8e6073-88ab-498e-9954-0266a219c0dc</GUID>
+    <output_GUID>f0184d32-7ae5-4eef-8dff-c5b495e48d23</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>6058</x>
+      <y>393</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Lo hice lo suficientemente cómodo, como para poder trabajar sin problemas desde el editor sin problemas</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>I made it comfortable enough to be able to work smoothly from the editor without any problems.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>f0184d32-7ae5-4eef-8dff-c5b495e48d23</GUID>
+    <output_GUID>5bbaf56e-e64f-4c25-989b-18c9d60825f1</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>6625</x>
+      <y>393</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Nick, eres escritor, ¿cierto?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Nick, you are a writer, right?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>5bbaf56e-e64f-4c25-989b-18c9d60825f1</GUID>
+    <output_GUID>3c465035-5961-4690-bb1a-4a21f94ee8ec</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>6968</x>
+      <y>393</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Si, aunque no soy muy bueno.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Yes, although I'm not very good.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>3c465035-5961-4690-bb1a-4a21f94ee8ec</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Dev</characterId>
+    <position>
+      <x>7308</x>
+      <y>393</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Que modesto.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>You are so modest.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <lenguageSelectOnColumns>0</lenguageSelectOnColumns>
+</InterpretationXL>

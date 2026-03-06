@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1743a3c24ea635d43acd629bf5628847
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 312875
+  packageName: Dialofy - Easy Dialogue System
+  packageVersion: 1.0.0
+  assetPath: Assets/Marav Assets/Dialogue System/Demo/Art/Animations/idle_characters.anim
+  uploadId: 756265

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 816f8b56e45b5894faa39d23d78c47b5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325697
+  packageName: Feel Speak Lite (Dialogue System)
+  packageVersion: 1.1.0
+  assetPath: Assets/StylishEsper/FeelSpeak/Prefabs/uGUI/ChoiceTimer.prefab
+  uploadId: 830328

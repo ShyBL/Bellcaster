@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InterpretationXL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DialogueLines>
+    <GUID>6bd06e86-3ad0-49a7-8e26-38ed65d8e1f1</GUID>
+    <output_GUID>9cac17e7-3781-4995-9f6a-87c4b5fb2888</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Start</action>
+    <position>
+      <x>0</x>
+      <y>0</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>9cac17e7-3781-4995-9f6a-87c4b5fb2888</GUID>
+    <output_GUID>d7d0116c-5207-444e-b8b6-b6f695ad4daa</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>166</x>
+      <y>-24</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Buenas noches, disculpe, ¿A quién tengo que entregarle mi invitación?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Good evening, excuse me, to whom should I give my invitation?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>d7d0116c-5207-444e-b8b6-b6f695ad4daa</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>???</characterId>
+    <position>
+      <x>618</x>
+      <y>-24</y>
+    </position>
+    <variantSpriteId>man 1</variantSpriteId>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Qué invitación?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>What invitation?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <lenguageSelectOnColumns>0</lenguageSelectOnColumns>
+</InterpretationXL>

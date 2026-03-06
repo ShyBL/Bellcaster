@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InterpretationXL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DialogueLines>
+    <GUID>9f97d4c6-1076-415f-909f-d88234bb065a</GUID>
+    <output_GUID>7fb02a99-246b-4605-b301-2b7ceae80b2d</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Start</action>
+    <position>
+      <x>0</x>
+      <y>0</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>7fb02a99-246b-4605-b301-2b7ceae80b2d</GUID>
+    <output_GUID>7b2b4318-bfaa-49da-826b-480dfbb32a2b</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Owl Eyes</characterId>
+    <position>
+      <x>253</x>
+      <y>-33</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Qué hacen ustedes aquí? ¿También vinieron a investigar?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>What are you guys doing here? Did you also come to investigate?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>7b2b4318-bfaa-49da-826b-480dfbb32a2b</GUID>
+    <output_GUID>dcc57d14-b44a-4b52-bcc9-ad744a44bad4</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>610</x>
+      <y>-33</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Vinieron?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Did they come?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>dcc57d14-b44a-4b52-bcc9-ad744a44bad4</GUID>
+    <output_GUID>e034f475-3bea-4468-8561-d2c5bcf01595</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Jordan Baker</characterId>
+    <position>
+      <x>952</x>
+      <y>-33</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Hola Nick, ya me libré del otro tonto.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Hi Nick, I got rid of the other sucker.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>e034f475-3bea-4468-8561-d2c5bcf01595</GUID>
+    <output_GUID>858a16fa-9e81-4c95-b44d-fc59045cfff7</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Owl Eyes</characterId>
+    <position>
+      <x>1290</x>
+      <y>-33</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Han visto esto? ¡Son libros reales!</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Have you seen these? These are real books!</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>858a16fa-9e81-4c95-b44d-fc59045cfff7</GUID>
+    <output_GUID>eda1532c-2215-43cb-90c9-7bfbaf3e3940</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Owl Eyes</characterId>
+    <position>
+      <x>1612</x>
+      <y>-33</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¡Con páginas reales! Yo pensé que solo serían de cartón o falsos, pero no... ¡Mírenlos! Completamente auténticos. ¡Un auténtico Belasco, les digo!</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>With real pages! I thought they would just be cardboard or fake, but no.... Look at them! Completely authentic. A real Belasco, I tell you!</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>eda1532c-2215-43cb-90c9-7bfbaf3e3940</GUID>
+    <output_GUID>ef7b8aa1-150c-4251-bb1c-51e2ccfe26f1</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>2384</x>
+      <y>-33</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Belasco?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Belasco?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>ef7b8aa1-150c-4251-bb1c-51e2ccfe26f1</GUID>
+    <output_GUID>b3796b49-a7df-4776-b9da-799efb7779b1</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Owl Eyes</characterId>
+    <position>
+      <x>2710</x>
+      <y>-33</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Sí, como David Belasco, el tipo del teatro.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Yes, like David Belasco, the guy from the theater.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>b3796b49-a7df-4776-b9da-799efb7779b1</GUID>
+    <output_GUID>a85729ef-24e2-4bd7-9f0e-12b9078ff554</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Owl Eyes</characterId>
+    <position>
+      <x>3027</x>
+      <y>-33</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Este Gatsby es un maestro del montaje, Aunque, claro, apuesto a que no ha leído ni uno solo.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>This Gatsby is a master of editing, although, of course, I bet he hasn't read a single one.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>a85729ef-24e2-4bd7-9f0e-12b9078ff554</GUID>
+    <output_GUID>897d18ad-5476-4371-b3ec-0466c48ed0a4</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>3550</x>
+      <y>-33</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Y qué opinas de todo esto? ¿La fiesta, la casa, Gatsby?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>And what do you think of all this? The party, the house, Gatsby?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>897d18ad-5476-4371-b3ec-0466c48ed0a4</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Owl Eyes</characterId>
+    <position>
+      <x>3914</x>
+      <y>-33</y>
+    </position>
+    <animation>LoL</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Oh, amigo, todo aquí es un espectáculo, ¿no lo ves? Pero eso es lo que lo hace grandioso. Es como una producción teatral... solo que no sé si el guion tiene final feliz.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Oh, man, everything here is a show, don't you see? But that's what makes it great. It's like a theatrical production... I just don't know if the script has a happy ending.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <lenguageSelectOnColumns>0</lenguageSelectOnColumns>
+</InterpretationXL>

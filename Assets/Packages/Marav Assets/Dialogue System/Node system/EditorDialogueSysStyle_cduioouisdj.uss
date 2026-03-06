@@ -1,0 +1,418 @@
+.rootVisualElement {
+    -unity-font-definition: url("project://database/Assets/Marav%20Assets/Dialogue%20System/Font/Jost-VariableFont_wght.ttf?fileID=12800000&guid=954648865f67dcc4e82e7302d696631b&type=3#Jost-VariableFont_wght");
+    -unity-font-style: normal;
+}
+
+.rootGraphVisualElement {
+    --grid-background-color: rgb(25, 25, 25);
+    --line-color: rgb(47, 47, 47);
+    --thick-line-color: rgb(186, 186, 186);
+    --spacing: 100;
+}
+
+.shadow {
+    background-image: url("project://database/Assets/Marav%20Assets/Dialogue%20System/Node%20system/EditorDialogueSystem_shadow.png?fileID=2800000&guid=ee35de91c941c91449fdd38e2f192359&type=3#EditorDialogueSystem_shadow");
+    height: 12px;
+    width: 100%;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.31);
+}
+
+.div {
+    width: 100%;
+    flex-direction: row;
+    background-size: 100% 100%;
+    align-self: center;
+    justify-content: flex-start;
+}
+
+.divCenter {
+    width: 100%;
+    flex-direction: row;
+    background-size: 100% 100%;
+    align-self: center;
+    justify-content: center;
+}
+
+.divLeft {
+    width: 100%;
+    flex-direction: row;
+    background-size: 100% 100%;
+    align-self: center;
+    justify-content: flex-end;
+}
+
+Button {
+    background-color: rgb(94, 94, 94);
+    border-top-width: 0;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 0;
+    border-left-color: rgb(55, 55, 55);
+    border-right-color: rgb(55, 55, 55);
+    border-top-color: rgb(55, 55, 55);
+    border-bottom-color: rgb(55, 55, 55);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+Button:hover {
+    border-left-color: rgb(196, 196, 196);
+    border-right-color: rgb(196, 196, 196);
+    border-top-color: rgb(196, 196, 196);
+    border-bottom-color: rgb(196, 196, 196);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+}
+
+.Toolbar {
+    background-color: rgb(60, 60, 60);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0.49);
+    height: 30px;
+    text-shadow: 0 0 0.9px rgba(0, 0, 0, 0);
+    border-bottom-width: 0;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    -unity-font-style: bold;
+}
+
+.Toolbar DropdownField .unity-base-field__input {
+    background-color: rgb(94, 94, 94);
+    border-top-width: 0;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 0;
+    border-left-color: rgb(55, 55, 55);
+    border-right-color: rgb(55, 55, 55);
+    border-top-color: rgb(55, 55, 55);
+    border-bottom-color: rgb(55, 55, 55);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.Toolbar Toggle {
+    background-color: rgba(132, 132, 132, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    height: auto;
+    flex-direction: row-reverse;
+    align-self: center;
+    justify-content: flex-end;
+    align-items: auto;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    flex-grow: 0;
+    opacity: 1;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    width: 75px;
+    left: auto;
+}
+
+.Toolbar Toggle Label {
+    margin-left: 0;
+    padding-left: 5px;
+}
+
+.Toolbar ObjectField {
+    background-color: rgba(132, 132, 132, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    height: auto;
+    flex-direction: row;
+    align-self: center;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    flex-grow: 0;
+    opacity: 1;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    width: auto;
+    left: auto;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    -unity-text-align: upper-center;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 12px;
+}
+
+.Toolbar ObjectField VisualElement {
+    display: flex;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition-duration: 0.2s;
+    border-color: rgb(0, 0, 0);
+    border-left-color: rgb(157, 157, 157);
+    border-right-color: rgb(157, 157, 157);
+    border-top-color: rgb(157, 157, 157);
+    border-bottom-color: rgb(157, 157, 157);
+}
+
+.Toolbar ObjectField VisualElement:hover {
+    border-color: rgb(255, 255, 255);
+}
+
+.Toolbar ObjectFieldSelector {
+    width: 22px;
+    height: 20px;
+    transition-property: all;
+    transition-duration: 0s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    overflow: hidden;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.node #contents {
+    background-color: rgb(42, 42, 42);
+}
+
+.extensionContainer {
+    padding-top: 0;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background-color: rgb(56, 56, 56);
+}
+
+#title Label {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    -unity-font-style: normal;
+}
+
+.NodeStart VisualElement {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.NodeStart #title {
+    background-color: rgb(3, 201, 136);
+}
+
+.NodeStart #selection-border {
+    border-left-color: rgb(3, 201, 136);
+    border-right-color: rgb(3, 201, 136);
+    border-top-color: rgb(3, 201, 136);
+    border-bottom-color: rgb(3, 201, 136);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+}
+
+.NodeDialogue {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.NodeDialogue #title {
+    background-color: rgb(28, 130, 173);
+}
+
+.NodeDialogue #selection-border {
+    border-left-color: rgb(28, 130, 173);
+    border-right-color: rgb(28, 130, 173);
+    border-top-color: rgb(28, 130, 173);
+    border-bottom-color: rgb(28, 130, 173);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+}
+
+.configDiv {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.configDiv VisualElement {
+    width: auto;
+}
+
+.configDiv VisualElement PopupField Label {
+    width: auto;
+    -unity-text-align: upper-right;
+}
+
+.configDiv VisualElement PopupField VisualElement PopupTextElement {
+    width: 50px;
+}
+
+.textDiv {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    width: 100%;
+}
+
+.textDiv TextField {
+    height: 100px;
+    width: 100%;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.textDiv TextField TextInput {
+    width: 100%;
+    height: 100%;
+    padding-top: 2px;
+    padding-right: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.textDiv TextField TextInput VisualElement TextElement {
+    white-space: normal;
+    text-overflow: clip;
+    -unity-text-align: upper-left;
+}
+
+.configDiv VisualElement Image {
+    width: 80px;
+    height: 80px;
+}
+
+.textDiv TextField TextInput {
+    width: 100%;
+    height: 100%;
+}
+
+.NodeSwitch {
+}
+
+.NodeSwitch #title {
+    background-color: rgb(59, 0, 124);
+}
+
+.NodeSwitch #selection-border {
+    border-left-color: rgb(59, 0, 124);
+    border-right-color: rgb(59, 0, 124);
+    border-top-color: rgb(59, 0, 124);
+    border-bottom-color: rgb(59, 0, 124);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+}
+
+.SwitchElement {
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: stretch;
+    margin-top: 1.5px;
+    margin-bottom: 1.5px;
+    padding-bottom: 2px;
+    background-color: rgb(56, 56, 56);
+    padding-top: 2px;
+}
+
+.SwitchElement TextField {
+    width: auto;
+    align-items: stretch;
+    min-width: 75px;
+    max-width: none;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.NodeTrigger #title {
+    background-color: rgb(201, 106, 3);
+}
+
+.NodeTrigger #selection-border {
+    border-left-color: rgb(201, 106, 3);
+    border-right-color: rgb(201, 106, 3);
+    border-top-color: rgb(201, 106, 3);
+    border-bottom-color: rgb(201, 106, 3);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+}
+
+.NodeHideRight #title {
+    background-color: rgb(78, 110, 123);
+}
+
+.NodeHideLeft #title {
+    background-color: rgb(78, 110, 123);
+}
+
+.NodeHideRight #selection-border {
+    border-left-color: rgb(78, 110, 123);
+    border-right-color: rgb(78, 110, 123);
+    border-top-color: rgb(78, 110, 123);
+    border-bottom-color: rgb(78, 110, 123);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+}
+
+.NodeHideLeft #selection-border {
+    border-left-color: rgb(78, 110, 123);
+    border-right-color: rgb(78, 110, 123);
+    border-top-color: rgb(78, 110, 123);
+    border-bottom-color: rgb(78, 110, 123);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+}
+
+.NodeAnimation #title {
+    background-color: rgb(123, 48, 48);
+}
+
+.NodeAnimation #selection-border {
+    border-left-color: rgb(123, 48, 48);
+    border-right-color: rgb(123, 48, 48);
+    border-top-color: rgb(123, 48, 48);
+    border-bottom-color: rgb(123, 48, 48);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+}

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 139f4f42f8ce9b84bb2c828d9e5ec9ce
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325697
+  packageName: Feel Speak Lite (Dialogue System)
+  packageVersion: 1.1.0
+  assetPath: Assets/StylishEsper/FeelSpeak/Scripts/UI/uGUI/DialogueBoxUGUI.cs
+  uploadId: 830328

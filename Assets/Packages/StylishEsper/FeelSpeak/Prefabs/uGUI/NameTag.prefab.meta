@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3c8df1986dc3e5243bf270b985d53975
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325697
+  packageName: Feel Speak Lite (Dialogue System)
+  packageVersion: 1.1.0
+  assetPath: Assets/StylishEsper/FeelSpeak/Prefabs/uGUI/NameTag.prefab
+  uploadId: 830328

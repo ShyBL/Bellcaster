@@ -1,0 +1,66 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/StylishEsper/FeelSpeak/Scripts/Editor/DialogueGraphEditorWindow.uss?fileID=7433441132597879392&amp;guid=db6181a6a8ff76c4fa3a85657fcd6fa8&amp;type=3#DialogueGraphEditorWindow" />
+    <Esper.FeelSpeak.Editor.DialogueGraphView style="flex-grow: 1; position: absolute; width: 100%; height: 100%;" />
+    <uie:Toolbar style="justify-content: flex-end;">
+        <uie:ToolbarButton text="Save (CTRL + S)" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SaveButton" style="left: auto; -unity-text-align: middle-left;" />
+    </uie:Toolbar>
+    <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1;">
+        <Esper.FeelSpeak.Editor.NodeInspector style="width: 40%; height: 80%; max-width: 400px; max-height: 700px;">
+            <ui:VisualElement name="DialogueTab" style="flex-grow: 1; display: none;">
+                <ui:VisualElement style="flex-direction: row; flex-shrink: 0;">
+                    <ui:VisualElement name="CharacterImage" style="flex-grow: 0; width: 64px; height: 64px; background-image: url(&quot;project://database/Assets/StylishEsper/FeelSpeak/Editor/Icons/character_icon.png?fileID=2800000&amp;guid=bad81e21cfcb64649a93f3ed89ab7a65&amp;type=3#character_icon&quot;); -unity-background-scale-mode: scale-to-fit;" />
+                    <ui:VisualElement style="flex-grow: 1; padding-left: 4px;">
+                        <ui:Label tabindex="-1" text="Character Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterNameLabel" style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden; margin-top: 0; margin-right: 0; margin-bottom: 4px; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-text-align: upper-left;" />
+                        <ui:Button text="Change" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterButton" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; margin-top: 4px; flex-shrink: 0;">
+                    <ui:VisualElement name="EmotionImage" style="flex-grow: 0; width: 64px; height: 64px; background-image: url(&quot;project://database/Assets/StylishEsper/FeelSpeak/Editor/Icons/emotion_icon.png?fileID=2800000&amp;guid=399027064c8d7d44eb56901545a34b0a&amp;type=3#emotion_icon&quot;); -unity-background-scale-mode: scale-to-fit;" />
+                    <ui:VisualElement style="flex-grow: 1; padding-left: 4px;">
+                        <ui:Label tabindex="-1" text="Emotion Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="EmotionNameLabel" style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden; margin-top: 0; margin-right: 0; margin-bottom: 4px; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-text-align: upper-left;" />
+                        <ui:Button text="Change" parse-escape-sequences="true" display-tooltip-when-elided="true" name="EmotionButton" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:ScrollView>
+                    <ui:VisualElement name="DialogueContent" style="flex-grow: 1; display: flex;">
+                        <ui:Toggle label="Suppress Emotion Animation" name="SuppressEmotionAnimationField" class="field" />
+                        <ui:Toggle label="Suppress Emotion Sound" name="SuppressEmotionSoundField" class="field" />
+                        <ui:Toggle label="Automatic Next On Complete" name="AutomaticNextOnCompleteField" class="field" />
+                        <ui:FloatField label="Next Delay" value="0" name="AutomaticNextDelayField" class="field" />
+                        <ui:TextField picking-mode="Ignore" label="Dialogue" multiline="true" name="DialogueField" class="field" />
+                        <uie:ObjectField label="Voice Line" name="VoiceLineField" type="UnityEngine.AudioClip, UnityEngine.AudioModule" class="field" />
+                    </ui:VisualElement>
+                </ui:ScrollView>
+            </ui:VisualElement>
+            <ui:VisualElement name="ChoiceTab" style="flex-grow: 1; display: none;">
+                <ui:Label tabindex="-1" text="Timeout" parse-escape-sequences="true" display-tooltip-when-elided="true" style="margin-bottom: 4px; margin-top: 0; margin-right: 2px; margin-left: 2px; -unity-font-style: bold; font-size: 14px; -unity-text-align: upper-left;" />
+                <ui:Toggle label="Enabled" name="UseTimeoutField" class="field" />
+                <ui:FloatField label="Length" value="0" name="TimeoutField" class="field" />
+                <ui:Label tabindex="-1" text="Automatic Timeout Choice" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AutomaticChoiceLabel" style="margin-bottom: 4px; margin-top: 0; margin-right: 2px; margin-left: 2px; -unity-font-style: bold; font-size: 12px; -unity-text-align: upper-left;" />
+                <ui:Toggle label="Random" name="TimeoutChoiceIsRandomField" class="field" />
+                <ui:IntegerField label="Index" value="0" name="TimeoutChoiceIndexField" class="field" />
+                <ui:Label tabindex="-1" text="Choices" parse-escape-sequences="true" display-tooltip-when-elided="true" style="margin-bottom: 0; margin-top: 4px; margin-right: 2px; margin-left: 2px; -unity-font-style: bold; font-size: 14px; -unity-text-align: upper-left;" />
+                <ui:ScrollView>
+                    <ui:VisualElement name="ChoiceContent" style="flex-grow: 1; display: flex;" />
+                </ui:ScrollView>
+                <ui:Button text="Add" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AddChoiceButton" style="margin-top: 4px; margin-right: 0; margin-bottom: 10px; margin-left: 0; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="DelayTab" style="flex-grow: 1; display: none;">
+                <ui:FloatField label="Delay" value="0" name="DelayField" class="field" />
+                <ui:Toggle label="Hide Dialogue Box" name="HideDialogueBoxField" class="field" />
+            </ui:VisualElement>
+            <ui:VisualElement name="SoundTab" style="flex-grow: 1; display: none;">
+                <uie:ObjectField label="Sound" name="SoundField" type="UnityEngine.AudioClip, UnityEngine.AudioModule" />
+            </ui:VisualElement>
+            <ui:Button text="Set As Starting Node" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SetAsStartingNodeButton" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; display: none;" />
+        </Esper.FeelSpeak.Editor.NodeInspector>
+        <uie:Toolbar name="NodeSelector" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); height: 120px; position: absolute; width: 120px; display: none;">
+            <ui:VisualElement name="Content" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap;">
+                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="DialogueButton" tooltip="Dialogue" class="nodeButton" style="background-image: url(&quot;project://database/Assets/StylishEsper/FeelSpeak/Editor/Icons/dialogue_icon.png?fileID=2800000&amp;guid=3897b8934add38b4ba5dfba2b8139032&amp;type=3#dialogue_icon&quot;);" />
+                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="ChoiceButton" tooltip="Choice" class="nodeButton" style="background-image: url(&quot;project://database/Assets/StylishEsper/FeelSpeak/Editor/Icons/choices_icon.png?fileID=2800000&amp;guid=70ab9c803a4ed224db31592ba1055b6f&amp;type=3#choices_icon&quot;);" />
+                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="DelayButton" tooltip="Delay" class="nodeButton" style="background-image: url(&quot;project://database/Assets/StylishEsper/FeelSpeak/Editor/Icons/delay_icon.png?fileID=2800000&amp;guid=b3862006e287ddb4a9e33ed02e16cf39&amp;type=3#delay_icon&quot;);" />
+                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="SoundButton" tooltip="Sound" class="nodeButton" style="background-image: url(&quot;project://database/Assets/StylishEsper/FeelSpeak/Editor/Icons/sound_icon.png?fileID=2800000&amp;guid=78a492b247c9b9a428c454a14caee944&amp;type=3#sound_icon&quot;);" />
+            </ui:VisualElement>
+        </uie:Toolbar>
+    </ui:VisualElement>
+</ui:UXML>

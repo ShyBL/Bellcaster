@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: dcdba7c77ae1fd949a96acb80f2e93d6
+AssetOrigin:
+  serializedVersion: 1
+  productId: 301202
+  packageName: Simple Visual Dialogue Editor
+  packageVersion: 1.1
+  assetPath: Assets/Visual-Dialogue-Editor/Editor/EventNodeEditor.cs
+  uploadId: 795572

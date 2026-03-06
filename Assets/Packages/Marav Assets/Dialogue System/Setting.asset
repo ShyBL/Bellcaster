@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 410e1544c1a2bba4dacf540b4c437743, type: 3}
+  m_Name: Setting
+  m_EditorClassIdentifier: 
+  talkCharacterDefaul: {fileID: 7400000, guid: 57ff01c5aedd3b349855934f33baacf9, type: 2}
+  charactersAnimations:
+  - {fileID: 7400000, guid: ae4c07008e52c8b4aa267853a569ad1f, type: 2}
+  - {fileID: 7400000, guid: 3711d99c74584d348b6db50b793e50ff, type: 2}
+  soundSpeakDefault: {fileID: 6418180475301049370, guid: f14cf6fc4bd9a3e46b56d6456c1f391b, type: 2}
+  languageSelect: 0
+  languageList:
+  - "Espa\xF1ol"
+  - English
+  characterList:
+  - _name: Nick Carraway
+    spriteDefaul: {fileID: 21300000, guid: 82db4f865f526c042b4d1b8d508397cf, type: 3}
+    positionDefaul: 1
+    variantsSprite: []
+    TextColor: {r: 1, g: 1, b: 1, a: 1}
+    bgColor: {r: 0.482, g: 0.1852314, b: 0.16332231, a: 0.6313726}
+    soundSpeak: {fileID: 6418180475301049370, guid: 83a254abdd4e4cd4eaaccf0534ea9f9b, type: 2}
+    description: 
+  - _name: Jay Gatsby
+    spriteDefaul: {fileID: 21300000, guid: 3d7eb1d6dce022346aea0b2c601c846e, type: 3}
+    positionDefaul: 0
+    variantsSprite: []
+    TextColor: {r: 1, g: 1, b: 1, a: 1}
+    bgColor: {r: 0.4811321, g: 0.38447505, b: 0.13843894, a: 0.7019608}
+    soundSpeak: {fileID: 6418180475301049370, guid: e533b9b190437874a887e3ef7bfeb85d, type: 2}
+    description: 
+  - _name: Jordan Baker
+    spriteDefaul: {fileID: 21300000, guid: ea4b2376a63a6524d8ae5d8351073c71, type: 3}
+    positionDefaul: 0
+    variantsSprite: []
+    TextColor: {r: 1, g: 1, b: 1, a: 1}
+    bgColor: {r: 0.38823533, g: 0.14509805, b: 0.24705884, a: 0.6745098}
+    soundSpeak: {fileID: 6418180475301049370, guid: b1e75f8414868f4419325fc38d265a32, type: 2}
+    description: 
+  - _name: Owl Eyes
+    spriteDefaul: {fileID: 21300000, guid: bccb72dfdcdabd244bd634c21fea3265, type: 3}
+    positionDefaul: 0
+    variantsSprite: []
+    TextColor: {r: 1, g: 1, b: 1, a: 1}
+    bgColor: {r: 0.40000004, g: 0.24705884, b: 0.03137255, a: 0.7882353}
+    soundSpeak: {fileID: 6418180475301049370, guid: 8f4cf4803a671d4418e3a63f4e65f0eb, type: 2}
+    description: "Nick se encuentra con un hombre peculiar al que apodan \"Ojos de
+      B\xFAho\" debido a sus gruesas gafas. Este personaje est\xE1 fascinado con
+      la biblioteca de Gatsby y expresa su asombro por el hecho de que los libros
+      sean reales (y no solo decorados)."
+  - _name: Barman
+    spriteDefaul: {fileID: 21300000, guid: b1ff31cd0dd3fb340847c21d96f1d6a9, type: 3}
+    positionDefaul: 0
+    variantsSprite: []
+    TextColor: {r: 1, g: 1, b: 1, a: 1}
+    bgColor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 0.7372549}
+    soundSpeak: {fileID: 6418180475301049370, guid: ef2dc576fd87b00419a89b92521d83e9, type: 2}
+    description: 
+  - _name: ???
+    spriteDefaul: {fileID: 21300000, guid: 84810bf5abf9607479c5d142d15370de, type: 3}
+    positionDefaul: 0
+    variantsSprite:
+    - _name: man 1
+      sprite: {fileID: 21300000, guid: 84810bf5abf9607479c5d142d15370de, type: 3}
+    - _name: man 2
+      sprite: {fileID: 21300000, guid: 3f99ebee7789cf942a6e4f30b478475a, type: 3}
+    - _name: man 3
+      sprite: {fileID: 21300000, guid: afa222d6c307ff24bbd8010400d5d0ff, type: 3}
+    - _name: woman 1
+      sprite: {fileID: 21300000, guid: f7eb950321ffb174cb140615b88ea481, type: 3}
+    - _name: woman 2
+      sprite: {fileID: 21300000, guid: 048569dc0fc965c409aacad8a9557cec, type: 3}
+    - _name: woman 2
+      sprite: {fileID: 21300000, guid: 1f6c725c27029de47b32c000686a6e89, type: 3}
+    TextColor: {r: 1, g: 1, b: 1, a: 1}
+    bgColor: {r: 0, g: 0, b: 0, a: 0.6666667}
+    soundSpeak: {fileID: 0}
+    description: 
+  - _name: Dev
+    spriteDefaul: {fileID: 21300000, guid: 974cb3805141e6548bd064e7fd246924, type: 3}
+    positionDefaul: 0
+    variantsSprite: []
+    TextColor: {r: 1, g: 1, b: 1, a: 1}
+    bgColor: {r: 0.028657887, g: 0.13332145, b: 0.26415092, a: 0.5647059}
+    soundSpeak: {fileID: 0}
+    description: 

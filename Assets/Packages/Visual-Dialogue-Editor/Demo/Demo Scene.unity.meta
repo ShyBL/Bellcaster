@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ece8a1ab9b02f4d469db9073379f2307
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 301202
+  packageName: Simple Visual Dialogue Editor
+  packageVersion: 1.1
+  assetPath: Assets/Visual-Dialogue-Editor/Demo/Demo Scene.unity
+  uploadId: 795572

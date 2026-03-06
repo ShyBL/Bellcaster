@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 52e7a78e10ee9834da361507bb0e9e59
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 301202
+  packageName: Simple Visual Dialogue Editor
+  packageVersion: 1.1
+  assetPath: Assets/Visual-Dialogue-Editor/ThirdPartyNotice.txt
+  uploadId: 795572

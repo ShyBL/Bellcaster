@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 802b0b9f512b57449907cfab9d9d5ab6
+AssetOrigin:
+  serializedVersion: 1
+  productId: 301202
+  packageName: Simple Visual Dialogue Editor
+  packageVersion: 1.1
+  assetPath: Assets/Visual-Dialogue-Editor/Scripts/DialogueNode.cs
+  uploadId: 795572

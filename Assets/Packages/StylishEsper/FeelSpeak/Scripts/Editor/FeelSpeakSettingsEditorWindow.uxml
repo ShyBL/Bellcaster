@@ -1,0 +1,45 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/StylishEsper/FeelSpeak/Scripts/Editor/FeelSpeakSettingsEditorWindow.uss?fileID=7433441132597879392&amp;guid=c9070ea47254e1340a373b3f5bad50ae&amp;type=3#FeelSpeakSettingsEditorWindow"/>
+    <uie:Toolbar/>
+    <ui:ScrollView>
+        <ui:VisualElement style="flex-grow: 1; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px;">
+            <ui:Label tabindex="-1" text="Debug" parse-escape-sequences="true" display-tooltip-when-elided="true" class="heading" style="font-size: 14px; margin-top: 4px;"/>
+            <ui:EnumField label="Debug Log Mode" type="Esper.FeelSpeak.Settings.FeelSpeakSettings+DebugLogMode, FeelSpeak" name="DebugLogField" class="field"/>
+            <ui:Label tabindex="-1" text="Database" parse-escape-sequences="true" display-tooltip-when-elided="true" class="heading" style="font-size: 14px;"/>
+            <ui:EnumField label="Database Type" type="Esper.FeelSpeak.Settings.FeelSpeakSettings+DatabaseType, FeelSpeak" name="DatabaseTypeField" value="SQLite" class="field"/>
+            <ui:TextField picking-mode="Ignore" label="DB Name" name="DatabaseNameField" class="field"/>
+            <ui:Button text="Validate" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ValidateButton" class="field"/>
+            <ui:Label tabindex="-1" text="Dialogue" parse-escape-sequences="true" display-tooltip-when-elided="true" class="heading" style="font-size: 14px;"/>
+            <ui:FloatField label="Text Speed" value="0" name="TextSpeedField" class="field"/>
+            <ui:Toggle label="Enable Fast Forward" name="EnableFastForwardField" class="field"/>
+            <ui:FloatField label="Sentence End Pause" value="0" name="SentenceEndPauseField" class="field"/>
+            <ui:FloatField label="Ellipsis Speed Multiplier" value="0" name="EllipsisSpeedMultiplierField" class="field"/>
+            <ui:Toggle label="Enable Object Text Colors" name="EnableObjectTextColorsField" class="field"/>
+            <ui:Toggle label="Enable Text Sounds" name="EnableTextSoundsField" class="field"/>
+            <ui:FloatField label="Text Sound Min Delay" value="0" name="TextSoundMinDelayField" class="field"/>
+            <uie:ObjectField label="Default Text Sound" name="DefaultTextSoundField" type="UnityEngine.AudioClip, UnityEngine.AudioModule" class="field"/>
+            <ui:Toggle label="Enable Voice Lines" name="EnableVoiceLinesField" class="field"/>
+            <uie:ColorField label="Active Speaker Sprite Color" value="RGBA(0.000, 1.000, 1.000, 1.000)" name="ActiveSpeakerSpriteColorField" class="field"/>
+            <uie:ColorField label="Inactive Speaker Sprite Color" value="RGBA(0.000, 1.000, 1.000, 1.000)" name="InactiveSpeakerSpriteColorField" class="field"/>
+            <ui:Label tabindex="-1" text="Choices" parse-escape-sequences="true" display-tooltip-when-elided="true" class="heading" style="font-size: 14px;"/>
+            <ui:FloatField label="Choice Display Length" value="0" name="ChoiceDisplayLengthField" class="field"/>
+            <ui:Label tabindex="-1" text="Editing" parse-escape-sequences="true" display-tooltip-when-elided="true" class="heading" style="font-size: 14px;"/>
+            <ui:Label tabindex="-1" text="Dialogue Node" parse-escape-sequences="true" display-tooltip-when-elided="true" class="h2" style="font-size: 12px;"/>
+            <ui:Toggle label="Default Automatic Next On Complete" name="DefaultAutomaticNextOnCompleteField" class="field"/>
+            <ui:FloatField label="Default Automatic Next Delay" value="0" name="DefaultAutomaticNextDelayField" class="field"/>
+            <ui:Label tabindex="-1" text="Choice Node" parse-escape-sequences="true" display-tooltip-when-elided="true" class="h2" style="font-size: 12px;"/>
+            <ui:Toggle label="Timeout Enabled By Default" name="TimeoutEnabledByDefaultField" class="field"/>
+            <ui:FloatField label="Default Timeout Length" value="0" name="DefaultTimeoutLengthField" class="field"/>
+            <ui:Label tabindex="-1" text="Delay Node" parse-escape-sequences="true" display-tooltip-when-elided="true" class="h2" style="font-size: 12px;"/>
+            <ui:FloatField label="Default Delay" value="0" name="DefaultDelayField" class="field"/>
+            <ui:Toggle label="Default Hide Dialogue Box" name="DefaultHideDialogueBoxField" class="field"/>
+            <ui:Label tabindex="-1" text="Danger Zone" parse-escape-sequences="true" display-tooltip-when-elided="true" class="heading" style="font-size: 14px; color: rgb(255, 0, 0);"/>
+            <ui:Label tabindex="-1" text="Always remember to backup your project!" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-style: bold; padding-right: 4px; padding-left: 4px; padding-top: 4px; padding-bottom: 4px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;"/>
+            <ui:Foldout text="Options" value="false">
+                <ui:Button text="Delete All Dialogue Graphs" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DeleteAllGraphsButton" class="field"/>
+                <ui:Button text="Delete All Characters" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DeleteAllCharactersButton" class="field"/>
+                <ui:Button text="Delete All Emotions" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DeleteAllEmotionsButton" class="field"/>
+            </ui:Foldout>
+        </ui:VisualElement>
+    </ui:ScrollView>
+</ui:UXML>

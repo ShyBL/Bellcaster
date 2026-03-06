@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e9869d68f06b74538a01e9b8e406159e
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 301202
+  packageName: Simple Visual Dialogue Editor
+  packageVersion: 1.1
+  assetPath: Assets/Visual-Dialogue-Editor/xNode/package.json
+  uploadId: 795572

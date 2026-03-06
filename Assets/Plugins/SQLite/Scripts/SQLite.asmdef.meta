@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 684e0be275565e843983896705fb4e84
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325697
+  packageName: Feel Speak Lite (Dialogue System)
+  packageVersion: 1.1.0
+  assetPath: Assets/Plugins/SQLite/Scripts/SQLite.asmdef
+  uploadId: 830328

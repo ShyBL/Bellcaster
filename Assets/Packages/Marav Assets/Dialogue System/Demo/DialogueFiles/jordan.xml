@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InterpretationXL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DialogueLines>
+    <GUID>b6e94d6e-6818-4bea-a648-6b597380e25e</GUID>
+    <output_GUID>f6d0485d-4554-4219-8832-a90ac2632a20</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Start</action>
+    <position>
+      <x>0</x>
+      <y>0</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>f6d0485d-4554-4219-8832-a90ac2632a20</GUID>
+    <output_GUID>179fb422-35a8-4984-afe8-eb3a040787fa</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Jordan Baker</characterId>
+    <position>
+      <x>216</x>
+      <y>-21</y>
+    </position>
+    <animation>LoL</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Hola Nick ¿Qué tal?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Hi Nick How are you?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>179fb422-35a8-4984-afe8-eb3a040787fa</GUID>
+    <output_GUID>e54ba24b-caae-46a2-9224-48afd9e31bdf</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>566</x>
+      <y>-21</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Hola Jordan, ¿Está Daisy aquí?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Hi Jordan, is Daisy here?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>e54ba24b-caae-46a2-9224-48afd9e31bdf</GUID>
+    <output_GUID>7a35eefa-d3ec-4bbc-8bbd-967b862439fe</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Jordan Baker</characterId>
+    <position>
+      <x>899</x>
+      <y>-21</y>
+    </position>
+    <animation>No</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>No, está con Tom.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>No, he is with Tom.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>7a35eefa-d3ec-4bbc-8bbd-967b862439fe</GUID>
+    <output_GUID>68e6d7f2-c91d-4258-844e-d2d28b0f8d56</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Jordan Baker</characterId>
+    <position>
+      <x>1221</x>
+      <y>-21</y>
+    </position>
+    <animation>No</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Probablemente discutiendo por infidelidades y cosas así.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Probably arguing about infidelities and such.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>68e6d7f2-c91d-4258-844e-d2d28b0f8d56</GUID>
+    <output_GUID>90412b3f-77cc-49e0-90c7-2212bb1b2579</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>1555</x>
+      <y>-21</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Bueno, ¿De casualidad has visto a Gastby? Lo estoy buscando.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Well, have you by any chance seen Gastby? I'm looking for him.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>90412b3f-77cc-49e0-90c7-2212bb1b2579</GUID>
+    <output_GUID>32dae688-2ad5-4a25-83c0-3ce4a4573826</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Jordan Baker</characterId>
+    <position>
+      <x>1926</x>
+      <y>-21</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Quién jay Gatsby? Nadie lo ha visto en persona.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Who Jay Gatsby? No one has ever seen him in person.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>32dae688-2ad5-4a25-83c0-3ce4a4573826</GUID>
+    <output_GUID>604b39eb-443c-4b19-a549-e5e655300967</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>2254</x>
+      <y>-21</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Ya, y si lo buscamos juntos.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Yeah, and if we look for it together.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>604b39eb-443c-4b19-a549-e5e655300967</GUID>
+    <output_GUID>2ebd3486-2cf0-4d01-97d5-8bcf21ef3910</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Jordan Baker</characterId>
+    <position>
+      <x>2578</x>
+      <y>-21</y>
+    </position>
+    <animation>LoL</animation>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Je je, eso estaria divertido.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Heh heh, that would be fun.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>2ebd3486-2cf0-4d01-97d5-8bcf21ef3910</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>???</characterId>
+    <position>
+      <x>2904</x>
+      <y>-21</y>
+    </position>
+    <variantSpriteId>man 3</variantSpriteId>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Qué haces Nick?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>What are you doing Nick?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <lenguageSelectOnColumns>0</lenguageSelectOnColumns>
+</InterpretationXL>

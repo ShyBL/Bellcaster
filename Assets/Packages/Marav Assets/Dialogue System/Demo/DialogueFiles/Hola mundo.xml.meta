@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 21c70d2c2ecb78b45b9d0a85f5264fd5
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 312875
+  packageName: Dialofy - Easy Dialogue System
+  packageVersion: 1.0.0
+  assetPath: Assets/Marav Assets/Dialogue System/Demo/DialogueFiles/Hola mundo.xml
+  uploadId: 756265

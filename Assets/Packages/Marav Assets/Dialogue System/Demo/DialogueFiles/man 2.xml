@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InterpretationXL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DialogueLines>
+    <GUID>382da0bc-80de-484d-9a0e-528fa9ac4d4e</GUID>
+    <output_GUID>4f861bb2-b18e-49ea-a7b7-74f48bbb8074</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Start</action>
+    <position>
+      <x>-1</x>
+      <y>4</y>
+    </position>
+    <translations />
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>4f861bb2-b18e-49ea-a7b7-74f48bbb8074</GUID>
+    <output_GUID>16159a7b-8b4f-4a24-827a-079164e3930f</output_GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>Nick Carraway</characterId>
+    <position>
+      <x>221</x>
+      <y>4</y>
+    </position>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>Buenas noches, disculpe, ¿A quién tengo que entregarle mi invitación?</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>Good evening, excuse me, to whom should I give my invitation?</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <DialogueLines>
+    <GUID>16159a7b-8b4f-4a24-827a-079164e3930f</GUID>
+    <Switch_outputs_GUIDs />
+    <action>Dialogue</action>
+    <characterId>???</characterId>
+    <position>
+      <x>627</x>
+      <y>4</y>
+    </position>
+    <variantSpriteId>man 2</variantSpriteId>
+    <translations>
+      <translation>
+        <id>Español</id>
+        <text>¿Qué dices? No se necesita invitación para entrar a la fiesta.</text>
+      </translation>
+      <translation>
+        <id>English</id>
+        <text>What do you say? You don't need an invitation to enter the party.</text>
+      </translation>
+    </translations>
+  </DialogueLines>
+  <lenguageSelectOnColumns>0</lenguageSelectOnColumns>
+</InterpretationXL>

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 297ddd411c02eb242bb265e9021dd6fb
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325697
+  packageName: Feel Speak Lite (Dialogue System)
+  packageVersion: 1.1.0
+  assetPath: Assets/StylishEsper/FeelSpeak/Prefabs/uGUI/ChoicesList.prefab
+  uploadId: 830328

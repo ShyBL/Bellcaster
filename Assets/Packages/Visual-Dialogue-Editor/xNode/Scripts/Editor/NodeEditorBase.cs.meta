@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: e85122ded59aceb4eb4b1bd9d9202642
+timeCreated: 1511353946
+licenseType: Store
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 301202
+  packageName: Simple Visual Dialogue Editor
+  packageVersion: 1.1
+  assetPath: Assets/Visual-Dialogue-Editor/xNode/Scripts/Editor/NodeEditorBase.cs
+  uploadId: 795572
