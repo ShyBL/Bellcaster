@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2238e7cbdea4d28bba71d12d4ae8d90, type: 3}
   m_Name: SceneGraphSettings
   m_EditorClassIdentifier: Assembly-CSharp::SceneGraphSettings
-  ViewPosition: {x: 0, y: 0, z: 0}
-  ViewScale: {x: 1, y: 1, z: 1}
+  ViewPosition: {x: 526.8571, y: 164.57143, z: 0}
+  ViewScale: {x: 0.25, y: 0.25, z: 1}
+  WindowColor: {r: 0.15, g: 0.15, b: 0.15, a: 1}
   GridBackgroundColor: {r: 0.2237196, g: 0.13236238, b: 0.21774565, a: 1}
   GridLineColor: {r: 0.44474387, g: 0.20798664, b: 0.43039498, a: 1}
+  NodeSize: {x: 1920, y: 1080}
   NodeTitleColor: {r: 0.48145708, g: 0.09665354, b: 0.48787057, a: 0.95}
   NodeBodyColor: {r: 0.6648518, g: 0.12673904, b: 0.6765498, a: 0.95}
   EdgeColor: {r: 1, g: 1, b: 1, a: 1}

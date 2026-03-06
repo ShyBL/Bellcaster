@@ -15,6 +15,10 @@ public class SceneGraphSettings : ScriptableObject
     public Vector3 ViewPosition = Vector3.zero;
     public Vector3 ViewScale    = Vector3.one;
 
+    // ── Window ───────────────────────────────────────────────────────────────
+    [Header("Window")]
+    public Color WindowColor = new Color(0.15f, 0.15f, 0.15f, 1f);
+
     // ── Grid ─────────────────────────────────────────────────────────────────
     [Header("Grid")]
     public Color GridBackgroundColor = new Color(0.17f, 0.17f, 0.17f, 1f);
@@ -22,8 +26,9 @@ public class SceneGraphSettings : ScriptableObject
 
     // ── Nodes ─────────────────────────────────────────────────────────────────
     [Header("Nodes")]
-    public Color NodeTitleColor      = new Color(0.16f, 0.16f, 0.16f, 0.95f);
-    public Color NodeBodyColor       = new Color(0.22f, 0.22f, 0.22f, 0.95f);
+    public Vector2 NodeSize       = new Vector2(210, 180);
+    public Color NodeTitleColor   = new Color(0.16f, 0.16f, 0.16f, 0.95f);
+    public Color NodeBodyColor    = new Color(0.22f, 0.22f, 0.22f, 0.95f);
 
     // ── Edges ─────────────────────────────────────────────────────────────────
     [Header("Edges")]

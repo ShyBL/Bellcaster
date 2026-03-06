@@ -1,14 +1,13 @@
 ﻿using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.Rendering;
 using System.IO;
 
 [InitializeOnLoad]
 public static class SceneThumbnailRecorder
 {
     private const string THUMBNAIL_FOLDER = "Assets/Editor/SceneThumbnails";
-    private const int WIDTH  = 256;
-    private const int HEIGHT = 144; // 16:9
 
     static SceneThumbnailRecorder()
     {
@@ -22,83 +21,82 @@ public static class SceneThumbnailRecorder
 
     public static void CaptureThumbnail(UnityEngine.SceneManagement.Scene scene)
     {
-        Camera cam = FindSceneCamera(scene);
-
-        if (cam == null)
-        {
-            Debug.LogWarning($"[SceneThumbnailRecorder] No camera found in '{scene.name}'. Thumbnail not captured.");
-            return;
-        }
+        Camera sceneCam = FindSceneCamera(scene);
+        if (sceneCam == null) return;
 
         if (!Directory.Exists(THUMBNAIL_FOLDER))
             Directory.CreateDirectory(THUMBNAIL_FOLDER);
 
-        // Render from the game camera into a RenderTexture
-        RenderTexture rt = new RenderTexture(WIDTH, HEIGHT, 24, RenderTextureFormat.ARGB32);
-        rt.antiAliasing  = 1;
+        // 1. SUPERSAMPLING (Capture at 1024 for a 512 display)
+        int width = 1024; 
+        int height = 576; 
 
-        RenderTexture prevTarget = cam.targetTexture;
-        Rect          prevRect   = cam.rect;
+        // 2. COLOR SPACE: Use sRGB = true if project is Linear
+        RenderTextureDescriptor desc = new RenderTextureDescriptor(width, height, RenderTextureFormat.ARGB32, 24);
+        desc.sRGB = QualitySettings.activeColorSpace == ColorSpace.Linear;
+        desc.msaaSamples = 8; // Anti-aliasing
 
-        cam.targetTexture = rt;
-        cam.rect          = new Rect(0, 0, 1, 1); // full render, ignore any viewport splits
-        cam.Render();
+        RenderTexture rt = RenderTexture.GetTemporary(desc);
+        sceneCam.targetTexture = rt;
 
-        // Read pixels out
+        // 3. RENDER (Standard Public API)
+        // In SRP (URP/HDRP), this call automatically triggers the pipeline's 
+        // internal rendering logic including Post-Processing.
+        sceneCam.Render();
+
         RenderTexture.active = rt;
-        Texture2D thumbnail  = new Texture2D(WIDTH, HEIGHT, TextureFormat.RGB24, false);
-        thumbnail.ReadPixels(new Rect(0, 0, WIDTH, HEIGHT), 0, 0);
-        thumbnail.Apply();
+        Texture2D screenShot = new Texture2D(width, height, TextureFormat.RGB24, false, QualitySettings.activeColorSpace == ColorSpace.Linear);
+        screenShot.ReadPixels(new Rect(0, 0, width, height), 0, 0);
+        screenShot.Apply();
 
-        // Restore camera state
-        cam.targetTexture = prevTarget;
-        cam.rect          = prevRect;
+        // Clean up
+        sceneCam.targetTexture = null;
         RenderTexture.active = null;
-        Object.DestroyImmediate(rt);
+        RenderTexture.ReleaseTemporary(rt);
 
-        // Write to disk
-        byte[] bytes   = thumbnail.EncodeToPNG();
-        string guid    = AssetDatabase.AssetPathToGUID(scene.path);
-        string filePath = $"{THUMBNAIL_FOLDER}/{guid}.png";
-
-        File.WriteAllBytes(filePath, bytes);
-        AssetDatabase.ImportAsset(filePath);
-
-        Object.DestroyImmediate(thumbnail);
+        byte[] bytes = screenShot.EncodeToPNG();
+        string guid = AssetDatabase.AssetPathToGUID(scene.path);
+        string fileName = $"{THUMBNAIL_FOLDER}/{guid}.png";
+    
+        File.WriteAllBytes(fileName, bytes);
+    
+        // 4. FORCE HIGH QUALITY IMPORT SETTINGS
+        AssetDatabase.ImportAsset(fileName);
+        SetHighQualityImportSettings(fileName);
     }
 
-    /// <summary>
-    /// Finds the best camera to use for the thumbnail in this order:
-    /// 1. Camera tagged "MainCamera" that belongs to this scene
-    /// 2. Any enabled camera in the scene (lowest depth wins = background camera)
-    /// </summary>
-    private static Camera FindSceneCamera(UnityEngine.SceneManagement.Scene scene)
+    private static void SetHighQualityImportSettings(string path)
     {
-        // Camera.main only works if the scene is active, so we search manually
-        Camera best = null;
+        TextureImporter importer = AssetImporter.GetAtPath(path) as TextureImporter;
+        if (importer == null) return;
 
-        foreach (GameObject root in scene.GetRootGameObjects())
-        {
-            foreach (Camera cam in root.GetComponentsInChildren<Camera>(includeInactive: false))
-            {
-                if (!cam.enabled) continue;
+        importer.textureType = TextureImporterType.GUI; // Optimized for UI
+        importer.mipmapEnabled = false;                 // Crisper at small sizes
+        importer.filterMode = FilterMode.Bilinear;
+        importer.textureCompression = TextureImporterCompression.Uncompressed; // FIXES PIXELATION
+        importer.sRGBTexture = QualitySettings.activeColorSpace == ColorSpace.Linear;
 
-                // Prefer MainCamera tag
-                if (cam.CompareTag("MainCamera"))
-                    return cam;
-
-                // Otherwise take the one with the lowest depth (renders first / background)
-                if (best == null || cam.depth < best.depth)
-                    best = cam;
-            }
-        }
-
-        return best;
+        importer.SaveAndReimport();
     }
 
     public static Texture2D GetThumbnail(string guid)
     {
         string path = $"{THUMBNAIL_FOLDER}/{guid}.png";
         return AssetDatabase.LoadAssetAtPath<Texture2D>(path);
+    }
+
+    private static Camera FindSceneCamera(UnityEngine.SceneManagement.Scene scene)
+    {
+        Camera best = null;
+        foreach (GameObject root in scene.GetRootGameObjects())
+        {
+            foreach (Camera cam in root.GetComponentsInChildren<Camera>(false))
+            {
+                if (!cam.enabled) continue;
+                if (cam.CompareTag("MainCamera")) return cam;
+                if (best == null || cam.depth < best.depth) best = cam;
+            }
+        }
+        return best;
     }
 }

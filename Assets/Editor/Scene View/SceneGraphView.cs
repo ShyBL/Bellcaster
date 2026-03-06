@@ -79,27 +79,26 @@ public class SceneGraphView : GraphView
         var node = new Node { title = sceneName, viewDataKey = guid };
 
         // Ports
-        var inputPort = node.InstantiatePort(Orientation.Horizontal, Direction.Input,
-                                             Port.Capacity.Multi, typeof(bool));
+        var inputPort = node.InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Multi, typeof(bool));
         inputPort.portName = "In";
         node.inputContainer.Add(inputPort);
 
-        var outputPort = node.InstantiatePort(Orientation.Horizontal, Direction.Output,
-                                              Port.Capacity.Multi, typeof(bool));
+        var outputPort = node.InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Multi, typeof(bool));
         outputPort.portName = "Out";
         node.outputContainer.Add(outputPort);
 
         // Thumbnail
         var imageSection = new VisualElement();
         imageSection.style.paddingTop = imageSection.style.paddingBottom =
-        imageSection.style.paddingLeft = imageSection.style.paddingRight = 5;
+            imageSection.style.paddingLeft = imageSection.style.paddingRight = 5;
 
-        var thumbnail = new Image
-        {
-            scaleMode = ScaleMode.ScaleAndCrop
-        };
-        thumbnail.style.width  = new Length(100, LengthUnit.Percent);
-        thumbnail.style.height = 112;
+        var thumbnail = new Image { scaleMode = ScaleMode.ScaleAndCrop };
+    
+        // FIX 1: Calculate explicit pixel dimensions instead of relying on 100% Flexbox width
+        float thumbWidth = _settings.NodeSize.x - 10f; // Node width minus 5px padding on each side
+        float thumbHeight = thumbWidth * (9f / 16f);
+        thumbnail.style.width  = thumbWidth;
+        thumbnail.style.height = thumbHeight;
 
         Texture2D tex = SceneThumbnailRecorder.GetThumbnail(guid);
         if (tex != null)
@@ -120,9 +119,12 @@ public class SceneGraphView : GraphView
         node.mainContainer.Add(imageSection);
         node.extensionContainer.style.display = DisplayStyle.None;
 
+        // FIX 2: Explicitly set the node's style width so the background stretches
+        node.style.width = _settings.NodeSize.x;
+
         node.RefreshExpandedState();
         node.RefreshPorts();
-        node.SetPosition(new Rect(position, new Vector2(210, 180)));
+        node.SetPosition(new Rect(position, _settings.NodeSize));
 
         AddElement(node);
         _sceneNodes.Add(node);
@@ -164,8 +166,16 @@ public class SceneGraphView : GraphView
         if (titleBar != null)
             titleBar.style.backgroundColor = _settings.NodeTitleColor;
 
-        // Body (mainContainer)
-        node.mainContainer.style.backgroundColor = _settings.NodeBodyColor;
+        // FIX 3: Target 'node-border' instead of 'mainContainer'
+        // The node-border is the actual master background of a GraphView Node.
+        var nodeBorder = node.Q("node-border");
+        if (nodeBorder != null)
+        {
+            nodeBorder.style.backgroundColor = _settings.NodeBodyColor;
+        }
+    
+        // Clear the mainContainer color just in case it's layering weirdly
+        node.mainContainer.style.backgroundColor = new StyleColor(StyleKeyword.Null);
     }
 
     private void ApplyEdgeColor(Edge edge)
