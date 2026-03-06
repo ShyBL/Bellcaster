@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5de1a18067947e994be62eb212fed8c, type: 3}
+  m_Name: SceneGraphSaveData
+  m_EditorClassIdentifier: Assembly-CSharp::SceneGraphData
+  Nodes:
+  - GUID: 29569e6116c194d41891433925724bba
+    SceneName: Scene - 4
+    Position: {x: 621.7143, y: 163.42856}
+  - GUID: b087f2c0e44d8584693278e9763f8a16
+    SceneName: Scene - 3
+    Position: {x: 462.85715, y: 163.42856}
+  - GUID: 7fe15eaf99635a74fab9b37fa067875b
+    SceneName: Scene - 2
+    Position: {x: 297.7143, y: 163.42856}
+  - GUID: c33c108055377c34ea4f8600b2bfe3cd
+    SceneName: Scene - 1
+    Position: {x: 150.85715, y: 163.42856}
+  Edges: []
