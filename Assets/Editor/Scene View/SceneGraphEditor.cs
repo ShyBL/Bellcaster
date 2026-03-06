@@ -107,7 +107,15 @@ public class SceneGraphEditor : EditorWindow
         toolbar.Add(autoSaveToggle);
 
         toolbar.Add(new ToolbarButton(() => SaveData())       { text = "Save"    });
-        toolbar.Add(new ToolbarButton(() => ConstructGraph()) { text = "Refresh" });
+        var refreshBtn = new ToolbarButton(() => {
+            // First, regenerate all images
+            SceneThumbnailRecorder.RefreshAllThumbnails();
+            // Then, rebuild the graph UI to show the new images
+            ConstructGraph(); 
+        }) { text = "Refresh & Recapture" };
+
+        toolbar.Add(refreshBtn);
+        // toolbar.Add(new ToolbarButton(() => ConstructGraph()) { text = "Refresh" });
 
         return toolbar;
     }

@@ -99,4 +99,43 @@ public static class SceneThumbnailRecorder
         }
         return best;
     }
+    
+    public static void RefreshAllThumbnails()
+    {
+        // 1. Save current state
+        string originalScenePath = UnityEngine.SceneManagement.SceneManager.GetActiveScene().path;
+        if (!EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
+
+        var buildScenes = EditorBuildSettings.scenes;
+        int count = buildScenes.Length;
+
+        try 
+        {
+            for (int i = 0; i < count; i++)
+            {
+                string path = buildScenes[i].path;
+                if (string.IsNullOrEmpty(path)) continue;
+
+                // Show progress bar
+                EditorUtility.DisplayProgressBar("Capturing Thumbnails", $"Processing: {path}", (float)i / count);
+
+                // 2. Open the scene
+                var scene = EditorSceneManager.OpenScene(path, OpenSceneMode.Single);
+            
+                // 3. Capture
+                CaptureThumbnail(scene);
+            }
+        }
+        finally
+        {
+            // 4. Cleanup
+            EditorUtility.ClearProgressBar();
+        
+            // Return to the original scene
+            if (!string.IsNullOrEmpty(originalScenePath))
+                EditorSceneManager.OpenScene(originalScenePath, OpenSceneMode.Single);
+        
+            AssetDatabase.Refresh();
+        }
+    }
 }
