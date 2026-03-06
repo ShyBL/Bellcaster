@@ -7,104 +7,320 @@ using System.Linq;
 
 public class SceneGraphView : GraphView
 {
-    private SceneGraphData _container;
+    private SceneGraphData     _container;
+    private SceneGraphSettings _settings;
+    private SceneGraphEditor   _editor;
+    private ColorableGrid      _grid;
 
-    public SceneGraphView(SceneGraphData container)
+    // Keep references to all live nodes so we can re-tint them when settings change
+    private readonly List<Node> _sceneNodes = new List<Node>();
+
+    public SceneGraphView(SceneGraphData container, SceneGraphSettings settings, SceneGraphEditor editor)
     {
         _container = container;
+        _settings  = settings;
+        _editor    = editor;
 
         SetupZoom(ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale);
         this.AddManipulator(new ContentDragger());
         this.AddManipulator(new SelectionDragger());
         this.AddManipulator(new RectangleSelector());
 
-        var grid = new GridBackground();
-        Insert(0, grid);
-        grid.StretchToParentSize();
+        // Custom painted grid — respects our color settings at runtime
+        _grid = new ColorableGrid();
+        Insert(0, _grid);
+        _grid.StretchToParentSize();
 
         graphViewChanged = OnGraphViewChanged;
 
+        // Apply colors before populating so nodes get the right tint on creation
+        ApplySettings(_settings);
         PopulateGraph();
+
+        // Restore saved viewport (must happen after layout, hence delayCall)
+        EditorApplication.delayCall += RestoreViewport;
     }
+
+    // ── Population ────────────────────────────────────────────────────────────
 
     private void PopulateGraph()
     {
-        // 1. Get only scenes included in Build Settings
-        var buildScenes = EditorBuildSettings.scenes;
-        
-        foreach (var scene in buildScenes)
+        // 1. Nodes
+        foreach (var scene in EditorBuildSettings.scenes)
         {
-            // Get the GUID for the scene asset
             string guid = scene.guid.ToString();
-            
-            // Get the path and name
             string path = AssetDatabase.GUIDToAssetPath(guid);
-            if (string.IsNullOrEmpty(path)) continue; // Skip if scene was deleted but still in build settings
-            
-            string name = System.IO.Path.GetFileNameWithoutExtension(path);
+            if (string.IsNullOrEmpty(path)) continue;
 
-            // Find existing saved position or default to center
-            var savedNode = _container.Nodes.FirstOrDefault(n => n.GUID == guid);
-            Vector2 pos = (savedNode != null) ? savedNode.Position : new Vector2(100, 100);
+            string name      = System.IO.Path.GetFileNameWithoutExtension(path);
+            var    savedNode = _container.Nodes.FirstOrDefault(n => n.GUID == guid);
+            Vector2 pos      = savedNode != null ? savedNode.Position : new Vector2(100, 100);
 
             CreateSceneNode(guid, name, pos);
         }
 
-        // Optional: Clean up data for scenes no longer in the build
-        var buildGuids = buildScenes.Select(s => s.guid.ToString()).ToList();
-        _container.Nodes.RemoveAll(n => !buildGuids.Contains(n.GUID));
+        // 2. Restore saved edges
+        foreach (var edgeData in _container.Edges)
+        {
+            var outputNode = GetNodeByGUID(edgeData.BaseNodeGUID);
+            var inputNode  = GetNodeByGUID(edgeData.TargetNodeGUID);
+            if (outputNode == null || inputNode == null) continue;
+
+            var outputPort = outputNode.outputContainer.Q<Port>();
+            var inputPort  = inputNode.inputContainer.Q<Port>();
+            if (outputPort == null || inputPort == null) continue;
+
+            AddElement(outputPort.ConnectTo(inputPort));
+        }
     }
 
     private void CreateSceneNode(string guid, string sceneName, Vector2 position)
     {
-        // We use the GUID as the viewDataKey so we can identify the node during moves
         var node = new Node { title = sceneName, viewDataKey = guid };
 
-        // Input Port
-        var inputPort = node.InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Multi, typeof(bool));
+        // Ports
+        var inputPort = node.InstantiatePort(Orientation.Horizontal, Direction.Input,
+                                             Port.Capacity.Multi, typeof(bool));
         inputPort.portName = "In";
         node.inputContainer.Add(inputPort);
 
-        // Output Port
-        var outputPort = node.InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Multi, typeof(bool));
+        var outputPort = node.InstantiatePort(Orientation.Horizontal, Direction.Output,
+                                              Port.Capacity.Multi, typeof(bool));
         outputPort.portName = "Out";
         node.outputContainer.Add(outputPort);
 
-        node.SetPosition(new Rect(position, new Vector2(200, 150)));
+        // Thumbnail
+        var imageSection = new VisualElement();
+        imageSection.style.paddingTop = imageSection.style.paddingBottom =
+        imageSection.style.paddingLeft = imageSection.style.paddingRight = 5;
+
+        var thumbnail = new Image
+        {
+            scaleMode = ScaleMode.ScaleAndCrop
+        };
+        thumbnail.style.width  = new Length(100, LengthUnit.Percent);
+        thumbnail.style.height = 112;
+
+        Texture2D tex = SceneThumbnailRecorder.GetThumbnail(guid);
+        if (tex != null)
+        {
+            thumbnail.image = tex;
+        }
+        else
+        {
+            var placeholder = new Label("No Preview Available");
+            placeholder.style.unityTextAlign = TextAnchor.MiddleCenter;
+            placeholder.style.flexGrow = 1;
+            placeholder.style.color    = Color.gray;
+            thumbnail.Add(placeholder);
+            thumbnail.style.backgroundColor = Color.black;
+        }
+
+        imageSection.Add(thumbnail);
+        node.mainContainer.Add(imageSection);
+        node.extensionContainer.style.display = DisplayStyle.None;
+
+        node.RefreshExpandedState();
+        node.RefreshPorts();
+        node.SetPosition(new Rect(position, new Vector2(210, 180)));
+
         AddElement(node);
+        _sceneNodes.Add(node);
+
+        // Apply current node colors
+        ApplyNodeColors(node);
     }
+
+    // ── Settings / styling ────────────────────────────────────────────────────
+
+    /// <summary>Called from the editor settings panel on any color change.</summary>
+    public void ApplySettings(SceneGraphSettings s)
+    {
+        _settings = s;
+
+        // Drive our custom painted grid
+        if (_grid != null)
+        {
+            _grid.BackgroundColor = s.GridBackgroundColor;
+            _grid.LineColor       = s.GridLineColor;
+            _grid.MarkDirtyRepaint();
+        }
+
+        // Node colors
+        foreach (var node in _sceneNodes)
+            ApplyNodeColors(node);
+
+        // Edge colors
+        foreach (var edge in edges.ToList())
+            ApplyEdgeColor(edge);
+    }
+
+    private void ApplyNodeColors(Node node)
+    {
+        if (_settings == null) return;
+
+        // Title bar
+        var titleBar = node.Q("title");
+        if (titleBar != null)
+            titleBar.style.backgroundColor = _settings.NodeTitleColor;
+
+        // Body (mainContainer)
+        node.mainContainer.style.backgroundColor = _settings.NodeBodyColor;
+    }
+
+    private void ApplyEdgeColor(Edge edge)
+    {
+        if (_settings == null) return;
+        edge.edgeControl.inputColor  = _settings.EdgeColor;
+        edge.edgeControl.outputColor = _settings.EdgeColor;
+    }
+
+    // ── Viewport persistence ──────────────────────────────────────────────────
+
+    public void SaveViewport(SceneGraphSettings s)
+    {
+        s.ViewPosition = viewTransform.position;
+        s.ViewScale    = viewTransform.scale;
+    }
+
+    private void RestoreViewport()
+    {
+        if (_settings == null) return;
+        UpdateViewTransform(_settings.ViewPosition, _settings.ViewScale);
+    }
+
+    // ── Edge serialization ────────────────────────────────────────────────────
+
+    public void SerializeEdges()
+    {
+        _container.Edges.Clear();
+
+        foreach (var edge in edges.ToList())
+        {
+            var outputNode = edge.output?.node as Node;
+            var inputNode  = edge.input?.node  as Node;
+            if (outputNode == null || inputNode == null) continue;
+
+            _container.Edges.Add(new EdgeData
+            {
+                BaseNodeGUID   = outputNode.viewDataKey,
+                TargetNodeGUID = inputNode.viewDataKey
+            });
+        }
+    }
+
+    // ── Graph change callback ─────────────────────────────────────────────────
 
     private GraphViewChange OnGraphViewChanged(GraphViewChange change)
     {
+        bool hasChanged = false;
+
         if (change.movedElements != null)
         {
             foreach (var element in change.movedElements)
             {
-                if (element is Node node)
+                if (element is not Node node) continue;
+                var nodeData = _container.Nodes.FirstOrDefault(n => n.GUID == node.viewDataKey);
+                if (nodeData == null)
                 {
-                    string guid = node.viewDataKey;
-                    var nodeData = _container.Nodes.FirstOrDefault(n => n.GUID == guid);
-                    
-                    if (nodeData == null)
-                    {
-                        nodeData = new NodeData { GUID = guid, SceneName = node.title };
-                        _container.Nodes.Add(nodeData);
-                    }
-                    
-                    nodeData.Position = node.GetPosition().position;
+                    nodeData = new NodeData { GUID = node.viewDataKey, SceneName = node.title };
+                    _container.Nodes.Add(nodeData);
                 }
+                nodeData.Position = node.GetPosition().position;
+                hasChanged = true;
             }
-            EditorUtility.SetDirty(_container);
-            AssetDatabase.SaveAssets(); // Ensure it writes to disk immediately
         }
+
+        // Color newly created edges immediately
+        if (change.edgesToCreate != null)
+        {
+            foreach (var edge in change.edgesToCreate)
+                ApplyEdgeColor(edge);
+        }
+
+        if (hasChanged
+            || (change.elementsToRemove != null && change.elementsToRemove.Count > 0)
+            || (change.edgesToCreate    != null && change.edgesToCreate.Count    > 0))
+        {
+            EditorApplication.delayCall += () => {
+                if (_container != null) _editor.RequestSave();
+            };
+        }
+
         return change;
     }
 
-    // Overriding this allows us to use the standard "Connect" behavior
-    public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
+    // ── Helpers ───────────────────────────────────────────────────────────────
+
+    private Node GetNodeByGUID(string guid) =>
+        nodes.ToList().OfType<Node>().FirstOrDefault(n => n.viewDataKey == guid);
+
+    public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter) =>
+        ports.ToList().Where(p => p.direction != startPort.direction && p.node != startPort.node).ToList();
+}
+
+/// <summary>
+/// A fully custom-painted grid that replaces GridBackground so we can
+/// control both background and line colors at runtime without USS fights.
+/// </summary>
+public class ColorableGrid : VisualElement
+{
+    public Color BackgroundColor = new Color(0.17f, 0.17f, 0.17f, 1f);
+    public Color LineColor       = new Color(0.22f, 0.22f, 0.22f, 1f);
+
+    private const float SmallStep = 20f;
+    private const float LargeStep = 100f;
+
+    public ColorableGrid()
     {
-        return ports.ToList().Where(endPort => 
-            endPort.direction != startPort.direction && 
-            endPort.node != startPort.node).ToList();
+        generateVisualContent += OnGenerateVisualContent;
+        // Prevent grid from blocking mouse events on the graph
+        pickingMode = PickingMode.Ignore;
+    }
+
+    private void OnGenerateVisualContent(MeshGenerationContext ctx)
+    {
+        var painter = ctx.painter2D;
+        var r       = contentRect;
+
+        // Background fill
+        painter.fillColor = BackgroundColor;
+        painter.BeginPath();
+        painter.MoveTo(new Vector2(r.xMin, r.yMin));
+        painter.LineTo(new Vector2(r.xMax, r.yMin));
+        painter.LineTo(new Vector2(r.xMax, r.yMax));
+        painter.LineTo(new Vector2(r.xMin, r.yMax));
+        painter.ClosePath();
+        painter.Fill();
+
+        // Small grid lines (thin, more transparent)
+        DrawLines(painter, r, SmallStep, new Color(LineColor.r, LineColor.g, LineColor.b, LineColor.a * 0.5f), 0.5f);
+
+        // Large grid lines (slightly stronger)
+        DrawLines(painter, r, LargeStep, LineColor, 1f);
+    }
+
+    private static void DrawLines(Painter2D painter, Rect r, float step, Color color, float width)
+    {
+        painter.strokeColor = color;
+        painter.lineWidth   = width;
+
+        // Vertical lines
+        for (float x = r.xMin - (r.xMin % step); x <= r.xMax; x += step)
+        {
+            painter.BeginPath();
+            painter.MoveTo(new Vector2(x, r.yMin));
+            painter.LineTo(new Vector2(x, r.yMax));
+            painter.Stroke();
+        }
+
+        // Horizontal lines
+        for (float y = r.yMin - (r.yMin % step); y <= r.yMax; y += step)
+        {
+            painter.BeginPath();
+            painter.MoveTo(new Vector2(r.xMin, y));
+            painter.LineTo(new Vector2(r.xMax, y));
+            painter.Stroke();
+        }
     }
 }
