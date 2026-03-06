@@ -2,6 +2,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(BoxCollider2D))]
 public class Interactable : MonoBehaviour
 {
     public InteractableData data;
