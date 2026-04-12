@@ -9,7 +9,7 @@
 public class SceneGraphSettings : ScriptableObject
 {
     private const string AssetPath = "Assets/Editor/SceneGraphSettings.asset";
-
+    
     // ── Viewport ─────────────────────────────────────────────────────────────
     [Header("Viewport")]
     public Vector3 ViewPosition = Vector3.zero;
@@ -18,7 +18,9 @@ public class SceneGraphSettings : ScriptableObject
     // ── Window ───────────────────────────────────────────────────────────────
     [Header("Window")]
     public Color WindowColor = new Color(0.15f, 0.15f, 0.15f, 1f);
-
+    [Header("Appearance")]
+    public int GlobalFontSize = 12;
+    
     // ── Grid ─────────────────────────────────────────────────────────────────
     [Header("Grid")]
     public Color GridBackgroundColor = new Color(0.17f, 0.17f, 0.17f, 1f);
