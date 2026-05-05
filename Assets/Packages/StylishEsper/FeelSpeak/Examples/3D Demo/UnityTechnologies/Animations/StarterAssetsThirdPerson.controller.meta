@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 463053a9efd3bdf4585674b7a0a805a6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325697
+  packageName: Feel Speak Lite (Dialogue System)
+  packageVersion: 1.1.2
+  assetPath: Assets/Packages/StylishEsper/FeelSpeak/Examples/3D Demo/UnityTechnologies/Animations/StarterAssetsThirdPerson.controller
+  uploadId: 875836

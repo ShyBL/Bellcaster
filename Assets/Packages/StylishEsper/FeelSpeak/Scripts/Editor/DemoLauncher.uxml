@@ -1,0 +1,25 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/StylishEsper/FeelSpeak/Scripts/Editor/DemoLauncher.uss?fileID=7433441132597879392&amp;guid=5f78fff66b08cb1428523f4ff9846465&amp;type=3#DemoLauncher"/>
+    <uie:Toolbar/>
+    <ui:VisualElement style="flex-grow: 1; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;">
+        <ui:Label tabindex="-1" text="Step 1: Import Demo Assets" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 16px; -unity-text-align: upper-center; -unity-font-style: bold;"/>
+        <ui:Label tabindex="-1" text="Importing the demo assets is &lt;b&gt;required&lt;/b&gt; to run the demo scenes. If you no longer need the demo assets, you can choose to remove them from the project." parse-escape-sequences="true" display-tooltip-when-elided="true" style="white-space: normal; -unity-text-align: upper-center; font-size: 13px;"/>
+        <ui:Label tabindex="-1" text="The demo assets have not been imported." parse-escape-sequences="true" display-tooltip-when-elided="true" name="ImportedLabel" style="-unity-text-align: upper-center; font-size: 14px; margin-top: 8px; margin-bottom: 8px;"/>
+        <ui:VisualElement style="flex-grow: 0; flex-direction: row; justify-content: center; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px;">
+            <ui:Button text="Import" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ImportButton" tooltip="Imports the demo assets into the project." style="font-size: 14px; width: 100px;"/>
+            <ui:Button text="Remove" parse-escape-sequences="true" display-tooltip-when-elided="true" name="RemoveButton" tooltip="Completely removes the demo assets from the project." style="font-size: 14px; width: 100px;"/>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 0; height: 40px;"/>
+        <ui:Label tabindex="-1" text="Step 2: Choose Demo Scene" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 16px; -unity-text-align: upper-center; -unity-font-style: bold;"/>
+        <ui:Label tabindex="-1" text="After importing the demo assets from above, select a scene and enter play mode." parse-escape-sequences="true" display-tooltip-when-elided="true" style="white-space: normal; -unity-text-align: upper-center; font-size: 13px;"/>
+        <ui:ScrollView mode="Horizontal" style="flex-grow: 1;">
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="FS3D" tooltip="The 3D demo scene." class="scene" style="background-image: url(&quot;project://database/Assets/StylishEsper/FeelSpeak/Editor/fs3d_scene_graphic.png?fileID=2800000&amp;guid=b14c250d0ff1c594fabcf32bb7e7d108&amp;type=3#fs3d_scene_graphic&quot;);">
+                <ui:Label tabindex="-1" text="3D" parse-escape-sequences="true" display-tooltip-when-elided="true" class="sceneTitle"/>
+            </ui:Button>
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="FS2D" tooltip="The 2D demo scene." class="scene" style="background-image: url(&quot;project://database/Assets/StylishEsper/FeelSpeak/Editor/fs2d_scene_graphic.png?fileID=2800000&amp;guid=3cc6fb37c225bad43ad181b2eb4d465a&amp;type=3#fs2d_scene_graphic&quot;);">
+                <ui:Label tabindex="-1" text="2D" parse-escape-sequences="true" display-tooltip-when-elided="true" class="sceneTitle"/>
+            </ui:Button>
+        </ui:ScrollView>
+        <ui:VisualElement style="flex-grow: 1; align-self: center; flex-direction: row; align-items: center;"/>
+    </ui:VisualElement>
+</ui:UXML>

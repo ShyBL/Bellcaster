@@ -1,0 +1,36 @@
+.scene {
+    width: 384px;
+    height: 216px;
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-bottom: 32px;
+    margin-left: 8px;
+    padding-top: 2px;
+    padding-right: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    overflow: visible;
+    transition-duration: 0.2s;
+    -unity-background-image-tint-color: rgb(189, 189, 189);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    justify-content: flex-end;
+}
+
+.sceneTitle {
+    font-size: 13px;
+    -unity-font-style: bold;
+}
+
+.scene:hover {
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    width: 480px;
+    height: 270px;
+}
+
+.unity-scroll-view__content-container {
+    align-items: center;
+    align-self: center;
+}

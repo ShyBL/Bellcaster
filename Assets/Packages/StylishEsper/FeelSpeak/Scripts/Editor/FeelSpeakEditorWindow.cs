@@ -71,11 +71,18 @@ namespace Esper.FeelSpeak.Editor
         private int totalCount;
         private bool filterOn;
 
-        [MenuItem("Window/Feel Speak/Object Manager")]
+        [MenuItem("Window/Feel Speak/Object Manager", secondaryPriority = 0)]
         public static void Open()
         {
-            FeelSpeakEditorWindow wnd = GetWindow<FeelSpeakEditorWindow>();
-            wnd.titleContent = new GUIContent("Feel Speak");
+            try
+            {
+                FeelSpeakEditorWindow wnd = GetWindow<FeelSpeakEditorWindow>();
+                wnd.titleContent = new GUIContent("Object Manager");
+            }
+            catch
+            {
+
+            }
         }
 
         private void CreateGUI()
@@ -553,126 +560,134 @@ namespace Esper.FeelSpeak.Editor
 
         private void ReloadCurrentPage()
         {
-            if (dialogueTab.style.display == DisplayStyle.Flex)
+            try
             {
-                dialogueTab.Clear();
-                loadedGraphElements.Clear();
-                List<DialogueRecord> records;
-
-                if (!filterOn)
+                if (dialogueTab.style.display == DisplayStyle.Flex)
                 {
-                    var min = (currentPage - 1) * amountPerPage;
-                    var max = currentPage * amountPerPage;
-                    records = FeelSpeakDatabase.GetDialogueRecords(min, max, "%", sortField.index == 1);
+                    dialogueTab.Clear();
+                    loadedGraphElements.Clear();
+                    List<DialogueRecord> records;
+
+                    if (!filterOn)
+                    {
+                        var min = (currentPage - 1) * amountPerPage;
+                        var max = currentPage * amountPerPage;
+                        records = FeelSpeakDatabase.GetDialogueRecords(min, max, "%", sortField.index == 1);
+                    }
+                    else
+                    {
+                        var min = (currentPageFiltered - 1) * amountPerPage;
+                        var max = currentPageFiltered * amountPerPage;
+                        records = FeelSpeakDatabase.GetDialogueRecords(min, max, searchField.value, sortField.index == 1);
+                    }
+
+                    foreach (var record in records)
+                    {
+                        var obj = FeelSpeak.GetDialogueGraph(record);
+
+                        try
+                        {
+                            var element = new DialogueElement(obj);
+                            element.clicked += () => SelectGraph(obj);
+                            element.Refresh();
+                            dialogueTab.Add(element);
+                            loadedGraphElements.Add(obj, element);
+                        }
+                        catch
+                        {
+                            obj.graphName = obj.SanitizeName(obj.graphName);
+                            obj.UpdateAssetName();
+                            Debug.LogError("A dialogue graph failed to load. Please try again later.");
+                        }
+                    }
+                }
+                else if (characterTab.style.display == DisplayStyle.Flex)
+                {
+                    characterTab.Clear();
+                    loadedCharacterElements.Clear();
+                    List<CharacterRecord> records;
+
+                    if (!filterOn)
+                    {
+                        var min = (currentPage - 1) * amountPerPage;
+                        var max = currentPage * amountPerPage;
+                        records = FeelSpeakDatabase.GetCharacterRecords(min, max, "%", sortField.index == 1);
+                    }
+                    else
+                    {
+                        var min = (currentPageFiltered - 1) * amountPerPage;
+                        var max = currentPageFiltered * amountPerPage;
+                        records = FeelSpeakDatabase.GetCharacterRecords(min, max, searchField.value, sortField.index == 1);
+                    }
+
+                    foreach (var record in records)
+                    {
+                        var obj = FeelSpeak.GetCharacter(record);
+
+                        try
+                        {
+                            var element = new CharacterElement(obj);
+                            element.clicked += () => SelectCharacter(obj);
+                            element.Refresh();
+                            characterTab.Add(element);
+                            loadedCharacterElements.Add(obj, element);
+                        }
+                        catch
+                        {
+                            obj.characterName = obj.SanitizeName(obj.characterName);
+                            obj.UpdateAssetName();
+                            Debug.LogError("A character failed to load. Please try again later.");
+                        }
+                    }
                 }
                 else
                 {
-                    var min = (currentPageFiltered - 1) * amountPerPage;
-                    var max = currentPageFiltered * amountPerPage;
-                    records = FeelSpeakDatabase.GetDialogueRecords(min, max, searchField.value, sortField.index == 1);
+                    emotionTab.Clear();
+                    loadedEmotionElements.Clear();
+                    List<EmotionRecord> records;
+
+                    if (!filterOn)
+                    {
+                        var min = (currentPage - 1) * amountPerPage;
+                        var max = currentPage * amountPerPage;
+                        records = FeelSpeakDatabase.GetEmotionRecords(min, max, "%", sortField.index == 1);
+                    }
+                    else
+                    {
+                        var min = (currentPageFiltered - 1) * amountPerPage;
+                        var max = currentPageFiltered * amountPerPage;
+                        records = FeelSpeakDatabase.GetEmotionRecords(min, max, searchField.value, sortField.index == 1);
+                    }
+
+                    foreach (var record in records)
+                    {
+                        var obj = FeelSpeak.GetEmotion(record);
+
+                        try
+                        {
+                            var element = new EmotionElement(obj);
+                            element.clicked += () => SelectEmotion(obj);
+                            element.Refresh();
+                            emotionTab.Add(element);
+                            loadedEmotionElements.Add(obj, element);
+                        }
+                        catch
+                        {
+                            obj.emotionName = obj.SanitizeName(obj.emotionName);
+                            obj.UpdateAssetName();
+                            Debug.LogError("An emotion failed to load. Please try again later.");
+                        }
+                    }
                 }
 
-                foreach (var record in records)
-                {
-                    var obj = FeelSpeak.GetDialogueGraph(record);
-
-                    try
-                    {
-                        var element = new DialogueElement(obj);
-                        element.clicked += () => SelectGraph(obj);
-                        element.Refresh();
-                        dialogueTab.Add(element);
-                        loadedGraphElements.Add(obj, element);
-                    }
-                    catch
-                    {
-                        obj.graphName = obj.SanitizeName(obj.graphName);
-                        obj.UpdateAssetName();
-                        Debug.LogError("A dialogue graph failed to load. Please try again later.");
-                    }
-                }
+                RefreshPagesLabel();
+                UpdateAmountLabel();
             }
-            else if (characterTab.style.display == DisplayStyle.Flex)
+            catch
             {
-                characterTab.Clear();
-                loadedCharacterElements.Clear();
-                List<CharacterRecord> records;
-
-                if (!filterOn)
-                {
-                    var min = (currentPage - 1) * amountPerPage;
-                    var max = currentPage * amountPerPage;
-                    records = FeelSpeakDatabase.GetCharacterRecords(min, max, "%", sortField.index == 1);
-                }
-                else
-                {
-                    var min = (currentPageFiltered - 1) * amountPerPage;
-                    var max = currentPageFiltered * amountPerPage;
-                    records = FeelSpeakDatabase.GetCharacterRecords(min, max, searchField.value, sortField.index == 1);
-                }
-
-                foreach (var record in records)
-                {
-                    var obj = FeelSpeak.GetCharacter(record);
-
-                    try
-                    {
-                        var element = new CharacterElement(obj);
-                        element.clicked += () => SelectCharacter(obj);
-                        element.Refresh();
-                        characterTab.Add(element);
-                        loadedCharacterElements.Add(obj, element);
-                    }
-                    catch
-                    {
-                        obj.characterName = obj.SanitizeName(obj.characterName);
-                        obj.UpdateAssetName();
-                        Debug.LogError("A character failed to load. Please try again later.");
-                    }
-                }
+                FeelSpeakSettingsEditorWindow.ValidateDatabase();
+                Open();
             }
-            else
-            {
-                emotionTab.Clear();
-                loadedEmotionElements.Clear();
-                List<EmotionRecord> records;
-
-                if (!filterOn)
-                {
-                    var min = (currentPage - 1) * amountPerPage;
-                    var max = currentPage * amountPerPage;
-                    records = FeelSpeakDatabase.GetEmotionRecords(min, max, "%", sortField.index == 1);
-                }
-                else
-                {
-                    var min = (currentPageFiltered - 1) * amountPerPage;
-                    var max = currentPageFiltered * amountPerPage;
-                    records = FeelSpeakDatabase.GetEmotionRecords(min, max, searchField.value, sortField.index == 1);
-                }
-
-                foreach (var record in records)
-                {
-                    var obj = FeelSpeak.GetEmotion(record);
-
-                    try
-                    {
-                        var element = new EmotionElement(obj);
-                        element.clicked += () => SelectEmotion(obj);
-                        element.Refresh();
-                        emotionTab.Add(element);
-                        loadedEmotionElements.Add(obj, element);
-                    }
-                    catch
-                    {
-                        obj.emotionName = obj.SanitizeName(obj.emotionName);
-                        obj.UpdateAssetName();
-                        Debug.LogError("An emotion failed to load. Please try again later.");
-                    }
-                }
-            }
-
-            RefreshPagesLabel();
-            UpdateAmountLabel();
         }
 
         private void RecalculatePages()

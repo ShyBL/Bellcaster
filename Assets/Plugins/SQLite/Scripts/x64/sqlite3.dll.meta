@@ -73,6 +73,6 @@ AssetOrigin:
   serializedVersion: 1
   productId: 325697
   packageName: Feel Speak Lite (Dialogue System)
-  packageVersion: 1.1.0
+  packageVersion: 1.1.2
   assetPath: Assets/Plugins/SQLite/Scripts/x64/sqlite3.dll
-  uploadId: 830328
+  uploadId: 875836

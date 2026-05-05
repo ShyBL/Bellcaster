@@ -43,7 +43,7 @@ namespace Esper.FeelSpeak.Editor
 
         private FeelSpeakSettings settings;
 
-        [MenuItem("Window/Feel Speak/Settings")]
+        [MenuItem("Window/Feel Speak/Settings", secondaryPriority = 1)]
         public static void Open()
         {
             FeelSpeakSettingsEditorWindow wnd = GetWindow<FeelSpeakSettingsEditorWindow>();
@@ -203,53 +203,22 @@ namespace Esper.FeelSpeak.Editor
             });
         }
 
-        private void ValidateDatabase()
+        public static void ValidateDatabase()
         {
-            var path = Path.Combine(Application.streamingAssetsPath, settings.databaseName + ".db");
-
-            if (!File.Exists(path))
+            if (HasOpenInstances<FeelSpeakEditorWindow>())
             {
-                FeelSpeakDatabase.Initialize();
-            }
-            else
-            {
-                FeelSpeakDatabase.Disconnect();
-                FeelSpeakDatabase.DeleteRuntimeDatabaseSQL();
-                FeelSpeakDatabase.DeleteEditorDatabaseSQL();
-                FeelSpeakDatabase.Initialize();
+                GetWindow<FeelSpeakEditorWindow>().Close();
             }
 
-            var graphs = FeelSpeak.GetAllDialogueGraphs();
-
-            foreach (var item in graphs)
+            if (HasOpenInstances<DialogueGraphEditorWindow>())
             {
-                item.UpdateDatabaseRecord();
+                GetWindow<DialogueGraphEditorWindow>().Close();
             }
 
-            var characters = FeelSpeak.GetAllCharacters();
-
-            foreach (var item in characters)
-            {
-                item.UpdateDatabaseRecord();
-            }
-
-            var emotions = FeelSpeak.GetAllEmotions();
-
-            foreach (var item in emotions)
-            {
-                item.UpdateDatabaseRecord();
-            }
-
-            graphs = null;
-            characters = null;
-            emotions = null;
-
-            if (!HasOpenInstances<FeelSpeakEditorWindow>() && !HasOpenInstances<DialogueGraphEditorWindow>())
-            {
-                FeelSpeakDatabase.Disconnect();
-            }
-
-            Resources.UnloadUnusedAssets();
+            FeelSpeakDatabase.Disconnect();
+            FeelSpeakDatabase.DeleteRuntimeDatabaseSQL();
+            FeelSpeakDatabase.DeleteEditorDatabaseSQL();
+            FeelSpeakDatabase.Initialize();
 
             EditorUtility.DisplayDialog("Done.", "Database validated.", "Ok");
         }

@@ -25,6 +25,29 @@ namespace Esper.MemoryDB
         [SerializeField] private List<Table> tables = new();
 
         /// <summary>
+        /// Checks if a table exists.
+        /// </summary>
+        /// <param name="tableName">The name of the table.</param>
+        /// <returns>True if the table exists. Otherwise, false.</returns>
+        public bool TableExists(string tableName)
+        {
+            foreach (var table in tables)
+            {
+                if (table == null)
+                {
+                    continue;
+                }
+
+                if (table.TableName == tableName)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        /// <summary>
         /// Gets or creates a table by name.
         /// </summary>
         public Table GetOrCreateTable(string tableName)
@@ -67,6 +90,15 @@ namespace Esper.MemoryDB
         {
             var table = GetOrCreateTable(tableName);
             table.Set(key, value);
+        }
+
+        /// <summary>
+        /// Retrieves a value by key from the specified table.
+        /// </summary>
+        public bool TryGetFirst<T>(string tableName, out T value)
+        {
+            var table = GetOrCreateTable(tableName);
+            return table.TryGetFirst(out value);
         }
 
         /// <summary>
@@ -248,6 +280,38 @@ namespace Esper.MemoryDB
                 return false;
             }
 
+            /// <summary>
+            /// Retrieves the first value in this table.
+            /// </summary>
+            public bool TryGetFirst<T>(out T value)
+            {
+                Initialize();
+
+                foreach (var kvp in cache)
+                {
+                    if (kvp.Value is T t)
+                    {
+                        value = t;
+                        return true;
+                    }
+                    else if (kvp.Value is string json)
+                    {
+                        try
+                        {
+                            value = json.ToObject<T>();
+                            cache[kvp.Key] = value;
+                            return true;
+                        }
+                        catch
+                        {
+                            break;
+                        }
+                    }
+                }
+
+                value = default;
+                return false;
+            }
 
             /// <summary>
             /// Find first record where property equals the given value.

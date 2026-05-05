@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4fb9d60e21865704d8d27f0d6e8f8e78
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325697
+  packageName: Feel Speak Lite (Dialogue System)
+  packageVersion: 1.1.2
+  assetPath: Assets/Packages/StylishEsper/FeelSpeak/Examples/3D Demo/UnityTechnologies/Environment/Skybox/SkyboxLiteWarm.mat
+  uploadId: 875836

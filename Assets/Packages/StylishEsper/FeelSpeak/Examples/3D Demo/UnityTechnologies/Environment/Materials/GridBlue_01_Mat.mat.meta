@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 238a3e0d84eda7a49a7bd8585663c070
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325697
+  packageName: Feel Speak Lite (Dialogue System)
+  packageVersion: 1.1.2
+  assetPath: Assets/Packages/StylishEsper/FeelSpeak/Examples/3D Demo/UnityTechnologies/Environment/Materials/GridBlue_01_Mat.mat
+  uploadId: 875836

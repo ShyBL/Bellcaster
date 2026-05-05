@@ -13,6 +13,6 @@ AssetOrigin:
   serializedVersion: 1
   productId: 325697
   packageName: Feel Speak Lite (Dialogue System)
-  packageVersion: 1.1.0
-  assetPath: Assets/StylishEsper/FeelSpeak/Scripts/UI/uGUI/DialogueBoxUGUI.cs
-  uploadId: 830328
+  packageVersion: 1.1.2
+  assetPath: Assets/Packages/StylishEsper/FeelSpeak/Scripts/UI/uGUI/DialogueBoxUGUI.cs
+  uploadId: 875836

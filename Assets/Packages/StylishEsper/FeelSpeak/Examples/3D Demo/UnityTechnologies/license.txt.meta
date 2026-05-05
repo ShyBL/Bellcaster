@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 36b1bb69ca7580840b2c8d68ba59053a
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325697
+  packageName: Feel Speak Lite (Dialogue System)
+  packageVersion: 1.1.2
+  assetPath: Assets/Packages/StylishEsper/FeelSpeak/Examples/3D Demo/UnityTechnologies/license.txt
+  uploadId: 875836

@@ -116,6 +116,6 @@ AssetOrigin:
   serializedVersion: 1
   productId: 325697
   packageName: Feel Speak Lite (Dialogue System)
-  packageVersion: 1.1.0
-  assetPath: Assets/StylishEsper/FeelSpeak/Editor/Icons/arrow_right_icon.png
-  uploadId: 830328
+  packageVersion: 1.1.2
+  assetPath: Assets/Packages/StylishEsper/FeelSpeak/Editor/Icons/arrow_right_icon.png
+  uploadId: 875836

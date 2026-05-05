@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <uie:Toolbar/>
+    <ui:VisualElement style="flex-grow: 1; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; width: 400px; align-self: center; justify-content: center;">
+        <ui:VisualElement style="background-image: url(&quot;project://database/Assets/StylishEsper/FeelSpeak/Editor/Icons/FeelSpeak_cover_nobg_1080.png?fileID=2800000&amp;guid=08449a009295d164c9ae46a49b885f26&amp;type=3#FeelSpeak_cover_nobg_1080&quot;); height: 200px; -unity-background-scale-mode: scale-to-fit; min-height: 200px;"/>
+        <ui:Label text="If Feel Speak has been helpful to you, consider supporting the asset by purchasing the full version!&#10;&#10;You will gain these benefits:&#10;&#10;· 3 Extra Nodes&#10;· Dialogue Groups&#10;· Full Text And Audio Localization Support&#10;· Animated Sprites&#10;· Deep Dialogue Text Search&#10;· Emotion Bubble&#10;· 2 Visible Speaker Sprites&#10;· And More!" style="font-size: 14px; -unity-font-style: bold; white-space: normal; -unity-text-align: upper-left; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px;"/>
+        <ui:Button text="View In Asset Store" name="GetFullButton" style="font-size: 16px; -unity-font-style: bold; margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px;"/>
+    </ui:VisualElement>
+</ui:UXML>
