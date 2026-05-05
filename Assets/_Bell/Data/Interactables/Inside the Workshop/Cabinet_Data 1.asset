@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77f752f7ca284681957fa51c96b22026, type: 3}
-  m_Name: Bottle_Data
+  m_Name: Cabinet_Data 1
   m_EditorClassIdentifier: Assembly-CSharp::InteractableData
-  objectName: Bottle
+  objectName: Cabinet
   objectIcon: {fileID: 0}
   canExamine: 1
-  examineText: It's a Bottle.
+  examineText: An old wooden cabinet.
   examineVO: {fileID: 0}
   canPickUp: 0
   pickupDestination: 0
   pickupRequirement: 
-  canInteract: 0
+  canInteract: 1
   requiredInventoryItem: 
   requiredItemIcon: {fileID: 0}
   interactResultState: 

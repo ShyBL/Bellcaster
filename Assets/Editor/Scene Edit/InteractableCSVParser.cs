@@ -11,9 +11,6 @@ public class InteractableCSVRow
     // Required
     public string object_name;
     public string template;
-    public float position_x;
-    public float position_y;
-    public float position_z;
     
     // Template overrides (optional)
     public string can_examine;
@@ -24,20 +21,13 @@ public class InteractableCSVRow
     public string examine_text;
     
     // Pickup
-    public PickupDestination pickup_destination;
+    public string pickup_destination; // 0 = Inventory, 1 = Journal
     public string pickup_requirement;
     
     // Interact
     public string required_inventory_item;
     public string interact_result_state;
     public string interact_result_object;
-    
-    // Visual
-    public string collider_width;
-    public string collider_height;
-    public string sorting_layer;
-    public string order_in_layer;
-    public string active;
     
     public bool IsValid()
     {
@@ -50,13 +40,6 @@ public class InteractableCSVRow
         value = value.Trim().ToUpper();
         if (value == "TRUE" || value == "1") return true;
         if (value == "FALSE" || value == "0") return false;
-        return null;
-    }
-    
-    public float? GetFloat(string value)
-    {
-        if (string.IsNullOrWhiteSpace(value)) return null;
-        if (float.TryParse(value.Trim(), out float result)) return result;
         return null;
     }
     
@@ -137,15 +120,6 @@ public static class InteractableCSVParser
                     case "template":
                         row.template = value;
                         break;
-                    case "position_x":
-                        float.TryParse(value, out row.position_x);
-                        break;
-                    case "position_y":
-                        float.TryParse(value, out row.position_y);
-                        break;
-                    case "position_z":
-                        float.TryParse(value, out row.position_z);
-                        break;
                     case "can_examine":
                         row.can_examine = value;
                         break;
@@ -172,21 +146,6 @@ public static class InteractableCSVParser
                         break;
                     case "interact_result_object":
                         row.interact_result_object = value;
-                        break;
-                    case "collider_width":
-                        row.collider_width = value;
-                        break;
-                    case "collider_height":
-                        row.collider_height = value;
-                        break;
-                    case "sorting_layer":
-                        row.sorting_layer = value;
-                        break;
-                    case "order_in_layer":
-                        row.order_in_layer = value;
-                        break;
-                    case "active":
-                        row.active = value;
                         break;
                 }
             }

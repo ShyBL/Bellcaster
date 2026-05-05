@@ -139,7 +139,8 @@ public class Interactable : MonoBehaviour
         // Activate result object
         if (data.interactResultObject != null)
         {
-            data.interactResultObject.SetActive(true);
+           // data.interactResultObject.gameObject.SetActive(true);
+           Instantiate(data.interactResultObject, transform.position, Quaternion.identity);
         }
         
         hasBeenInteracted = true;

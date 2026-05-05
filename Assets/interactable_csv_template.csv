@@ -1,0 +1,8 @@
+object_name,template,can_examine,can_pickup,can_interact,examine_text,pickup_destination,pickup_requirement,required_inventory_item,interact_result_state,interact_result_object
+Garrick's Note,PickupToJournal,,,,Nina\nMy dear daughter\nIt appears the king's men\nhad finally caught up with me\nPlease do not worry I will be fine\nI hid the most powerful magical bells\nYou can finish this latest one I started\nRing it and it shall lead you to the others\nFind all three of them then come and find me\nLove\nPapa,1,,,,
+Anvil,CraftingStation,,,,"Presently holding the Unfinished Bell. Trying to collect it prompts: It's not finished yet.",,,,bellCrafted,
+Red Cap,PickupToInventory,,,,A stylish red cap.,0,,,,
+Door Bell,AchievementUnlock,,,,The broken doorbell. I could fix this.,0,,,achievementAttentionToDetail,
+Bellcaster's Hammer,ConditionalPickup,,,,It's protected by a magical orb.,0,orbFaded,,,
+Cabinet,BasicInteract,,,,An old wooden cabinet.,,,,,cabinetOpened,HiddenItem
+Hat Rack,SimpleExamine,,,,A wooden hat rack by the door. The Red Cap cosmetic can be found here.,,,,,,

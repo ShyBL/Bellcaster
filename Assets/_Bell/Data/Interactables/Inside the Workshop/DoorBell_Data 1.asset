@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77f752f7ca284681957fa51c96b22026, type: 3}
+  m_Name: DoorBell_Data 1
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableData
+  objectName: Door Bell
+  objectIcon: {fileID: 0}
+  canExamine: 1
+  examineText: The broken doorbell. I could fix this.
+  examineVO: {fileID: 0}
+  canPickUp: 1
+  pickupDestination: 0
+  pickupRequirement: 
+  canInteract: 1
+  requiredInventoryItem: 
+  requiredItemIcon: {fileID: 0}
+  interactResultState: achievementAttentionToDetail
+  interactResultObject: {fileID: 0}
+  spriteAfterInteract: {fileID: 0}
+  vfxPrefab: {fileID: 0}

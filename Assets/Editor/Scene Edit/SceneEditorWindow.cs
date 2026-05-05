@@ -1,5 +1,3 @@
-// ==================== SceneEditorWindow.cs ====================
-// Place in Assets/Editor/SceneEditorWindow.cs
 #if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
@@ -31,12 +29,14 @@ public class SceneEditorWindow : EditorWindow
     private TextAsset csvFile;
     
     // Folders
-    private const string DATA_ROOT_FOLDER = "Assets/Data/Interactables";
-    
-    [MenuItem("Tools/Interactable Workshop")]
+    private const string DATA_ROOT_FOLDER = "Assets/_Bell/Data/Interactables";
+
+    #region Unity Cycle
+
+    [MenuItem("Tools/Scene Editor Window")]
     public static void ShowWindow()
     {
-        var window = GetWindow<SceneEditorWindow>("Interactable Workshop");
+        var window = GetWindow<SceneEditorWindow>("Scene Editor Window");
         window.minSize = new Vector2(400, 600);
     }
     
@@ -103,8 +103,11 @@ public class SceneEditorWindow : EditorWindow
         
         EditorGUILayout.EndScrollView();
     }
+
+    #endregion
+
+    #region Drawing
     
-    // ==================== Header ====================
     void DrawHeader()
     {
         EditorGUILayout.BeginVertical(EditorStyles.helpBox);
@@ -113,13 +116,12 @@ public class SceneEditorWindow : EditorWindow
         titleStyle.fontSize = 16;
         titleStyle.alignment = TextAnchor.MiddleCenter;
         
-        EditorGUILayout.LabelField("INTERACTABLE WORKSHOP", titleStyle);
+        EditorGUILayout.LabelField("BELLCASTER TOOLS", titleStyle);
         EditorGUILayout.LabelField("Scene-Based Level Design Tool", EditorStyles.centeredGreyMiniLabel);
         
         EditorGUILayout.EndVertical();
     }
-    
-    // ==================== Scene Selector ====================
+
     void DrawSceneSelector()
     {
         EditorGUILayout.BeginVertical(EditorStyles.helpBox);
@@ -175,7 +177,6 @@ public class SceneEditorWindow : EditorWindow
         EditorGUILayout.EndVertical();
     }
     
-    // ==================== Scene Interactables List ====================
     void DrawSceneInteractablesList()
     {
         EditorGUILayout.BeginVertical(EditorStyles.helpBox);
@@ -223,7 +224,6 @@ public class SceneEditorWindow : EditorWindow
         EditorGUILayout.EndVertical();
     }
     
-    // ==================== Creation Panel ====================
     void DrawCreationPanel()
     {
         EditorGUILayout.BeginVertical(EditorStyles.helpBox);
@@ -250,8 +250,7 @@ public class SceneEditorWindow : EditorWindow
         
         EditorGUILayout.EndVertical();
     }
-    
-    // ==================== Edit Panel ====================
+
     void DrawEditPanel()
     {
         EditorGUILayout.BeginVertical(EditorStyles.helpBox);
@@ -308,8 +307,8 @@ public class SceneEditorWindow : EditorWindow
         if (GUILayout.Button("Delete"))
         {
             if (EditorUtility.DisplayDialog("Delete Interactable", 
-                $"Are you sure you want to delete {selectedObject.name}?", 
-                "Yes", "No"))
+                    $"Are you sure you want to delete {selectedObject.name}?", 
+                    "Yes", "No"))
             {
                 DeleteInteractable(selectedObject);
             }
@@ -320,7 +319,6 @@ public class SceneEditorWindow : EditorWindow
         EditorGUILayout.EndVertical();
     }
     
-    // ==================== Quick Actions ====================
     void DrawQuickActionsPanel()
     {
         EditorGUILayout.BeginVertical(EditorStyles.helpBox);
@@ -342,26 +340,11 @@ public class SceneEditorWindow : EditorWindow
         
         EditorGUILayout.Space(10);
         
-        // Scene-specific presets
-        if (currentSceneName == "Workshop")
-        {
-            if (GUILayout.Button("Spawn All Workshop Interactables"))
-            {
-                SpawnWorkshopPresets();
-            }
-        }
-        else
-        {
-            EditorGUILayout.HelpBox($"No presets available for '{currentSceneName}' scene.", MessageType.Info);
-        }
-        
-        EditorGUILayout.Space(5);
-        
         if (GUILayout.Button($"Clear All Interactables in {currentSceneName}"))
         {
             if (EditorUtility.DisplayDialog("Clear All", 
-                $"Are you sure you want to delete ALL interactables in {currentSceneName}?", 
-                "Yes", "No"))
+                    $"Are you sure you want to delete ALL interactables in {currentSceneName}?", 
+                    "Yes", "No"))
             {
                 ClearAllInteractables();
             }
@@ -369,8 +352,10 @@ public class SceneEditorWindow : EditorWindow
         
         EditorGUILayout.EndVertical();
     }
+
+    #endregion
     
-    // ==================== CSV Import ====================
+    #region CSV Import
     
     void ImportFromCSV(string csvContent)
     {
@@ -432,37 +417,15 @@ public class SceneEditorWindow : EditorWindow
             throw new System.Exception($"Invalid template type: '{row.template}'");
         }
         
-        // Create GameObject
+        // Create GameObject at origin (position will be set manually in editor)
         GameObject newObj = new GameObject(row.object_name);
-        newObj.transform.position = new Vector3(row.position_x, row.position_y, row.position_z);
+        newObj.transform.position = Vector3.zero;
         
         // Add SpriteRenderer
         SpriteRenderer sr = newObj.AddComponent<SpriteRenderer>();
         
-        // Set sorting layer if specified
-        if (!string.IsNullOrWhiteSpace(row.sorting_layer))
-        {
-            sr.sortingLayerName = row.sorting_layer.Trim();
-        }
-        
-        // Set order in layer if specified
-        int? orderInLayer = row.GetInt(row.order_in_layer);
-        if (orderInLayer.HasValue)
-        {
-            sr.sortingOrder = orderInLayer.Value;
-        }
-        
-        // Add Collider
+        // Add Collider (will auto-size when sprite is assigned)
         BoxCollider2D collider = newObj.AddComponent<BoxCollider2D>();
-        
-        float? colliderWidth = row.GetFloat(row.collider_width);
-        float? colliderHeight = row.GetFloat(row.collider_height);
-        
-        if (colliderWidth.HasValue && colliderHeight.HasValue)
-        {
-            collider.size = new Vector2(colliderWidth.Value, colliderHeight.Value);
-        }
-        // If no manual size, sprite will auto-size when assigned
         
         // Add Interactable
         Interactable interactable = newObj.AddComponent<Interactable>();
@@ -486,11 +449,21 @@ public class SceneEditorWindow : EditorWindow
             data.examineText = row.examine_text.Trim();
         }
         
-        if (!string.IsNullOrWhiteSpace(row.pickup_destination))
+        // Handle pickup_destination as int (0 = Inventory, 1 = Journal)
+        int? pickupDest = row.GetInt(row.pickup_destination);
+        if (pickupDest.HasValue)
         {
-            if (System.Enum.TryParse<PickupDestination>(row.pickup_destination.Trim(), true, out var dest))
+            if (pickupDest.Value == 0)
             {
-                data.pickupDestination = dest;
+                data.pickupDestination = PickupDestination.Inventory;
+            }
+            else if (pickupDest.Value == 1)
+            {
+                data.pickupDestination = PickupDestination.Journal;
+            }
+            else
+            {
+                Debug.LogWarning($"Invalid pickup_destination value '{pickupDest.Value}' for {row.object_name}. Use 0 for Inventory or 1 for Journal.");
             }
         }
         
@@ -523,14 +496,17 @@ public class SceneEditorWindow : EditorWindow
             }
         }
         
-        // Set active state
-        bool? active = row.GetBool(row.active);
-        if (active.HasValue)
-        {
-            newObj.SetActive(active.Value);
-        }
-        
-        // Save InteractableData asset
+        SaveInteractableDataAsset(row, data, interactable);
+
+        Debug.Log($"Created: {row.object_name} ({templateType})");
+    }
+
+    #endregion
+    
+    #region Core Functions
+    
+    private void SaveInteractableDataAsset(InteractableCSVRow row, InteractableData data, Interactable interactable)
+    {
         string folderPath = GetSceneDataFolder();
         EnsureFolderExists(folderPath);
         
@@ -541,11 +517,7 @@ public class SceneEditorWindow : EditorWindow
         AssetDatabase.SaveAssets();
         
         interactable.data = data;
-        
-        Debug.Log($"Created: {row.object_name} ({templateType})");
     }
-    
-    // ==================== Core Functions ====================
     
     void RefreshSceneInteractables()
     {
@@ -659,39 +631,7 @@ public class SceneEditorWindow : EditorWindow
         DestroyImmediate(obj);
     }
     
-    void SpawnWorkshopPresets()
-    {
-        var presets = WorkshopPresets.GetAllPresets();
-        
-        foreach (var preset in presets)
-        {
-            // Create GameObject
-            GameObject newObj = new GameObject(preset.name);
-            newObj.transform.position = preset.position;
-            
-            // Add components
-            SpriteRenderer sr = newObj.AddComponent<SpriteRenderer>();
-            BoxCollider2D collider = newObj.AddComponent<BoxCollider2D>();
-            Interactable interactable = newObj.AddComponent<Interactable>();
-            
-            // Create custom data from preset
-            InteractableData customData = preset.dataCreator();
-            
-            string folderPath = GetSceneDataFolder();
-            EnsureFolderExists(folderPath);
-            
-            string assetPath = $"{folderPath}/{preset.name.Replace(" ", "")}_Data.asset";
-            assetPath = AssetDatabase.GenerateUniqueAssetPath(assetPath);
-            
-            AssetDatabase.CreateAsset(customData, assetPath);
-            AssetDatabase.SaveAssets();
-            
-            interactable.data = customData;
-        }
-        
-        RefreshSceneInteractables();
-        Debug.Log($"Spawned {presets.Count} Workshop interactables in {currentSceneName}!");
-    }
+    #endregion
     
     void ClearAllInteractables()
     {

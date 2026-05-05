@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77f752f7ca284681957fa51c96b22026, type: 3}
-  m_Name: Copper_Data
+  m_Name: Anvil_Data 1
   m_EditorClassIdentifier: Assembly-CSharp::InteractableData
-  objectName: Copper
+  objectName: Anvil
   objectIcon: {fileID: 0}
   canExamine: 1
-  examineText: There is a copper peice on the road
+  examineText: 'Presently holding the Unfinished Bell. Trying to collect it prompts:
+    It''s not finished yet.'
   examineVO: {fileID: 0}
   canPickUp: 0
   pickupDestination: 0
   pickupRequirement: 
-  canInteract: 0
+  canInteract: 1
   requiredInventoryItem: 
   requiredItemIcon: {fileID: 0}
-  interactResultState: 
+  interactResultState: bellCrafted
   interactResultObject: {fileID: 0}
   spriteAfterInteract: {fileID: 0}
   vfxPrefab: {fileID: 0}

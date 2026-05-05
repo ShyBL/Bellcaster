@@ -10,15 +10,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77f752f7ca284681957fa51c96b22026, type: 3}
-  m_Name: Pizza_Data
+  m_Name: Garrick'sNote_Data 1
   m_EditorClassIdentifier: Assembly-CSharp::InteractableData
-  objectName: Pizza
+  objectName: Garrick's Note
   objectIcon: {fileID: 0}
   canExamine: 1
-  examineText: This is a pizza box on the road
+  examineText: 'Nina
+
+    My dear daughter
+
+    It appears the king''s men
+
+    had
+    finally caught up with me
+
+    Please do not worry I will be fine
+
+    I hid
+    the most powerful magical bells
+
+    You can finish this latest one I started
+
+    Ring
+    it and it shall lead you to the others
+
+    Find all three of them then come
+    and find me
+
+    Love
+
+    Papa'
   examineVO: {fileID: 0}
-  canPickUp: 0
-  pickupDestination: 0
+  canPickUp: 1
+  pickupDestination: 1
   pickupRequirement: 
   canInteract: 0
   requiredInventoryItem: 
