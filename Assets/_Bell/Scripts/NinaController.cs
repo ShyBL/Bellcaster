@@ -22,6 +22,12 @@ public class NinaController : MonoBehaviour
     [SerializeField, Tooltip("Distance threshold to consider destination reached")]
     private float _arrivalThreshold = 0.05f;
 
+    [SerializeField, Tooltip(
+        "How fast Nina's Y tracks the ground surface (world units per second). " +
+        "High values = instant snap. Lower values = smooth glide on steep ramps."),
+        Range(1f, 50f)]
+    private float _groundSnapSpeed = 20f;
+
     // ── Cached components ────────────────────────────────────────────────────
     private Animator       _animator;
     private SpriteRenderer _spriteRenderer;
@@ -104,8 +110,9 @@ public class NinaController : MonoBehaviour
     {
         if (GroundBounds.Instance == null) return;
 
-        Vector3 pos = transform.position;
-        pos.y = GroundBounds.Instance.GetGroundY(pos.x);
+        Vector3 pos    = transform.position;
+        float   groundY = GroundBounds.Instance.GetGroundY(pos.x);
+        pos.y          = Mathf.MoveTowards(pos.y, groundY, _groundSnapSpeed * Time.deltaTime);
         transform.position = pos;
     }
 }

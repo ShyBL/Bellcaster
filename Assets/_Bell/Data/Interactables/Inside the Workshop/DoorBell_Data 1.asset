@@ -17,10 +17,10 @@ MonoBehaviour:
   canExamine: 1
   examineText: The broken doorbell. I could fix this.
   examineVO: {fileID: 0}
-  canPickUp: 1
+  canPickUp: 0
   pickupDestination: 0
   pickupRequirement: 
-  canInteract: 1
+  canInteract: 0
   requiredInventoryItem: 
   requiredItemIcon: {fileID: 0}
   interactResultState: achievementAttentionToDetail

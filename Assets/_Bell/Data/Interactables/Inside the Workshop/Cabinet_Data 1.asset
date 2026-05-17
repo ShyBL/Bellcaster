@@ -20,7 +20,7 @@ MonoBehaviour:
   canPickUp: 0
   pickupDestination: 0
   pickupRequirement: 
-  canInteract: 1
+  canInteract: 0
   requiredInventoryItem: 
   requiredItemIcon: {fileID: 0}
   interactResultState: 
