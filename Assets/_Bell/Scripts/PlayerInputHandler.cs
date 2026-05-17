@@ -38,6 +38,12 @@ public class PlayerInputHandler : MonoBehaviour
     [SerializeField] private NinaController _nina;
     [SerializeField] private Camera         _camera;
 
+    [Header("Ground Settings")]
+    [SerializeField, Tooltip(
+        "How close (world units) a click must be to the ground path to trigger movement. " +
+        "Increase this for scenes with tall stairs or ramps so clicks above a step still register.")]
+    private float _groundClickTolerance = 1.5f;
+
     [Header("Scene Interactables")]
     [SerializeField, Tooltip("Leave empty — auto-populated at runtime")]
     private List<InteractableView> _sceneInteractables = new List<InteractableView>();
@@ -169,11 +175,12 @@ public class PlayerInputHandler : MonoBehaviour
             return;
         }
 
-        // Hit the ground — walk there (no callback)
-        if (GroundBounds.Instance != null)
-            worldPoint = GroundBounds.Instance.ClampToGround(worldPoint);
+        // Ground walk — only if click is within tolerance of the floor path.
+        // This prevents sky/wall clicks from silently moving Nina.
+        if (GroundBounds.Instance == null) return;
+        if (!GroundBounds.Instance.IsOnGround(worldPoint, _groundClickTolerance)) return;
 
-        _nina.MoveTo(worldPoint);
+        _nina.MoveTo(GroundBounds.Instance.ClampToGround(worldPoint));
     }
 
     /// <summary>Enter key — same as click for KBM cycling (mode 2).</summary>
