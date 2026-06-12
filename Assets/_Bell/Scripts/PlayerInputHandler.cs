@@ -10,7 +10,7 @@ using UnityEngine.InputSystem;
 ///   KBM-2  Arrow keys cycle interactables → Left Click or Enter to confirm
 ///   PAD-3  Left stick / D-Pad cycles interactables → Right Trigger to confirm
 ///
-/// When the character arrives at the selected interactable, <see cref="InteractableView.OpenMenu"/>
+/// When the character arrives at the selected interactable, <see cref="Interactable.OnClick"/>
 /// is called. While the menu is open, face buttons (Gamepad) or the interaction
 /// buttons in <see cref="InteractionMenu"/> handle the rest — this script defers
 /// to the existing <see cref="InteractionMenu"/> for that.
@@ -40,7 +40,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     [Header("Scene Interactables")]
     [SerializeField, Tooltip("Leave empty — auto-populated at runtime")]
-    private List<InteractableView> _sceneInteractables = new List<InteractableView>();
+    private List<Interactable> _sceneInteractables = new List<Interactable>();
 
     // ── Input Actions ────────────────────────────────────────────────────────
     private InputSystem_Actions _actions;
@@ -56,9 +56,9 @@ public class PlayerInputHandler : MonoBehaviour
 
     // ── Runtime state ────────────────────────────────────────────────────────
     private int              _cycleIndex  = -1;
-    private InteractableView _hoveredView;
-    private InteractableView _cycledView;
-    private InteractableView _pendingView;
+    private Interactable _hoveredView;
+    private Interactable _cycledView;
+    private Interactable _pendingView;
     private bool             _menuOpen    = false;
 
     // ────────────────────────────────────────────────────────────────────────
@@ -131,7 +131,7 @@ public class PlayerInputHandler : MonoBehaviour
         if (_camera == null || Mouse.current == null) return;
 
         Vector2 mouseWorld = MouseToWorld();
-        InteractableView newHover = GetInteractableAtWorld(mouseWorld);
+        var newHover = GetInteractableAtWorld(mouseWorld);
 
         if (newHover != _hoveredView)
         {
@@ -162,7 +162,7 @@ public class PlayerInputHandler : MonoBehaviour
 
         Vector2 worldPoint = MouseToWorld();
 
-        InteractableView view = GetInteractableAtWorld(worldPoint);
+        Interactable view = GetInteractableAtWorld(worldPoint);
         if (view != null)
         {
             NavigateTo(view);
@@ -246,7 +246,7 @@ public class PlayerInputHandler : MonoBehaviour
     // Navigation
     // ────────────────────────────────────────────────────────────────────────
 
-    private void NavigateTo(InteractableView view)
+    private void NavigateTo(Interactable view)
     {
         _pendingView = view;
 
@@ -262,7 +262,7 @@ public class PlayerInputHandler : MonoBehaviour
         if (_pendingView == null) return;
 
         _menuOpen = true;
-        _pendingView.OpenMenu();
+        _pendingView.OnClick();
         _pendingView.SetHighlight(false);
         _pendingView = null;
     }
@@ -293,27 +293,27 @@ public class PlayerInputHandler : MonoBehaviour
     }
 
     /// <summary>
-    /// Returns the <see cref="InteractableView"/> whose PolygonCollider2D
+    /// Returns the <see cref="Interactable"/> whose PolygonCollider2D
     /// contains <paramref name="worldPos"/>, or null if none.
     /// </summary>
-    private InteractableView GetInteractableAtWorld(Vector2 worldPos)
+    private Interactable GetInteractableAtWorld(Vector2 worldPos)
     {
-        foreach (InteractableView view in _sceneInteractables)
+        foreach (Interactable view in _sceneInteractables)
         {
             if (view == null) continue;
-
-            PolygonCollider2D poly;
-            if (view.TryGetComponent(out poly) && poly.OverlapPoint(worldPos))
+           
+            PolygonCollider2D poly = view._polygonCollider;
+            if (poly.OverlapPoint(worldPos))
                 return view;
         }
         return null;
     }
 
-    /// <summary>Gathers all <see cref="InteractableView"/> objects currently in the scene.</summary>
+    /// <summary>Gathers all <see cref="Interactable"/> objects currently in the scene.</summary>
     public void RefreshInteractables()
     {
         _sceneInteractables.Clear();
-        InteractableView[] found = FindObjectsByType<InteractableView>(FindObjectsSortMode.None);
+        Interactable[] found = FindObjectsByType<Interactable>(FindObjectsSortMode.None);
         _sceneInteractables.AddRange(found);
     }
 }

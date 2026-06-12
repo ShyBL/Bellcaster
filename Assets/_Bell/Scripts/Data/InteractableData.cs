@@ -25,7 +25,7 @@ public class InteractableData : ScriptableObject
     public Sprite requiredItemIcon; // Show this if item is missing
     [Tooltip("World state boolean this sets when used (e.g., 'doorbellFixed')")]
     public string interactResultState = "";
-    [Tooltip("GameObject to activate after interaction (optional)")]
+    [Tooltip("GameObject to instantiate after interaction (optional)")]
     public GameObject interactResultObject;
     
     [Header("Visual Changes")]

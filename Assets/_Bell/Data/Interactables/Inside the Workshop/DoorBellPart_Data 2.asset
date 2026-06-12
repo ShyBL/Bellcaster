@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77f752f7ca284681957fa51c96b22026, type: 3}
-  m_Name: Anvil_Data 1
+  m_Name: DoorBellPart_Data 2
   m_EditorClassIdentifier: Assembly-CSharp::InteractableData
-  objectName: Anvil
+  objectName: Door Bell Part
   objectIcon: {fileID: 0}
   canExamine: 1
-  examineText: Presently holding the Unfinished Bell.
+  examineText: The broken doorbell. I could fix this.
   examineVO: {fileID: 0}
-  canPickUp: 0
+  canPickUp: 1
   pickupDestination: 0
   pickupRequirement: 
-  canInteract: 1
-  requiredInventoryItem: Required Parts
+  canInteract: 0
+  requiredInventoryItem: 
   requiredItemIcon: {fileID: 0}
-  interactResultState: bellCrafted
+  interactResultState: 
   interactResultObject: {fileID: 0}
   spriteAfterInteract: {fileID: 0}
   vfxPrefab: {fileID: 0}

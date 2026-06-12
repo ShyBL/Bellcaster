@@ -18,6 +18,7 @@ public class InventoryManager : MonoBehaviour
     {
         inventory.Add(itemName);
         Debug.Log($"Added to Inventory: {itemName}");
+//        InventoryView.Instance.RefreshUI();
     }
     
     public void AddToJournal(string itemName)

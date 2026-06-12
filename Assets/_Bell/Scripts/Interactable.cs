@@ -1,33 +1,28 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer))]
-[RequireComponent(typeof(BoxCollider2D))]
 public class Interactable : MonoBehaviour
 {
-    public InteractableData data;
+    [SerializeField, Tooltip("Where Nina walks to before the menu opens. " +
+                             "Leave empty to use this transform's position.")]
+    private Transform _interactionPoint;
+
+    [SerializeField, Tooltip("Outline width in world units")]
+    private float _outlineWidth = 0.05f;
+
+    [SerializeField]
+    private Color _outlineColor = Color.yellow;
+
+    public PolygonCollider2D _polygonCollider;
+    private LineRenderer     _lineRenderer;
     
+    public InteractableData data;
     private SpriteRenderer spriteRenderer;
     private bool hasBeenInteracted = false;
     
-    void Start()
-    {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-    
-    void OnMouseDown()
-    {
-        if (data == null)
-        {
-            Debug.LogWarning($"No InteractableData assigned to {gameObject.name}");
-            return;
-        }
-        
-        List<InteractionType> availableInteractions = GetAvailableInteractions();
-        InteractionMenu.Instance.ShowMenu(this, transform.position, availableInteractions);
-    }
-    
-    public List<InteractionType> GetAvailableInteractions()
+    #region Helpers
+
+    private List<InteractionType> GetAvailableInteractions()
     {
         List<InteractionType> interactions = new List<InteractionType>();
         
@@ -55,12 +50,35 @@ public class Interactable : MonoBehaviour
     
     public bool CanInteract()
     {
+        return hasBeenInteracted;
+    }
+    
+    public bool HasRequiredItem()
+    {
         // Check if we have required item
         if (!string.IsNullOrEmpty(data.requiredInventoryItem))
         {
             return InventoryManager.Instance.HasItem(data.requiredInventoryItem);
         }
         return true;
+    }
+    
+    /// <summary>World position Nina should walk toward.</summary>
+    public Vector2 InteractionPosition =>
+        _interactionPoint != null
+            ? (Vector2)_interactionPoint.position
+            : (Vector2)transform.position;
+
+    #endregion
+
+    #region Public
+
+    public void OnClick()
+    {
+        if (hasBeenInteracted) return;
+        
+        List<InteractionType> availableInteractions = GetAvailableInteractions();
+        InteractionMenu.Instance.ShowMenu(this, transform.position, availableInteractions);
     }
     
     public void OnExamine()
@@ -102,6 +120,8 @@ public class Interactable : MonoBehaviour
     
     public void OnInteract()
     {
+        //if (hasBeenInteracted) return;
+        
         // Check if we have required item
         if (!string.IsNullOrEmpty(data.requiredInventoryItem))
         {
@@ -141,30 +161,98 @@ public class Interactable : MonoBehaviour
         {
            // data.interactResultObject.gameObject.SetActive(true);
            Instantiate(data.interactResultObject, transform.position, Quaternion.identity);
+           FindFirstObjectByType<PlayerInputHandler>().RefreshInteractables();
         }
         
         hasBeenInteracted = true;
     }
+
+    #endregion
     
-    #if UNITY_EDITOR
-    [ContextMenu("Create New Data")]
-    void CreateNewData()
+    #region Unity Lifecycle
+    
+    private void OnValidate()
     {
-        string path = UnityEditor.EditorUtility.SaveFilePanelInProject(
-            "Create Interactable Data",
-            gameObject.name + "_Data",
-            "asset",
-            "Create new InteractableData"
-        );
-    
-        if (!string.IsNullOrEmpty(path))
+        if (data == null)
         {
-            InteractableData newData = ScriptableObject.CreateInstance<InteractableData>();
-            newData.objectName = gameObject.name;
-            UnityEditor.AssetDatabase.CreateAsset(newData, path);
-            UnityEditor.AssetDatabase.SaveAssets();
-            data = newData;
+            Debug.LogWarning($"No InteractableData assigned to {gameObject.name}");
         }
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        }
+
+        if (_polygonCollider == null)
+        {
+            _polygonCollider = spriteRenderer.GetComponent<PolygonCollider2D>();
+        }
+
+        if (_lineRenderer == null)
+        {
+            _lineRenderer = spriteRenderer.GetComponent<LineRenderer>();
+        }
+
+        if (_lineRenderer != null && _polygonCollider != null)
+        {
+            ConfigureLineRenderer();
+            DrawLine();
+        }
+        
     }
-    #endif
+    
+    #endregion
+
+    #region Outline
+
+    /// <summary>Shows or hides the outline highlight.</summary>
+    public void SetHighlight(bool highlighted)
+    {
+        if (_lineRenderer != null)
+            _lineRenderer.enabled = highlighted;
+    }
+    
+    // Outline drawing (matches the DrawLine signature in the brief)
+    private void ConfigureLineRenderer()
+    {
+        if (_lineRenderer == null) return;
+
+        _lineRenderer.useWorldSpace    = false; // points are in local space
+        _lineRenderer.loop             = true;
+        _lineRenderer.startColor       = _outlineColor;
+        _lineRenderer.endColor         = _outlineColor;
+        _lineRenderer.startWidth       = _outlineWidth;
+        _lineRenderer.endWidth         = _outlineWidth;
+        _lineRenderer.sortingOrder     = 1;
+        _lineRenderer.enabled          = false;
+    }
+    
+    private void DrawLine()
+    {
+        if (_lineRenderer == null || _polygonCollider == null) return;
+
+        Vector2[] pts = _polygonCollider.points;
+
+        _lineRenderer.positionCount = pts.Length + 1;
+
+        for (int i = 0; i < pts.Length; i++)
+            _lineRenderer.SetPosition(i, pts[i]);
+
+        // Close the loop
+        _lineRenderer.SetPosition(pts.Length, pts[0]);
+
+        _lineRenderer.startWidth = _outlineWidth;
+        _lineRenderer.endWidth   = _outlineWidth;
+        _lineRenderer.enabled    = false;
+    }
+    
+    #endregion 
+    
+#if UNITY_EDITOR
+    [ContextMenu("Create New Line")]
+    private void CreateNewLine()
+    {
+        ConfigureLineRenderer();
+        DrawLine();
+    }
+#endif
 }

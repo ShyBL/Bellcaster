@@ -24,6 +24,6 @@ MonoBehaviour:
   requiredInventoryItem: 
   requiredItemIcon: {fileID: 0}
   interactResultState: HatRack
-  interactResultObject: {fileID: 3321367162014784907, guid: 15357450e6118bc458e0e9fcf6423ad0, type: 3}
-  spriteAfterInteract: {fileID: 0}
+  interactResultObject: {fileID: 2667156851403661395, guid: d610edcef8c9dac4bade1c126dc4e264, type: 3}
+  spriteAfterInteract: {fileID: -2047515189558285298, guid: 31218c18fafec394d99009699eeb9e33, type: 3}
   vfxPrefab: {fileID: 0}
