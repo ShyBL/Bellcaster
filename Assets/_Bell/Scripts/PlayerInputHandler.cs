@@ -33,18 +33,17 @@ using UnityEngine.InputSystem;
 [DisallowMultipleComponent]
 public class PlayerInputHandler : MonoBehaviour
 {
-    // ── Inspector ────────────────────────────────────────────────────────────
+    // Inspector 
     [Header("References")]
     [SerializeField] private NinaController _nina;
-    [SerializeField] private Camera         _camera;
+    [SerializeField] private Camera _camera;
 
     [Header("Scene Interactables")]
     [SerializeField, Tooltip("Leave empty — auto-populated at runtime")]
     private List<Interactable> _sceneInteractables = new List<Interactable>();
 
-    // ── Input Actions ────────────────────────────────────────────────────────
+    // Input Actions 
     private InputSystem_Actions _actions;
-
     private InputAction _actClick;
     private InputAction _actCycleNext;
     private InputAction _actCyclePrev;
@@ -54,14 +53,15 @@ public class PlayerInputHandler : MonoBehaviour
     private InputAction _actMenuPickUp;
     private InputAction _actCancel;
 
-    // ── Runtime state ────────────────────────────────────────────────────────
-    private int              _cycleIndex  = -1;
+    // Runtime state 
+    private int _cycleIndex = -1;
     private Interactable _hoveredView;
     private Interactable _cycledView;
     private Interactable _pendingView;
-    private bool             _menuOpen    = false;
+    private bool _menuOpen = false;
 
-    // ────────────────────────────────────────────────────────────────────────
+    #region Unity lifecycle
+
     void Awake()
     {
         if (_nina == null)
@@ -112,7 +112,6 @@ public class PlayerInputHandler : MonoBehaviour
         _actions.Disable();
     }
 
-    // ────────────────────────────────────────────────────────────────────────
     void Update()
     {
         if (_menuOpen) return;
@@ -120,10 +119,8 @@ public class PlayerInputHandler : MonoBehaviour
         UpdateHoveredInteractable();
     }
 
-    // ────────────────────────────────────────────────────────────────────────
-    // Hover
-    // ────────────────────────────────────────────────────────────────────────
-
+    #endregion
+    
     private void UpdateHoveredInteractable()
     {
         // Hover only applies when using the mouse (not keyboard/gamepad cycling)
@@ -135,15 +132,21 @@ public class PlayerInputHandler : MonoBehaviour
 
         if (newHover != _hoveredView)
         {
-            if (_hoveredView != null) _hoveredView.SetHighlight(false);
+            if (_hoveredView != null)
+            {
+                _hoveredView.SetHighlight(false);
+                _hoveredView.SetLabel(false);
+            }
             _hoveredView = newHover;
-            if (_hoveredView != null) _hoveredView.SetHighlight(true);
+            if (_hoveredView != null)
+            {
+                _hoveredView.SetHighlight(true);
+                _hoveredView.SetLabel(true);
+            }
         }
     }
 
-    // ────────────────────────────────────────────────────────────────────────
-    // Input callbacks
-    // ────────────────────────────────────────────────────────────────────────
+    #region Input callbacks
 
     /// <summary>Left mouse button (KBM) or Right Trigger (gamepad).</summary>
     private void OnClick(InputAction.CallbackContext ctx)
@@ -171,9 +174,12 @@ public class PlayerInputHandler : MonoBehaviour
 
         // Ground walk — only if the click lands inside the walkable polygon.
         if (GroundBounds.Instance == null) return;
-        if (!GroundBounds.Instance.IsOnGround(worldPoint)) return;
+        // if (!GroundBounds.Instance.IsOnGround(worldPoint)) return;
+        Vector2 walkTarget = GroundBounds.Instance.IsOnGround(worldPoint)
+            ? worldPoint
+            : GroundBounds.Instance.ClosestPointOnBoundary(worldPoint);
 
-        _nina.MoveTo(worldPoint);
+        _nina.MoveTo(walkTarget);
     }
 
     /// <summary>Enter key — same as click for KBM cycling (mode 2).</summary>
@@ -213,46 +219,62 @@ public class PlayerInputHandler : MonoBehaviour
         ClearSelection();
     }
 
-    // ────────────────────────────────────────────────────────────────────────
-    // Cycling
-    // ────────────────────────────────────────────────────────────────────────
+    #endregion
+    
+
+    #region Cycling
 
     private void CycleInteractable(int direction)
     {
         if (_sceneInteractables.Count == 0) return;
 
-        // Clear mouse hover so the two modes don't conflict
-        if (_hoveredView != null) _hoveredView.SetHighlight(false);
-        _hoveredView = null;
+        if (_hoveredView != null)
+        {
+            _hoveredView.SetHighlight(false);
+            _hoveredView.SetLabel(false);
+            _hoveredView = null;
+        }
 
         _cycleIndex = (_cycleIndex + direction + _sceneInteractables.Count)
                       % _sceneInteractables.Count;
 
-        if (_cycledView != null) _cycledView.SetHighlight(false);
+        if (_cycledView != null)
+        {
+            _cycledView.SetHighlight(false);
+            _cycledView.SetLabel(false);
+        }
 
         _cycledView = _sceneInteractables[_cycleIndex];
         _cycledView.SetHighlight(true);
+        _cycledView.SetLabel(true);
     }
 
     private void ClearSelection()
     {
-        if (_cycledView != null) _cycledView.SetHighlight(false);
+        if (_cycledView != null)
+        {
+            _cycledView.SetHighlight(false);
+            _cycledView.SetLabel(false);
+        }
         _cycledView  = null;
         _cycleIndex  = -1;
         _pendingView = null;
     }
 
-    // ────────────────────────────────────────────────────────────────────────
-    // Navigation
-    // ────────────────────────────────────────────────────────────────────────
+    #endregion
+    
+    #region Navigation
 
     private void NavigateTo(Interactable view)
     {
         _pendingView = view;
 
         if (_cycledView != null && _cycledView != view)
+        {
             _cycledView.SetHighlight(false);
-        _cycledView = null;
+            _cycledView.SetLabel(false);
+            _cycledView = null;
+        }
 
         _nina.MoveTo(view.InteractionPosition, OnNinaArrived);
     }
@@ -262,6 +284,7 @@ public class PlayerInputHandler : MonoBehaviour
         if (_pendingView == null) return;
 
         _menuOpen = true;
+        
         _pendingView.OnClick();
         _pendingView.SetHighlight(false);
         _pendingView = null;
@@ -280,9 +303,9 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
 
-    // ────────────────────────────────────────────────────────────────────────
-    // Helpers
-    // ────────────────────────────────────────────────────────────────────────
+    #endregion
+
+    #region Helpers
 
     /// <summary>Converts the current mouse screen position to world space.</summary>
     private Vector2 MouseToWorld()
@@ -316,4 +339,6 @@ public class PlayerInputHandler : MonoBehaviour
         Interactable[] found = FindObjectsByType<Interactable>(FindObjectsSortMode.None);
         _sceneInteractables.AddRange(found);
     }
+
+    #endregion
 }

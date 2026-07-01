@@ -683,11 +683,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 79c47ba2-0f75-41ee-974c-14cf901866c9
+  cloudProjectId: 41c6e263-bf63-40c0-a04b-299056de746b
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Bellcaster 2026-01-13_01-30-12
-  organizationId: darthblechman
+  projectName: Bellcaster
+  organizationId: bearstickstudios
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

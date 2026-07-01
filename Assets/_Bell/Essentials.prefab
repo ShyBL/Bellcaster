@@ -1177,8 +1177,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1920, y: -1083.4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8441267547285210707}
   m_Father: {fileID: 6696237733073540515}
@@ -1786,113 +1786,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &7591964008301759555
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7438748453929302408}
-  - component: {fileID: 593541661860833583}
-  - component: {fileID: 1220242387936902416}
-  m_Layer: 0
-  m_Name: Environment
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7438748453929302408
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7591964008301759555}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1920, y: -1080, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6696237733073540515}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &593541661860833583
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7591964008301759555}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.25}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -6.308654, y: -3.4395304}
-      - {x: -6.776969, y: -3.3844886}
-      - {x: -9.298059, y: -3.331171}
-      - {x: -9.581351, y: -3.6796067}
-      - {x: -9.495153, y: -4.0512915}
-      - {x: -8.350222, y: -4.147273}
-      - {x: -5.8916726, y: -4.272266}
-      - {x: 5.7083297, y: -4.256817}
-      - {x: 7.9974737, y: -3.703082}
-      - {x: 9.077572, y: -2.7457116}
-      - {x: 9.881041, y: -2.1602917}
-      - {x: 6.3285503, y: -2.1796415}
-      - {x: 5.257525, y: -3.5031538}
-      - {x: -0.39793956, y: -3.5386977}
-      - {x: -5.636848, y: -3.497007}
-  m_UseDelaunayMesh: 1
---- !u!114 &1220242387936902416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7591964008301759555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a716930d0be24ef4ba36387a7bc4ed0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GroundBounds
 --- !u!1 &7726586206738717558
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,7 +2240,6 @@ Transform:
   - {fileID: 3461808335962158554}
   - {fileID: 8178333589692180883}
   - {fileID: 7284120918929651148}
-  - {fileID: 7438748453929302408}
   - {fileID: 6321810915922690194}
   - {fileID: 1326505233118185325}
   m_Father: {fileID: 0}
@@ -2380,7 +2272,7 @@ Transform:
   m_GameObject: {fileID: 8501797337245608291}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1920, y: -1080, z: -10}
+  m_LocalPosition: {x: -1899.94, y: -1079.85, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

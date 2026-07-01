@@ -59,9 +59,6 @@ public class NinaController : MonoBehaviour
             _moveSpeed * Time.deltaTime
         );
 
-        // Snap Y to the ground surface so Nina follows ramps and stairs.
-        SnapToGround();
-
         if (Vector2.Distance(transform.position, _targetPosition) < _arrivalThreshold)
         {
             _isMoving = false;
@@ -73,19 +70,11 @@ public class NinaController : MonoBehaviour
         }
     }
 
-    // ────────────────────────────────────────────────────────────────────────
-    /// <summary>
-    /// Move Nina to <paramref name="destination"/>. The destination Y is snapped
-    /// to the ground surface so arrival detection stays accurate.
-    /// Fires <paramref name="onArrival"/> once when she gets there.
-    /// Calling this while already moving cancels the previous trip.
-    /// </summary>
     public void MoveTo(Vector2 destination, Action onArrival = null)
     {
-        // Snap destination Y to the ground surface so the arrival threshold
-        // works correctly even after per-frame Y snapping.
+        // Clamp destination to valid ground — preserves X, snaps Y only if above surface
         if (GroundBounds.Instance != null)
-            destination.y = GroundBounds.Instance.GetGroundY(destination.x);
+            destination = GroundBounds.Instance.GetGround(destination.x, destination.y);
 
         _targetPosition = destination;
         _onArrival      = onArrival;
@@ -97,6 +86,7 @@ public class NinaController : MonoBehaviour
             _spriteRenderer.flipX = destination.x < transform.position.x;
     }
 
+
     /// <summary>Cancels any in-progress movement immediately.</summary>
     public void CancelMovement()
     {
@@ -105,11 +95,10 @@ public class NinaController : MonoBehaviour
         _animator.SetBool("IsWalking", false);
     }
 
-    // ────────────────────────────────────────────────────────────────────────
     private void SnapToGround()
     {
         if (GroundBounds.Instance == null) return;
-
+    
         Vector3 pos    = transform.position;
         float   groundY = GroundBounds.Instance.GetGroundY(pos.x);
         pos.y          = Mathf.MoveTowards(pos.y, groundY, _groundSnapSpeed * Time.deltaTime);

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Interactable : MonoBehaviour
@@ -107,11 +108,11 @@ public class Interactable : MonoBehaviour
         
         if (data.pickupDestination == PickupDestination.Inventory)
         {
-            InventoryManager.Instance.AddToInventory(data.objectName);
+            InventoryManager.Instance.AddToInventory(data);
         }
         else if (data.pickupDestination == PickupDestination.Journal)
         {
-            InventoryManager.Instance.AddToJournal(data.objectName);
+            InventoryManager.Instance.AddToJournal(data);
         }
         
         hasBeenInteracted = true;
@@ -198,6 +199,11 @@ public class Interactable : MonoBehaviour
             DrawLine();
         }
         
+        if (data != null)
+        {
+            _hoverLabel.text = data.objectName;
+            _hoverLabel.gameObject.SetActive(false);
+        }
     }
     
     #endregion
@@ -247,6 +253,19 @@ public class Interactable : MonoBehaviour
     
     #endregion 
     
+    #region Text
+    
+    [Header("Hover Label")]
+    [SerializeField] private TextMeshProUGUI _hoverLabel;
+
+    public void SetLabel(bool shown)
+    {
+        if (_hoverLabel == null) return;
+        _hoverLabel.text = data.objectName;
+        _hoverLabel.gameObject.SetActive(shown);
+    }
+    
+    #endregion 
 #if UNITY_EDITOR
     [ContextMenu("Create New Line")]
     private void CreateNewLine()
