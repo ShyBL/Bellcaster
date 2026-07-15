@@ -95,13 +95,13 @@ public class NinaController : MonoBehaviour
         _onArrival = null;
         _skeletonAnimation.AnimationState.SetAnimation(0, "adle", true);    }
 
-    private void SnapToGround()
-    {
-        if (GroundBounds.Instance == null) return;
-    
-        Vector3 pos    = transform.position;
-        float   groundY = GroundBounds.Instance.GetGroundY(pos.x);
-        pos.y          = Mathf.MoveTowards(pos.y, groundY, _groundSnapSpeed * Time.deltaTime);
-        transform.position = pos;
-    }
+    // private void SnapToGround()
+    // {
+    //     if (GroundBounds.Instance == null) return;
+    //
+    //     Vector3 pos    = transform.position;
+    //     float   groundY = GroundBounds.Instance.GetGroundY(pos.x);
+    //     pos.y          = Mathf.MoveTowards(pos.y, groundY, _groundSnapSpeed * Time.deltaTime);
+    //     transform.position = pos;
+    // }
 }

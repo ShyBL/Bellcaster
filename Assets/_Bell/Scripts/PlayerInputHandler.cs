@@ -59,7 +59,9 @@ public class PlayerInputHandler : MonoBehaviour
     private Interactable _cycledView;
     private Interactable _pendingView;
     private bool _menuOpen = false;
-
+    private Queue<Vector2> _currentPath = new Queue<Vector2>();
+    private System.Action _onPathComplete;
+    
     #region Unity lifecycle
 
     void Awake()
@@ -179,7 +181,8 @@ public class PlayerInputHandler : MonoBehaviour
             ? worldPoint
             : GroundBounds.Instance.ClosestPointOnBoundary(worldPoint);
 
-        _nina.MoveTo(walkTarget);
+        List<Vector2> path = GroundBounds.Instance.FindPath(_nina.transform.position, walkTarget);
+        MoveAlongPath(path);
     }
 
     /// <summary>Enter key — same as click for KBM cycling (mode 2).</summary>
@@ -215,7 +218,11 @@ public class PlayerInputHandler : MonoBehaviour
             return;
         }
 
-        if (_nina != null) _nina.CancelMovement();
+        if (_nina != null)
+        {
+            _currentPath.Clear();
+            _nina.CancelMovement();
+        }
         ClearSelection();
     }
 
@@ -275,8 +282,11 @@ public class PlayerInputHandler : MonoBehaviour
             _cycledView.SetLabel(false);
             _cycledView = null;
         }
+        
+        if (GroundBounds.Instance == null) return;
 
-        _nina.MoveTo(view.InteractionPosition, OnNinaArrived);
+        List<Vector2> path = GroundBounds.Instance.FindPath(_nina.transform.position, view.InteractionPosition);
+        MoveAlongPath(path, OnNinaArrived);
     }
 
     private void OnNinaArrived()
@@ -301,6 +311,33 @@ public class PlayerInputHandler : MonoBehaviour
             _menuOpen = false;
             ClearSelection();
         }
+    }
+    
+    private void MoveAlongPath(List<Vector2> path, System.Action onComplete = null)
+    {
+        _currentPath.Clear();
+        _onPathComplete = onComplete;
+
+        // Skip the first waypoint (index 0) because it is Nina's current position
+        for (int i = 1; i < path.Count; i++)
+        {
+            _currentPath.Enqueue(path[i]);
+        }
+
+        MoveToNextWaypoint();
+    }
+
+    private void MoveToNextWaypoint()
+    {
+        if (_currentPath.Count == 0)
+        {
+            _onPathComplete?.Invoke();
+            _onPathComplete = null;
+            return;
+        }
+
+        Vector2 nextPoint = _currentPath.Dequeue();
+        _nina.MoveTo(nextPoint, MoveToNextWaypoint);
     }
 
     #endregion
