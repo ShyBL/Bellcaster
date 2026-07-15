@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Spine.Unity;
 
 /// <summary>
 /// Handles Nina's movement only. Receives a world-space destination and an
@@ -10,9 +11,7 @@ using UnityEngine;
 /// surface every frame so she follows ramps and stairs instead of cutting
 /// through the air in a straight line.
 /// </summary>
-[RequireComponent(typeof(SpriteRenderer))]
-[RequireComponent(typeof(Animator))]
-[DisallowMultipleComponent]
+
 public class NinaController : MonoBehaviour
 {
     // ── Inspector ────────────────────────────────────────────────────────────
@@ -29,8 +28,7 @@ public class NinaController : MonoBehaviour
     private float _groundSnapSpeed = 20f;
 
     // ── Cached components ────────────────────────────────────────────────────
-    private Animator       _animator;
-    private SpriteRenderer _spriteRenderer;
+    private SkeletonAnimation _skeletonAnimation;
 
     // ── Movement state ───────────────────────────────────────────────────────
     private Vector2 _targetPosition;
@@ -42,11 +40,8 @@ public class NinaController : MonoBehaviour
     // ────────────────────────────────────────────────────────────────────────
     void Awake()
     {
-        if (!TryGetComponent(out _animator))
-            Debug.LogError($"[NinaController] Missing Animator on {gameObject.name}", this);
-
-        if (!TryGetComponent(out _spriteRenderer))
-            Debug.LogError($"[NinaController] Missing SpriteRenderer on {gameObject.name}", this);
+        if (!TryGetComponent(out _skeletonAnimation))
+            Debug.LogError($"[NinaController] Missing SkeletonAnimation on {gameObject.name}", this);
     }
 
     void Update()
@@ -62,7 +57,8 @@ public class NinaController : MonoBehaviour
         if (Vector2.Distance(transform.position, _targetPosition) < _arrivalThreshold)
         {
             _isMoving = false;
-            _animator.SetBool("IsWalking", false);
+            // Track 0, "idle", loop (true)
+            _skeletonAnimation.AnimationState.SetAnimation(0, "adle", true); 
 
             Action callback = _onArrival;
             _onArrival = null;
@@ -80,10 +76,15 @@ public class NinaController : MonoBehaviour
         _onArrival      = onArrival;
         _isMoving       = true;
 
-        _animator.SetBool("IsWalking", true);
+        // Track 0, "walk" (or "run"), loop (true)
+        _skeletonAnimation.AnimationState.SetAnimation(0, "walk", true); 
 
         if (!Mathf.Approximately(destination.x, transform.position.x))
-            _spriteRenderer.flipX = destination.x < transform.position.x;
+        {
+            // Spine uses 1 for normal facing, -1 for flipped facing
+            float facingDirection = (destination.x < transform.position.x) ? 1f : -1f;
+            _skeletonAnimation.skeleton.ScaleX = facingDirection;
+        }
     }
 
 
@@ -92,8 +93,7 @@ public class NinaController : MonoBehaviour
     {
         _isMoving  = false;
         _onArrival = null;
-        _animator.SetBool("IsWalking", false);
-    }
+        _skeletonAnimation.AnimationState.SetAnimation(0, "adle", true);    }
 
     private void SnapToGround()
     {

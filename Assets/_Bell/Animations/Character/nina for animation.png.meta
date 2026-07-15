@@ -1,0 +1,2184 @@
+fileFormatVersion: 2
+guid: 4289b0406fe91ff418ad6f069e170f7f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8229787578109703547
+    second: nina for animation_0
+  - first:
+      213: 8919510039847218730
+    second: nina for animation_1
+  - first:
+      213: 1069012486381795721
+    second: nina for animation_2
+  - first:
+      213: 4588370839239006929
+    second: nina for animation_3
+  - first:
+      213: -5671425063817895449
+    second: nina for animation_4
+  - first:
+      213: 932554930859919556
+    second: nina for animation_5
+  - first:
+      213: 7033557634111706312
+    second: nina for animation_6
+  - first:
+      213: 7803426083857762277
+    second: nina for animation_7
+  - first:
+      213: -4043218025733845490
+    second: nina for animation_8
+  - first:
+      213: -3976979869808061652
+    second: nina for animation_9
+  - first:
+      213: 5771537967145958524
+    second: nina for animation_10
+  - first:
+      213: 9123294367864208379
+    second: nina for animation_11
+  - first:
+      213: 841046306789832748
+    second: nina for animation_12
+  - first:
+      213: -1884297592302457855
+    second: nina for animation_13
+  - first:
+      213: 4801243651099765541
+    second: nina for animation_14
+  - first:
+      213: -6964558509814122678
+    second: nina for animation_15
+  - first:
+      213: 4191901410520307578
+    second: nina for animation_16
+  - first:
+      213: 5551821168256967313
+    second: nina for animation_17
+  - first:
+      213: -3287968177271233631
+    second: nina for animation_18
+  - first:
+      213: -2182584561406082398
+    second: nina for animation_19
+  - first:
+      213: 5367927548995322141
+    second: nina for animation_20
+  - first:
+      213: 5629292588977571613
+    second: nina for animation_21
+  - first:
+      213: -1538351811328757911
+    second: nina for animation_22
+  - first:
+      213: 102867603594711541
+    second: nina for animation_23
+  - first:
+      213: -3249822158242599880
+    second: nina for animation_24
+  - first:
+      213: 246357935337607784
+    second: nina for animation_25
+  - first:
+      213: 3283748012946827226
+    second: nina for animation_26
+  - first:
+      213: -3222579504169686696
+    second: nina for animation_27
+  - first:
+      213: -7977399393329764102
+    second: nina for animation_28
+  - first:
+      213: 3000874685972185563
+    second: nina for animation_29
+  - first:
+      213: -1005239510695987383
+    second: nina for animation_30
+  - first:
+      213: 49959822640769556
+    second: nina for animation_31
+  - first:
+      213: -5923440992961821869
+    second: nina for animation_32
+  - first:
+      213: -2196387195615533507
+    second: nina for animation_33
+  - first:
+      213: 352077734118726697
+    second: nina for animation_34
+  - first:
+      213: 2621855132387902961
+    second: nina for animation_35
+  - first:
+      213: -8225604342930819029
+    second: nina for animation_36
+  - first:
+      213: -1353480505268989003
+    second: nina for animation_37
+  - first:
+      213: 714816276434275012
+    second: nina for animation_38
+  - first:
+      213: -4730984750883383119
+    second: nina for animation_39
+  - first:
+      213: -7671425935073888703
+    second: nina for animation_40
+  - first:
+      213: 8976415820872473779
+    second: nina for animation_41
+  - first:
+      213: -4975207189741713785
+    second: nina for animation_42
+  - first:
+      213: -8046654892568303924
+    second: nina for animation_43
+  - first:
+      213: 6670030953233557438
+    second: nina for animation_44
+  - first:
+      213: 7871289498740718770
+    second: nina for animation_45
+  - first:
+      213: 8374631619271778484
+    second: nina for animation_46
+  - first:
+      213: -7873340915169912891
+    second: nina for animation_47
+  - first:
+      213: -459961899461156192
+    second: nina for animation_48
+  - first:
+      213: 3951405346480989775
+    second: nina for animation_49
+  - first:
+      213: -3928945016373676770
+    second: nina for animation_50
+  - first:
+      213: 1233536511765256875
+    second: nina for animation_51
+  - first:
+      213: 3086050446774973812
+    second: nina for animation_52
+  - first:
+      213: -2072099301991012038
+    second: nina for animation_53
+  - first:
+      213: -7511618512440922845
+    second: nina for animation_54
+  - first:
+      213: 3225262641478327419
+    second: nina for animation_55
+  - first:
+      213: -7206684883832885597
+    second: nina for animation_56
+  - first:
+      213: 2069018278804378897
+    second: nina for animation_57
+  - first:
+      213: -1857651592644414317
+    second: nina for animation_58
+  - first:
+      213: 1659074372347566497
+    second: nina for animation_59
+  - first:
+      213: 5272093398920462925
+    second: nina for animation_60
+  - first:
+      213: -8686627199349599743
+    second: nina for animation_61
+  - first:
+      213: 2574769740573162245
+    second: nina for animation_62
+  - first:
+      213: -3204154998163773010
+    second: nina for animation_63
+  - first:
+      213: 4952884926350311159
+    second: nina for animation_64
+  - first:
+      213: 4057041413649371489
+    second: nina for animation_65
+  - first:
+      213: 6668952226596819315
+    second: nina for animation_66
+  - first:
+      213: -358937846587998658
+    second: nina for animation_67
+  - first:
+      213: 1212746369785007215
+    second: nina for animation_68
+  - first:
+      213: 1753722119068739016
+    second: nina for animation_69
+  - first:
+      213: -2658301322714874430
+    second: nina for animation_70
+  - first:
+      213: -6996378351930424689
+    second: nina for animation_71
+  - first:
+      213: -850477997570399633
+    second: nina for animation_72
+  - first:
+      213: -2007876708905072264
+    second: nina for animation_73
+  - first:
+      213: 6406666680081646960
+    second: nina for animation_74
+  - first:
+      213: -2332096870760869778
+    second: nina for animation_75
+  - first:
+      213: 6673669823370296715
+    second: nina for animation_76
+  - first:
+      213: 2362567990119956040
+    second: nina for animation_77
+  - first:
+      213: 4615962527562051277
+    second: nina for animation_78
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nina for animation_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1497
+        width: 20
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58a49dd0dcbe9cd80800000000000000
+      internalID: -8229787578109703547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1497
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2eaf97af1778cb70800000000000000
+      internalID: 8919510039847218730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1498
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9897e374135e5de00800000000000000
+      internalID: 1069012486381795721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_3
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 1499
+        width: 42
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1da1a92d7fa2daf30800000000000000
+      internalID: 4588370839239006929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_4
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 1506
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e123e4f3fc0b41b0800000000000000
+      internalID: -5671425063817895449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_5
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1498
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c8c17bc4c911fc00800000000000000
+      internalID: 932554930859919556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_6
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 1505
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c4177027673c9160800000000000000
+      internalID: 7033557634111706312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_7
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1497
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e70c5fcda65b4c60800000000000000
+      internalID: 7803426083857762277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_8
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1497
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0e8da2a0aa93e7c0800000000000000
+      internalID: -4043218025733845490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_9
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1498
+        width: 42
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c23163d11edeec8c0800000000000000
+      internalID: -3976979869808061652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_10
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 1497
+        width: 56
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7c3a63c33f981050800000000000000
+      internalID: 5771537967145958524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_11
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1495
+        width: 127
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfb3ed9e3e37c9e70800000000000000
+      internalID: 9123294367864208379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_12
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 1496
+        width: 20
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c28bcd3f82ffbab00800000000000000
+      internalID: 841046306789832748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_13
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1495
+        width: 25
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10c20bfb251a9d5e0800000000000000
+      internalID: -1884297592302457855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_14
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 1495
+        width: 56
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ba6ef99a171a240800000000000000
+      internalID: 4801243651099765541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_15
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 1108
+        width: 241
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a47fa156feae85f90800000000000000
+      internalID: -6964558509814122678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_16
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 1462
+        width: 291
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a77958b8f10ac2a30800000000000000
+      internalID: 4191901410520307578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_17
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 1437
+        width: 194
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 192637e00f70c0d40800000000000000
+      internalID: 5551821168256967313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_18
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 1496
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a3a5f8fc5ace52d0800000000000000
+      internalID: -3287968177271233631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_19
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 1483
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a2832db7e6e5b1e0800000000000000
+      internalID: -2182584561406082398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_20
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 1378
+        width: 145
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1146e15aa5be7a40800000000000000
+      internalID: 5367927548995322141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_21
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1116
+        width: 433
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d174fbec8c34f1e40800000000000000
+      internalID: 5629292588977571613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_22
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 1115
+        width: 432
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96fab2a9d2da6aae0800000000000000
+      internalID: -1538351811328757911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_23
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 1483
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f1982b5a857d6100800000000000000
+      internalID: 102867603594711541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_24
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 1108
+        width: 263
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ca1c227ff46e2d0800000000000000
+      internalID: -3249822158242599880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_25
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 1079
+        width: 207
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8629567ac3d3b6300800000000000000
+      internalID: 246357935337607784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_26
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 1433
+        width: 58
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad727937b67329d20800000000000000
+      internalID: 3283748012946827226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_27
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 1378
+        width: 92
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 859e281d3091743d0800000000000000
+      internalID: -3222579504169686696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_28
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 650
+        height: 1114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af8a92194859a4190800000000000000
+      internalID: -7977399393329764102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_29
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 929
+        width: 479
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd185d8a0af35a920800000000000000
+      internalID: 3000874685972185563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_30
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 898
+        width: 426
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94737c2bdfbac02f0800000000000000
+      internalID: -1005239510695987383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_31
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 1057
+        width: 215
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41a6b89a13e71b000800000000000000
+      internalID: 49959822640769556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_32
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 518
+        width: 241
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3530686fcc5bbcda0800000000000000
+      internalID: -5923440992961821869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_33
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 919
+        width: 231
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d36ae188b7dd481e0800000000000000
+      internalID: -2196387195615533507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_34
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 919
+        width: 48
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92c987375d4d2e400800000000000000
+      internalID: 352077734118726697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_35
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 781
+        width: 288
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f5048a0a53b26420800000000000000
+      internalID: 2621855132387902961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_36
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 775
+        width: 169
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b28b2b46e68c8dd80800000000000000
+      internalID: -8225604342930819029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_37
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 832
+        width: 115
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b39609c6a8773de0800000000000000
+      internalID: -1353480505268989003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_38
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 833
+        width: 26
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca488cbd998be900800000000000000
+      internalID: 714816276434275012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_39
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 833
+        width: 35
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b85ec55f6a285eb0800000000000000
+      internalID: -4730984750883383119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_40
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 658
+        width: 266
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 146b33bc1ce998590800000000000000
+      internalID: -7671425935073888703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_41
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 495
+        width: 269
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bcdc4741a2a29c70800000000000000
+      internalID: 8976415820872473779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_42
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 658
+        width: 242
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 786c973bb6384fab0800000000000000
+      internalID: -4975207189741713785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_43
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 658
+        width: 140
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc6ae4a120a845090800000000000000
+      internalID: -8046654892568303924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_44
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 495
+        width: 442
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb7a85800d5b09c50800000000000000
+      internalID: 6670030953233557438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_45
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 587
+        width: 37
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bcf3b068107c3d60800000000000000
+      internalID: 7871289498740718770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_46
+      rect:
+        serializedVersion: 2
+        x: 1708
+        y: 629
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b0e277461ba83470800000000000000
+      internalID: 8374631619271778484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_47
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 604
+        width: 56
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c79fb307264cb290800000000000000
+      internalID: -7873340915169912891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_48
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 550
+        width: 89
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a26764e613ed99f0800000000000000
+      internalID: -459961899461156192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_49
+      rect:
+        serializedVersion: 2
+        x: 1763
+        y: 589
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4624982a3636d630800000000000000
+      internalID: 3951405346480989775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_50
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 573
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e157105f2559979c0800000000000000
+      internalID: -3928945016373676770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_51
+      rect:
+        serializedVersion: 2
+        x: 1765
+        y: 573
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baa1e310ce66e1110800000000000000
+      internalID: 1233536511765256875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_52
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 502
+        width: 37
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47535fed78ad3da20800000000000000
+      internalID: 3086050446774973812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_53
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 544
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a39ad7dc9ac6e33e0800000000000000
+      internalID: -2072099301991012038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_54
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 519
+        width: 56
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32de5bdd2ce51c790800000000000000
+      internalID: -7511618512440922845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_55
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 2
+        width: 217
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7c57a4c84f62cc20800000000000000
+      internalID: 3225262641478327419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_56
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 488
+        width: 73
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aea6f2e746bcfb90800000000000000
+      internalID: -7206684883832885597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_57
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 504
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 115dce59921a6bc10800000000000000
+      internalID: 2069018278804378897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_58
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 313
+        width: 426
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 394bdfff7bb4836e0800000000000000
+      internalID: -1857651592644414317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_59
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 488
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a91bbbf957360710800000000000000
+      internalID: 1659074372347566497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_60
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 488
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d420659730d3a2940800000000000000
+      internalID: 5272093398920462925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_61
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 2
+        width: 274
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 102558ef596e27780800000000000000
+      internalID: -8686627199349599743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_62
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 1
+        width: 274
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50bb945ff6b6bb320800000000000000
+      internalID: 2574769740573162245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_63
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 309
+        width: 218
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea9e729610e8883d0800000000000000
+      internalID: -3204154998163773010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_64
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 309
+        width: 206
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fe3f78599e2cb440800000000000000
+      internalID: 4952884926350311159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_65
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 303
+        width: 98
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1619e9baba18d4830800000000000000
+      internalID: 4057041413649371489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_66
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 160
+        width: 29
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3719a5a67b0ec8c50800000000000000
+      internalID: 6668952226596819315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_67
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 223
+        width: 47
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3ebda52eebc40bf0800000000000000
+      internalID: -358937846587998658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_68
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 220
+        width: 64
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6c0eadd56a84d010800000000000000
+      internalID: 1212746369785007215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_69
+      rect:
+        serializedVersion: 2
+        x: 1547
+        y: 230
+        width: 47
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c566d5c9f8765810800000000000000
+      internalID: 1753722119068739016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_70
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 221
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cdf0a10801db1bd0800000000000000
+      internalID: -2658301322714874430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_71
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 227
+        width: 65
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8244f215fed7ee90800000000000000
+      internalID: -6996378351930424689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_72
+      rect:
+        serializedVersion: 2
+        x: 1621
+        y: 221
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f62e78964ce7234f0800000000000000
+      internalID: -850477997570399633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_73
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 229
+        width: 47
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 879ceec75c69224e0800000000000000
+      internalID: -2007876708905072264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_74
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 220
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 075099cc66d09e850800000000000000
+      internalID: 6406666680081646960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_75
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 226
+        width: 64
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e609f74804ab2afd0800000000000000
+      internalID: -2332096870760869778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_76
+      rect:
+        serializedVersion: 2
+        x: 1747
+        y: 220
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8dfa328853ad9c50800000000000000
+      internalID: 6673669823370296715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_77
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 1
+        width: 207
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84efec0d11789c020800000000000000
+      internalID: 2362567990119956040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nina for animation_78
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 1
+        width: 207
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcea9df56713f0040800000000000000
+      internalID: 4615962527562051277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      nina for animation_0: -8229787578109703547
+      nina for animation_1: 8919510039847218730
+      nina for animation_10: 5771537967145958524
+      nina for animation_11: 9123294367864208379
+      nina for animation_12: 841046306789832748
+      nina for animation_13: -1884297592302457855
+      nina for animation_14: 4801243651099765541
+      nina for animation_15: -6964558509814122678
+      nina for animation_16: 4191901410520307578
+      nina for animation_17: 5551821168256967313
+      nina for animation_18: -3287968177271233631
+      nina for animation_19: -2182584561406082398
+      nina for animation_2: 1069012486381795721
+      nina for animation_20: 5367927548995322141
+      nina for animation_21: 5629292588977571613
+      nina for animation_22: -1538351811328757911
+      nina for animation_23: 102867603594711541
+      nina for animation_24: -3249822158242599880
+      nina for animation_25: 246357935337607784
+      nina for animation_26: 3283748012946827226
+      nina for animation_27: -3222579504169686696
+      nina for animation_28: -7977399393329764102
+      nina for animation_29: 3000874685972185563
+      nina for animation_3: 4588370839239006929
+      nina for animation_30: -1005239510695987383
+      nina for animation_31: 49959822640769556
+      nina for animation_32: -5923440992961821869
+      nina for animation_33: -2196387195615533507
+      nina for animation_34: 352077734118726697
+      nina for animation_35: 2621855132387902961
+      nina for animation_36: -8225604342930819029
+      nina for animation_37: -1353480505268989003
+      nina for animation_38: 714816276434275012
+      nina for animation_39: -4730984750883383119
+      nina for animation_4: -5671425063817895449
+      nina for animation_40: -7671425935073888703
+      nina for animation_41: 8976415820872473779
+      nina for animation_42: -4975207189741713785
+      nina for animation_43: -8046654892568303924
+      nina for animation_44: 6670030953233557438
+      nina for animation_45: 7871289498740718770
+      nina for animation_46: 8374631619271778484
+      nina for animation_47: -7873340915169912891
+      nina for animation_48: -459961899461156192
+      nina for animation_49: 3951405346480989775
+      nina for animation_5: 932554930859919556
+      nina for animation_50: -3928945016373676770
+      nina for animation_51: 1233536511765256875
+      nina for animation_52: 3086050446774973812
+      nina for animation_53: -2072099301991012038
+      nina for animation_54: -7511618512440922845
+      nina for animation_55: 3225262641478327419
+      nina for animation_56: -7206684883832885597
+      nina for animation_57: 2069018278804378897
+      nina for animation_58: -1857651592644414317
+      nina for animation_59: 1659074372347566497
+      nina for animation_6: 7033557634111706312
+      nina for animation_60: 5272093398920462925
+      nina for animation_61: -8686627199349599743
+      nina for animation_62: 2574769740573162245
+      nina for animation_63: -3204154998163773010
+      nina for animation_64: 4952884926350311159
+      nina for animation_65: 4057041413649371489
+      nina for animation_66: 6668952226596819315
+      nina for animation_67: -358937846587998658
+      nina for animation_68: 1212746369785007215
+      nina for animation_69: 1753722119068739016
+      nina for animation_7: 7803426083857762277
+      nina for animation_70: -2658301322714874430
+      nina for animation_71: -6996378351930424689
+      nina for animation_72: -850477997570399633
+      nina for animation_73: -2007876708905072264
+      nina for animation_74: 6406666680081646960
+      nina for animation_75: -2332096870760869778
+      nina for animation_76: 6673669823370296715
+      nina for animation_77: 2362567990119956040
+      nina for animation_78: 4615962527562051277
+      nina for animation_8: -4043218025733845490
+      nina for animation_9: -3976979869808061652
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
