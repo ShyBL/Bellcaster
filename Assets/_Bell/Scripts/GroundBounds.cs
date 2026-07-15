@@ -19,7 +19,8 @@ public class GroundBounds : MonoBehaviour
     [Header("Pathfinding Settings")]
     [Tooltip("How far the path waypoints are offset from obstacle corners so the character doesn't clip them.")]
     [SerializeField] private float _characterOffset = 0.35f;
-    
+    public float MinWalkableY => _poly.bounds.min.y;
+    public float MaxWalkableY => _poly.bounds.max.y;
     void Awake()
     {
         if (Instance != null)

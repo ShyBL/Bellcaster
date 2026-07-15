@@ -1,4 +1,5 @@
 using System;
+using FMODUnity;
 using UnityEngine;
 using Spine.Unity;
 
@@ -14,34 +15,43 @@ using Spine.Unity;
 
 public class NinaController : MonoBehaviour
 {
-    // ── Inspector ────────────────────────────────────────────────────────────
-    [SerializeField, Tooltip("World units per second"), Range(1f, 20f)]
+    [SerializeField, Tooltip("World units per second"), Range(1f,
+         20f)]
     private float _moveSpeed = 5f;
 
     [SerializeField, Tooltip("Distance threshold to consider destination reached")]
     private float _arrivalThreshold = 0.05f;
 
     [SerializeField, Tooltip(
-        "How fast Nina's Y tracks the ground surface (world units per second). " +
-        "High values = instant snap. Lower values = smooth glide on steep ramps."),
-        Range(1f, 50f)]
+         "How fast Nina's Y tracks the ground surface (world units per second). " +
+         "High values = instant snap. Lower values = smooth glide on steep ramps."),
+     Range(1f,
+         50f)]
     private float _groundSnapSpeed = 20f;
-
+    
+    [Header("Audio")]
+    [SerializeField, Tooltip("FMOD Event for Footsteps")]
+    private EventReference _footstepEvent;
+    [SerializeField, Tooltip("How far Nina moves before the next footstep plays")]
+    private float _stepDistance = 1.5f;
+    
     // ── Cached components ────────────────────────────────────────────────────
     private SkeletonAnimation _skeletonAnimation;
 
     // ── Movement state ───────────────────────────────────────────────────────
     private Vector2 _targetPosition;
-    private Action  _onArrival;
-    private bool    _isMoving;
-
-    public bool IsMoving => _isMoving;
+    private Action _onArrival;
+    private bool _isMoving;
+    private Vector2 _lastStepPosition;
+    public bool IsMoving =>
+        _isMoving;
 
     // ────────────────────────────────────────────────────────────────────────
     void Awake()
     {
         if (!TryGetComponent(out _skeletonAnimation))
-            Debug.LogError($"[NinaController] Missing SkeletonAnimation on {gameObject.name}", this);
+            Debug.LogError($"[NinaController] Missing SkeletonAnimation on {gameObject.name}",
+                this);
     }
 
     void Update()
@@ -54,10 +64,21 @@ public class NinaController : MonoBehaviour
             _moveSpeed * Time.deltaTime
         );
 
+        // Distance-based footsteps while walking
+        if (Vector2.Distance(transform.position, _lastStepPosition) >= _stepDistance)
+        {
+            RuntimeManager.PlayOneShot(_footstepEvent, transform.position);
+            _lastStepPosition = transform.position;
+        }
+
+        // Arrival logic
         if (Vector2.Distance(transform.position, _targetPosition) < _arrivalThreshold)
         {
             _isMoving = false;
-            // Track 0, "idle", loop (true)
+            
+            // 2. PLAY SOUND ON ARRIVAL: The final "plant foot" step
+            RuntimeManager.PlayOneShot(_footstepEvent, transform.position);
+            
             _skeletonAnimation.AnimationState.SetAnimation(0, "adle", true); 
 
             Action callback = _onArrival;
@@ -66,23 +87,36 @@ public class NinaController : MonoBehaviour
         }
     }
 
-    public void MoveTo(Vector2 destination, Action onArrival = null)
+    public void MoveTo(Vector2 destination,
+        Action onArrival = null)
     {
         // Clamp destination to valid ground — preserves X, snaps Y only if above surface
         if (GroundBounds.Instance != null)
-            destination = GroundBounds.Instance.GetGround(destination.x, destination.y);
+            destination = GroundBounds.Instance.GetGround(destination.x,
+                destination.y);
 
         _targetPosition = destination;
-        _onArrival      = onArrival;
-        _isMoving       = true;
+        _onArrival = onArrival;
+        _isMoving = true;
 
+        // 1. PLAY SOUND ON START: The initial "push off" step
+        RuntimeManager.PlayOneShot(_footstepEvent, transform.position);
+        
+        // Reset the tracker so the next distance-based step measures from here
+        _lastStepPosition = transform.position;
+        
         // Track 0, "walk" (or "run"), loop (true)
-        _skeletonAnimation.AnimationState.SetAnimation(0, "walk", true); 
+        _skeletonAnimation.AnimationState.SetAnimation(0,
+            "walk",
+            true);
 
-        if (!Mathf.Approximately(destination.x, transform.position.x))
+        if (!Mathf.Approximately(destination.x,
+                transform.position.x))
         {
             // Spine uses 1 for normal facing, -1 for flipped facing
-            float facingDirection = (destination.x < transform.position.x) ? 1f : -1f;
+            float facingDirection = (destination.x < transform.position.x)
+                ? 1f
+                : -1f;
             _skeletonAnimation.skeleton.ScaleX = facingDirection;
         }
     }
@@ -91,9 +125,12 @@ public class NinaController : MonoBehaviour
     /// <summary>Cancels any in-progress movement immediately.</summary>
     public void CancelMovement()
     {
-        _isMoving  = false;
+        _isMoving = false;
         _onArrival = null;
-        _skeletonAnimation.AnimationState.SetAnimation(0, "adle", true);    }
+        _skeletonAnimation.AnimationState.SetAnimation(0,
+            "adle",
+            true);
+    }
 
     // private void SnapToGround()
     // {
