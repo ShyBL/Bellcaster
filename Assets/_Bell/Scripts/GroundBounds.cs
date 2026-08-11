@@ -13,7 +13,7 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class GroundBounds : MonoBehaviour
 {
-    public static GroundBounds Instance { get; private set; }
+   // public static GroundBounds Instance { get; private set; }
     private PolygonCollider2D _poly;
 
     [Header("Pathfinding Settings")]
@@ -23,12 +23,12 @@ public class GroundBounds : MonoBehaviour
     public float MaxWalkableY => _poly.bounds.max.y;
     void Awake()
     {
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
+        // if (Instance != null)
+        // {
+        //     Destroy(gameObject);
+        //     return;
+        // }
+        // Instance = this;
 
         _poly = GetComponent<PolygonCollider2D>();
         _poly.isTrigger = true;
@@ -36,7 +36,7 @@ public class GroundBounds : MonoBehaviour
 
     void OnDestroy()
     {
-        if (Instance == this) Instance = null;
+      //  if (Instance == this) Instance = null;
     }
 
     /// <summary>Returns true if <paramref name="worldPos"/> is inside the walkable polygon.</summary>

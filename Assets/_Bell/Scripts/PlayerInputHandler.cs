@@ -175,14 +175,20 @@ public class PlayerInputHandler : MonoBehaviour
         }
 
         // Ground walk — only if the click lands inside the walkable polygon.
-        if (GroundBounds.Instance == null) return;
-        // if (!GroundBounds.Instance.IsOnGround(worldPoint)) return;
-        Vector2 walkTarget = GroundBounds.Instance.IsOnGround(worldPoint)
+        if (NavigationManager.Instance.CurrentGround == null) return;
+        Vector2 walkTarget = NavigationManager.Instance.CurrentGround.IsOnGround(worldPoint)
             ? worldPoint
-            : GroundBounds.Instance.ClosestPointOnBoundary(worldPoint);
+            : NavigationManager.Instance.CurrentGround.ClosestPointOnBoundary(worldPoint);
 
-        List<Vector2> path = GroundBounds.Instance.FindPath(_nina.transform.position, walkTarget);
+        List<Vector2> path = NavigationManager.Instance.CurrentGround.FindPath(_nina.transform.position, walkTarget);
         MoveAlongPath(path);
+        // if (!GroundBounds.Instance.IsOnGround(worldPoint)) return;
+        // Vector2 walkTarget = GroundBounds.Instance.IsOnGround(worldPoint)
+        //     ? worldPoint
+        //     : GroundBounds.Instance.ClosestPointOnBoundary(worldPoint);
+        //
+        // List<Vector2> path = GroundBounds.Instance.FindPath(_nina.transform.position, walkTarget);
+        // MoveAlongPath(path);
     }
 
     /// <summary>Enter key — same as click for KBM cycling (mode 2).</summary>
@@ -283,10 +289,15 @@ public class PlayerInputHandler : MonoBehaviour
             _cycledView = null;
         }
         
-        if (GroundBounds.Instance == null) return;
+        if (NavigationManager.Instance.CurrentGround == null) return;
 
-        List<Vector2> path = GroundBounds.Instance.FindPath(_nina.transform.position, view.InteractionPosition);
+        List<Vector2> path = NavigationManager.Instance.CurrentGround.FindPath(_nina.transform.position, view.InteractionPosition);
         MoveAlongPath(path, OnNinaArrived);
+        
+        // if (GroundBounds.Instance == null) return;
+        //
+        // List<Vector2> path = GroundBounds.Instance.FindPath(_nina.transform.position, view.InteractionPosition);
+        // MoveAlongPath(path, OnNinaArrived);
     }
 
     private void OnNinaArrived()
@@ -369,12 +380,23 @@ public class PlayerInputHandler : MonoBehaviour
         return null;
     }
 
-    /// <summary>Gathers all <see cref="Interactable"/> objects currently in the scene.</summary>
-    public void RefreshInteractables()
+    /// <summary>Gathers interactables specifically inside the current area's container.</summary>
+    public void RefreshInteractables(Transform container = null)
     {
         _sceneInteractables.Clear();
-        Interactable[] found = FindObjectsByType<Interactable>(FindObjectsSortMode.None);
-        _sceneInteractables.AddRange(found);
+
+        if (container != null)
+        {
+            // Only fetch interactables inside this specific area GameObject!
+            Interactable[] found = container.GetComponentsInChildren<Interactable>(false);
+            _sceneInteractables.AddRange(found);
+        }
+        else
+        {
+            // Fallback for scene-wide search if no container was passed
+            Interactable[] found = FindObjectsByType<Interactable>(FindObjectsSortMode.None);
+            _sceneInteractables.AddRange(found);
+        }
     }
 
     #endregion

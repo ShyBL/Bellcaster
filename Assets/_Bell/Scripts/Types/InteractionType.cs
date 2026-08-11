@@ -2,5 +2,6 @@
 {
     Examine,
     Interact,
-    PickUp
+    PickUp,
+    Navigate
 }

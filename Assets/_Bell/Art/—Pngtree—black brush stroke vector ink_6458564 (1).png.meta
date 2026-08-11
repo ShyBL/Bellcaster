@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8937aa32b2229174b99d7993325c648b
+guid: 6c2468591d6ab1e49b8053196e6e31e3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1193231513676163352
-    second: sketches workshop kitchen_0
+      213: 2793908970177569869
+    second: "\u2014Pngtree\u2014black brush stroke vector ink_6458564 (1)_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,13 +46,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 320, y: 22, z: 320, w: 22}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sketches workshop kitchen_0
+      name: "\u2014Pngtree\u2014black brush stroke vector ink_6458564 (1)_0"
       rect:
         serializedVersion: 2
-        x: 72
-        y: 28
-        width: 1445
-        height: 744
+        x: 0
+        y: 0
+        width: 1114
+        height: 230
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 819287b5db53f8010800000000000000
-      internalID: 1193231513676163352
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sketches workshop kitchen_1
-      rect:
-        serializedVersion: 2
-        x: 71
-        y: 810
-        width: 1448
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4acedc9eb16525f47b42cfb90f0c1f56
-      internalID: 863894100
+      spriteID: d442636d765f5c620800000000000000
+      internalID: 2793908970177569869
       vertices: []
       indices: 
       edges: []
@@ -160,8 +138,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5f69867d43c15b742b375a2a3e85aa59
-    internalID: 0
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -170,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sketches workshop kitchen_0: 1193231513676163352
-      sketches workshop kitchen_1: 863894100
+      "\u2014Pngtree\u2014black brush stroke vector ink_6458564 (1)_0": 2793908970177569869
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

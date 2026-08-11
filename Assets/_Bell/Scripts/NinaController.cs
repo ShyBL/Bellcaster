@@ -87,13 +87,16 @@ public class NinaController : MonoBehaviour
         }
     }
 
-    public void MoveTo(Vector2 destination,
-        Action onArrival = null)
+    public void MoveTo(Vector2 destination, Action onArrival = null)
     {
+        if (NavigationManager.Instance != null && NavigationManager.Instance.CurrentGround != null)
+        {
+            destination = NavigationManager.Instance.CurrentGround.GetGround(destination.x, destination.y);
+        }
         // Clamp destination to valid ground — preserves X, snaps Y only if above surface
-        if (GroundBounds.Instance != null)
-            destination = GroundBounds.Instance.GetGround(destination.x,
-                destination.y);
+        // if (GroundBounds.Instance != null)
+        //     destination = GroundBounds.Instance.GetGround(destination.x,
+        //         destination.y);
 
         _targetPosition = destination;
         _onArrival = onArrival;
@@ -110,8 +113,7 @@ public class NinaController : MonoBehaviour
             "walk",
             true);
 
-        if (!Mathf.Approximately(destination.x,
-                transform.position.x))
+        if (!Mathf.Approximately(destination.x, transform.position.x))
         {
             // Spine uses 1 for normal facing, -1 for flipped facing
             float facingDirection = (destination.x < transform.position.x)

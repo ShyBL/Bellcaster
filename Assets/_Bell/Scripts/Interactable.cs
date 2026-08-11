@@ -23,7 +23,7 @@ public class Interactable : MonoBehaviour
     
     #region Helpers
 
-    private List<InteractionType> GetAvailableInteractions()
+     private List<InteractionType> GetAvailableInteractions()
     {
         List<InteractionType> interactions = new List<InteractionType>();
         
@@ -165,6 +165,18 @@ public class Interactable : MonoBehaviour
            FindFirstObjectByType<PlayerInputHandler>().RefreshInteractables();
         }
         
+        if (!string.IsNullOrEmpty(data.targetAreaName))
+        {
+            if (NavigationManager.Instance != null)
+            {
+                NavigationManager.Instance.NavigateTo(data.targetAreaName);
+            }
+            else
+            {
+                Debug.LogError("[Interactable] NavigationManager instance not found!");
+            }
+        }
+        
         hasBeenInteracted = true;
     }
 
@@ -201,7 +213,8 @@ public class Interactable : MonoBehaviour
         
         if (data != null)
         {
-            _hoverLabel.text = data.objectName;
+            _hoverLabelText.text = data.objectName;
+            _hoverLabelText.gameObject.SetActive(false);
             _hoverLabel.gameObject.SetActive(false);
         }
     }
@@ -256,12 +269,14 @@ public class Interactable : MonoBehaviour
     #region Text
     
     [Header("Hover Label")]
-    [SerializeField] private TextMeshProUGUI _hoverLabel;
+    [SerializeField] private TextMeshProUGUI _hoverLabelText;
+    [SerializeField] private GameObject _hoverLabel;
 
     public void SetLabel(bool shown)
     {
-        if (_hoverLabel == null) return;
-        _hoverLabel.text = data.objectName;
+        if (_hoverLabel == null && _hoverLabelText == null) return;
+        _hoverLabelText.text = data.objectName;
+        _hoverLabelText.gameObject.SetActive(shown);
         _hoverLabel.gameObject.SetActive(shown);
     }
     

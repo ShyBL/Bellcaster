@@ -28,6 +28,11 @@ public class InteractableData : ScriptableObject
     [Tooltip("GameObject to instantiate after interaction (optional)")]
     public GameObject interactResultObject;
     
+    [Header("Navigate")]
+    public bool canNavigate = false;
+    [Tooltip("If populated, interacting with this object will navigate to this scene or area key.")]
+    public string targetAreaName = "";
+    
     [Header("Visual Changes")]
     public Sprite spriteAfterInteract;
     public GameObject vfxPrefab; // Particle effect or animation

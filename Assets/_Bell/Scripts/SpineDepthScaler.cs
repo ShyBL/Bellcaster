@@ -45,11 +45,20 @@ public class SpineDepthScaler : MonoBehaviour
 
     void LateUpdate()
     {
-        if (GroundBounds.Instance == null || _spineComponent == null || _spineComponent.Skeleton == null) return;
+        if (NavigationManager.Instance == null || NavigationManager.Instance.CurrentGround == null) return;
+        if (_spineComponent == null || _spineComponent.Skeleton == null) return;
+
+        GroundBounds activeGround = NavigationManager.Instance.CurrentGround;
 
         // 1. Get the vertical boundaries
-        float minY = _useCustomYBounds ? _customMinY : GroundBounds.Instance.MinWalkableY;
-        float maxY = _useCustomYBounds ? _customMaxY : GroundBounds.Instance.MaxWalkableY;
+        float minY = _useCustomYBounds ? _customMinY : activeGround.MinWalkableY;
+        float maxY = _useCustomYBounds ? _customMaxY : activeGround.MaxWalkableY;
+        
+        // if (GroundBounds.Instance == null || _spineComponent == null || _spineComponent.Skeleton == null) return;
+        //
+        // // 1. Get the vertical boundaries
+        // float minY = _useCustomYBounds ? _customMinY : GroundBounds.Instance.MinWalkableY;
+        // float maxY = _useCustomYBounds ? _customMaxY : GroundBounds.Instance.MaxWalkableY;
 
         if (Mathf.Approximately(minY, maxY)) return;
 
