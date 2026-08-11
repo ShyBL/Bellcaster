@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:ue="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd">
+
+    <ui:VisualElement class="window-root">
+
+        <ue:Toolbar>
+            <ue:ToolbarButton text="Save" name="toolbar-btn-save" />
+            <ue:ToolbarButton text="Settings" name="toolbar-btn-settings" />
+            <ui:VisualElement style="flex-grow: 1;" />
+            <ue:ToolbarSearchField name="toolbar-search" />
+        </ue:Toolbar>
+
+        <ui:TwoPaneSplitView
+            fixed-pane-index="0"
+            fixed-pane-initial-dimension="480"
+            orientation="horizontal"
+            class="split-view-container">
+
+            <ui:TwoPaneSplitView
+                fixed-pane-index="0"
+                fixed-pane-initial-dimension="180"
+                orientation="horizontal">
+
+                <!-- PANE A: distinct scene groupings, derived from each
+                     Interactable's topmost parent GameObject -->
+                <ui:VisualElement name="pane-scenes" class="pane-container">
+                    <ui:Label text="Scenes" class="pane-header" />
+                    <ui:ListView name="scene-list-view" class="pane-content" />
+                </ui:VisualElement>
+
+                <!-- PANE B: Interactables belonging to the selected scene -->
+                <ui:VisualElement name="pane-interactables" class="pane-container">
+                    <ui:VisualElement name="interactable-action-row" class="action-row">
+                        <ui:Button text="Add" name="btn-add-interactable" class="action-btn" />
+                        <ui:Button text="Delete" name="btn-remove-interactable" class="action-btn danger-btn" />
+                    </ui:VisualElement>
+                    <ui:Label text="Interactables" class="pane-header" />
+                    <ui:ListView name="interactable-list-view" class="pane-content" />
+                </ui:VisualElement>
+
+            </ui:TwoPaneSplitView>
+
+            <!-- PANE C: the selected interactable's data fields -->
+            <ui:VisualElement name="pane-properties" class="pane-container">
+                <ui:VisualElement name="action-row" class="action-row">
+                    <ui:Button text="Create Data" name="btn-create-data" class="action-btn" />
+                    <ui:Button text="Select Asset" name="btn-select-asset" class="action-btn" />
+                    <ui:Button text="Duplicate" name="btn-duplicate" class="action-btn" />
+                    <ui:Button text="Delete" name="btn-delete" class="action-btn danger-btn" />
+                </ui:VisualElement>
+                <ui:Label text="Properties" name="properties-header-label" class="pane-header" />
+                <ui:ScrollView name="inspector-scroll-view" class="pane-content" />
+            </ui:VisualElement>
+
+        </ui:TwoPaneSplitView>
+    </ui:VisualElement>
+</ui:UXML>

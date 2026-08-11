@@ -1,0 +1,46 @@
+.window-root {
+    flex-grow: 1;
+    display: flex;
+}
+
+.split-view-container {
+    flex-grow: 1;
+}
+
+.pane-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--unity-colors-window-background);
+    border-right-width: 1px;
+    border-right-color: var(--unity-colors-default-border);
+}
+
+.pane-header {
+    -unity-font-style: bold;
+    padding: 6px;
+    background-color: var(--unity-colors-default-background);
+    border-bottom-width: 1px;
+    border-bottom-color: var(--unity-colors-default-border);
+}
+
+.pane-content {
+    flex-grow: 1;
+    padding: 4px;
+}
+
+.action-row {
+    flex-direction: row;
+    padding: 4px;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--unity-colors-default-border);
+}
+
+.action-btn {
+    flex-grow: 1;
+    margin: 2px;
+}
+
+.danger-btn {
+    color: rgb(255, 120, 120);
+}
