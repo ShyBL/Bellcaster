@@ -23,30 +23,50 @@ public class Interactable : MonoBehaviour
     
     #region Helpers
 
-     private List<InteractionType> GetAvailableInteractions()
+    //  private List<InteractionType> GetAvailableInteractions()
+    // {
+    //     List<InteractionType> interactions = new List<InteractionType>();
+    //     
+    //     if (data.canExamine)
+    //     {
+    //         interactions.Add(InteractionType.Examine);
+    //     }
+    //     
+    //     if (data.canPickUp && !hasBeenInteracted)
+    //     {
+    //         // Check if pickup requirement is met
+    //         if (WorldState.Instance.CheckRequirement(data.pickupRequirement))
+    //         {
+    //             interactions.Add(InteractionType.PickUp);
+    //         }
+    //     }
+    //     
+    //     if (data.canInteract && !hasBeenInteracted)
+    //     {
+    //         interactions.Add(InteractionType.Interact);
+    //     }
+    //     
+    //     return interactions;
+    // }
+    
+    private InteractionType? GetActiveInteraction()
     {
-        List<InteractionType> interactions = new List<InteractionType>();
-        
         if (data.canExamine)
-        {
-            interactions.Add(InteractionType.Examine);
-        }
-        
+            return InteractionType.Examine;
+
         if (data.canPickUp && !hasBeenInteracted)
         {
-            // Check if pickup requirement is met
             if (WorldState.Instance.CheckRequirement(data.pickupRequirement))
-            {
-                interactions.Add(InteractionType.PickUp);
-            }
+                return InteractionType.PickUp;
         }
-        
+
         if (data.canInteract && !hasBeenInteracted)
-        {
-            interactions.Add(InteractionType.Interact);
-        }
-        
-        return interactions;
+            return InteractionType.Interact;
+
+        if (data.canNavigate && !hasBeenInteracted)
+            return InteractionType.Navigate;
+
+        return null;
     }
     
     public bool CanInteract()
@@ -77,10 +97,26 @@ public class Interactable : MonoBehaviour
     public void OnClick()
     {
         if (hasBeenInteracted) return;
-        
-        List<InteractionType> availableInteractions = GetAvailableInteractions();
-        InteractionMenu.Instance.ShowMenu(this, transform.position, availableInteractions);
+
+        InteractionType? active = GetActiveInteraction();
+        if (active == null) return;
+
+        switch (active.Value)
+        {
+            case InteractionType.Examine:  OnExamine();  break;
+            case InteractionType.PickUp:   OnPickUp();   break;
+            case InteractionType.Interact: OnInteract(); break;
+            case InteractionType.Navigate: OnNavigate(); break;
+        }
     }
+    
+    // public void OnClick()
+    // {
+    //     if (hasBeenInteracted) return;
+    //     
+    //     List<InteractionType> availableInteractions = GetAvailableInteractions();
+    //     InteractionMenu.Instance.ShowMenu(this, transform.position, availableInteractions);
+    // }
     
     public void OnExamine()
     {
@@ -165,18 +201,16 @@ public class Interactable : MonoBehaviour
            FindFirstObjectByType<PlayerInputHandler>().RefreshInteractables();
         }
         
-        if (!string.IsNullOrEmpty(data.targetAreaName))
-        {
-            if (NavigationManager.Instance != null)
-            {
-                NavigationManager.Instance.NavigateTo(data.targetAreaName);
-            }
-            else
-            {
-                Debug.LogError("[Interactable] NavigationManager instance not found!");
-            }
-        }
-        
+        hasBeenInteracted = true;
+    }
+    
+    public void OnNavigate()
+    {
+        if (NavigationManager.Instance != null)
+            NavigationManager.Instance.NavigateTo(data.targetAreaName);
+        else
+            Debug.LogError("[Interactable] NavigationManager instance not found!");
+
         hasBeenInteracted = true;
     }
 

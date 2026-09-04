@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 /// <summary>
@@ -58,7 +59,7 @@ public class PlayerInputHandler : MonoBehaviour
     private Interactable _hoveredView;
     private Interactable _cycledView;
     private Interactable _pendingView;
-    private bool _menuOpen = false;
+    //private bool _menuOpen = false;
     private Queue<Vector2> _currentPath = new Queue<Vector2>();
     private System.Action _onPathComplete;
     
@@ -92,9 +93,9 @@ public class PlayerInputHandler : MonoBehaviour
         _actConfirm.performed      += OnConfirm;
         _actCycleNext.performed    += OnCycleNext;
         _actCyclePrev.performed    += OnCyclePrev;
-        _actMenuExamine.performed  += OnMenuExamine;
-        _actMenuInteract.performed += OnMenuInteract;
-        _actMenuPickUp.performed   += OnMenuPickUp;
+        //  _actMenuExamine.performed  += OnMenuExamine;
+        //  _actMenuInteract.performed += OnMenuInteract;
+        //  _actMenuPickUp.performed   += OnMenuPickUp;
         _actCancel.performed       += OnCancel;
 
         RefreshInteractables();
@@ -106,9 +107,9 @@ public class PlayerInputHandler : MonoBehaviour
         _actConfirm.performed      -= OnConfirm;
         _actCycleNext.performed    -= OnCycleNext;
         _actCyclePrev.performed    -= OnCyclePrev;
-        _actMenuExamine.performed  -= OnMenuExamine;
-        _actMenuInteract.performed -= OnMenuInteract;
-        _actMenuPickUp.performed   -= OnMenuPickUp;
+        //  _actMenuExamine.performed  -= OnMenuExamine;
+        //  _actMenuInteract.performed -= OnMenuInteract;
+        //   _actMenuPickUp.performed   -= OnMenuPickUp;
         _actCancel.performed       -= OnCancel;
 
         _actions.Disable();
@@ -116,7 +117,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     void Update()
     {
-        if (_menuOpen) return;
+        //if (_menuOpen) return;
 
         UpdateHoveredInteractable();
     }
@@ -153,8 +154,11 @@ public class PlayerInputHandler : MonoBehaviour
     /// <summary>Left mouse button (KBM) or Right Trigger (gamepad).</summary>
     private void OnClick(InputAction.CallbackContext ctx)
     {
-        if (_menuOpen) return;
-
+        //  if (_menuOpen) return;
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
         // Cycle selection active — confirm it
         if (_cycledView != null)
         {
@@ -197,32 +201,32 @@ public class PlayerInputHandler : MonoBehaviour
     private void OnCycleNext(InputAction.CallbackContext ctx) => CycleInteractable(+1);
     private void OnCyclePrev(InputAction.CallbackContext ctx) => CycleInteractable(-1);
 
-    private void OnMenuExamine(InputAction.CallbackContext ctx)
-    {
-        if (!_menuOpen) return;
-        InteractionMenu.Instance.examineButton.onClick.Invoke();
-    }
-
-    private void OnMenuInteract(InputAction.CallbackContext ctx)
-    {
-        if (!_menuOpen) return;
-        InteractionMenu.Instance.interactButton.onClick.Invoke();
-    }
-
-    private void OnMenuPickUp(InputAction.CallbackContext ctx)
-    {
-        if (!_menuOpen) return;
-        InteractionMenu.Instance.pickUpButton.onClick.Invoke();
-    }
+    // private void OnMenuExamine(InputAction.CallbackContext ctx)
+    // {
+    //     //if (!_menuOpen) return;
+    //     InteractionMenu.Instance.examineButton.onClick.Invoke();
+    // }
+    //
+    // private void OnMenuInteract(InputAction.CallbackContext ctx)
+    // {
+    //     //if (!_menuOpen) return;
+    //     InteractionMenu.Instance.interactButton.onClick.Invoke();
+    // }
+    //
+    // private void OnMenuPickUp(InputAction.CallbackContext ctx)
+    // {
+    //     //if (!_menuOpen) return;
+    //     InteractionMenu.Instance.pickUpButton.onClick.Invoke();
+    // }
 
     private void OnCancel(InputAction.CallbackContext ctx)
     {
-        if (_menuOpen)
-        {
-            InteractionMenu.Instance.CloseMenu();
-            _menuOpen = false;
-            return;
-        }
+        // if (_menuOpen)
+        // {
+        //     InteractionMenu.Instance.CloseMenu();
+        //     _menuOpen = false;
+        //     return;
+        // }
 
         if (_nina != null)
         {
@@ -304,25 +308,39 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (_pendingView == null) return;
 
-        _menuOpen = true;
-        
-        _pendingView.OnClick();
-        _pendingView.SetHighlight(false);
+        Interactable view = _pendingView;
         _pendingView = null;
+
+        view.SetHighlight(false);
+        view.SetLabel(false);
+        if (_hoveredView == view) _hoveredView = null;
+
+        view.OnClick();
     }
+    
+    // private void OnNinaArrived()
+    // {
+    //     if (_pendingView == null) return;
+    //
+    //     _menuOpen = true;
+    //     
+    //     _pendingView.OnClick();
+    //     _pendingView.SetHighlight(false);
+    //     _pendingView = null;
+    // }
 
     // Poll for menu close (InteractionMenu has no close event)
-    private void LateUpdate()
-    {
-        if (!_menuOpen) return;
-        if (InteractionMenu.Instance == null) return;
-
-        if (!InteractionMenu.Instance.menuContainer.activeSelf)
-        {
-            _menuOpen = false;
-            ClearSelection();
-        }
-    }
+    // private void LateUpdate()
+    // {
+    //     if (!_menuOpen) return;
+    //     if (InteractionMenu.Instance == null) return;
+    //
+    //     if (!InteractionMenu.Instance.menuContainer.activeSelf)
+    //     {
+    //         _menuOpen = false;
+    //         ClearSelection();
+    //     }
+    // }
     
     private void MoveAlongPath(List<Vector2> path, System.Action onComplete = null)
     {
