@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableData
   objectName: Anvil
   objectIcon: {fileID: 0}
-  canExamine: 1
+  canExamine: 0
   examineText: Presently holding the Unfinished Bell.
   examineVO: {fileID: 0}
   canPickUp: 0
@@ -25,5 +25,7 @@ MonoBehaviour:
   requiredItemIcon: {fileID: 0}
   interactResultState: bellCrafted
   interactResultObject: {fileID: 0}
+  canNavigate: 0
+  targetAreaName: 
   spriteAfterInteract: {fileID: 0}
   vfxPrefab: {fileID: 0}

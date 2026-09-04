@@ -20,10 +20,12 @@ MonoBehaviour:
   canPickUp: 0
   pickupDestination: 0
   pickupRequirement: 
-  canInteract: 1
+  canInteract: 0
   requiredInventoryItem: Door Bell Part
   requiredItemIcon: {fileID: 6590932936845950268, guid: 31218c18fafec394d99009699eeb9e33, type: 3}
   interactResultState: achievementAttentionToDetail
   interactResultObject: {fileID: 0}
+  canNavigate: 0
+  targetAreaName: 
   spriteAfterInteract: {fileID: 7003086980274391704, guid: 31218c18fafec394d99009699eeb9e33, type: 3}
   vfxPrefab: {fileID: 0}

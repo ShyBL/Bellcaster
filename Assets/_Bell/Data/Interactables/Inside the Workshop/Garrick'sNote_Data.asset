@@ -41,7 +41,7 @@ MonoBehaviour:
 
     Papa'
   examineVO: {fileID: 0}
-  canPickUp: 1
+  canPickUp: 0
   pickupDestination: 0
   pickupRequirement: 
   canInteract: 0
@@ -49,5 +49,7 @@ MonoBehaviour:
   requiredItemIcon: {fileID: 0}
   interactResultState: 
   interactResultObject: {fileID: 0}
+  canNavigate: 0
+  targetAreaName: 
   spriteAfterInteract: {fileID: 0}
   vfxPrefab: {fileID: 0}
