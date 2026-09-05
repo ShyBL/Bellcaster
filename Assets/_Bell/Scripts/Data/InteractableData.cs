@@ -15,16 +15,29 @@ public class InteractableData : ScriptableObject
     [Header("Pick Up")]
     public bool canPickUp = false;
     public PickupDestination pickupDestination = PickupDestination.Inventory;
+    
     [Tooltip("Required world state boolean (e.g., 'chairInPosition')")]
     public string pickupRequirement = "";
     
+    [Header("Toolbelt")]
+    [Tooltip("Only used when Pickup Destination is Toolbelt — which attachment point this item rides on once equipped.")]
+    public ToolbeltSocket toolbeltSocket = ToolbeltSocket.Belt;
+    
     [Header("Interact")]
     public bool canInteract = false;
+    
     [Tooltip("Item name required in inventory (leave empty if none)")]
     public string requiredInventoryItem = "";
-    public Sprite requiredItemIcon; // Show this if item is missing
+    
+    [Header("Wrong Item Response")]
+    [Tooltip("What Nina says the first time the wrong item is dropped on this object. Repeat attempts fall back to NinaQuipBank's generic lines instead.")]
+    [TextArea(2, 4)]
+    public string wrongItemText = "";
+    public AudioClip wrongItemVO;
+    
     [Tooltip("World state boolean this sets when used (e.g., 'doorbellFixed')")]
     public string interactResultState = "";
+    
     [Tooltip("GameObject to instantiate after interaction (optional)")]
     public GameObject interactResultObject;
     
@@ -36,4 +49,5 @@ public class InteractableData : ScriptableObject
     [Header("Visual Changes")]
     public Sprite spriteAfterInteract;
     public GameObject vfxPrefab; // Particle effect or animation
+    
 }

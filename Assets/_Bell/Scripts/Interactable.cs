@@ -20,34 +20,13 @@ public class Interactable : MonoBehaviour
     public InteractableData data;
     private SpriteRenderer spriteRenderer;
     private bool hasBeenInteracted = false;
-    
+    /// <summary>
+    /// Tracks whether a wrong item has already been tried on this object once.
+    /// First failure shows data.wrongItemText/wrongItemVO; repeats fall back
+    /// to NinaQuipBank's generic lines instead of repeating the specific one.
+    /// </summary>
+    private bool _hasFailedAttemptBefore = false;
     #region Helpers
-
-    //  private List<InteractionType> GetAvailableInteractions()
-    // {
-    //     List<InteractionType> interactions = new List<InteractionType>();
-    //     
-    //     if (data.canExamine)
-    //     {
-    //         interactions.Add(InteractionType.Examine);
-    //     }
-    //     
-    //     if (data.canPickUp && !hasBeenInteracted)
-    //     {
-    //         // Check if pickup requirement is met
-    //         if (WorldState.Instance.CheckRequirement(data.pickupRequirement))
-    //         {
-    //             interactions.Add(InteractionType.PickUp);
-    //         }
-    //     }
-    //     
-    //     if (data.canInteract && !hasBeenInteracted)
-    //     {
-    //         interactions.Add(InteractionType.Interact);
-    //     }
-    //     
-    //     return interactions;
-    // }
     
     private InteractionType? GetActiveInteraction()
     {
@@ -84,6 +63,46 @@ public class Interactable : MonoBehaviour
         return true;
     }
     
+    /// <summary>
+    /// Called when an inventory item is dropped on this object via drag-and-drop (from
+    /// either the Pack UI or a Toolbelt world item). Returns true if accepted (runs the
+    /// same effects OnInteract would from a click), false if this isn't a valid use of
+    /// that item here — in which case a wrong-item quip is shown before returning false.
+    /// </summary>
+    public bool TryUseItem(InteractableData item)
+    {
+        if (hasBeenInteracted) return false;
+        if (!data.canInteract) return false;
+        if (item == null) return false;
+
+        bool isCorrectItem = !string.IsNullOrEmpty(data.requiredInventoryItem)
+                             && item.objectName == data.requiredInventoryItem;
+
+        if (!isCorrectItem)
+        {
+            ShowWrongItemResponse();
+            return false;
+        }
+
+        OnInteract();
+        return true;
+    }
+    
+    private void ShowWrongItemResponse()
+    {
+        if (NinaSpeechBubble.Instance == null) return;
+
+        if (!_hasFailedAttemptBefore && !string.IsNullOrEmpty(data.wrongItemText))
+        {
+            _hasFailedAttemptBefore = true;
+            NinaSpeechBubble.Instance.Show(data.wrongItemText, data.wrongItemVO);
+            return;
+        }
+
+        _hasFailedAttemptBefore = true;
+        NinaSpeechBubble.Instance.ShowCategory(NinaQuipCategory.WrongItemFallback);
+    }
+    
     /// <summary>World position Nina should walk toward.</summary>
     public Vector2 InteractionPosition =>
         _interactionPoint != null
@@ -110,14 +129,6 @@ public class Interactable : MonoBehaviour
         }
     }
     
-    // public void OnClick()
-    // {
-    //     if (hasBeenInteracted) return;
-    //     
-    //     List<InteractionType> availableInteractions = GetAvailableInteractions();
-    //     InteractionMenu.Instance.ShowMenu(this, transform.position, availableInteractions);
-    // }
-    
     public void OnExamine()
     {
         Debug.Log($"[EXAMINE] {data.objectName}: {data.examineText}");
@@ -142,13 +153,20 @@ public class Interactable : MonoBehaviour
         
         Debug.Log($"[PICK UP] {data.objectName}");
         
-        if (data.pickupDestination == PickupDestination.Inventory)
+        switch (data.pickupDestination)
         {
-            InventoryManager.Instance.AddToInventory(data);
-        }
-        else if (data.pickupDestination == PickupDestination.Journal)
-        {
-            InventoryManager.Instance.AddToJournal(data);
+            case PickupDestination.Inventory:
+                InventoryManager.Instance.AddToPack(data);
+                break;
+            case PickupDestination.Souvenir:
+                InventoryManager.Instance.AddSouvenir(data);
+                break;
+            case PickupDestination.Journal:
+                InventoryManager.Instance.AddJournal(data);
+                break;
+            case PickupDestination.Toolbelt:
+                InventoryManager.Instance.Equip(data);
+                break;
         }
         
         hasBeenInteracted = true;
@@ -157,24 +175,6 @@ public class Interactable : MonoBehaviour
     
     public void OnInteract()
     {
-        //if (hasBeenInteracted) return;
-        
-        // Check if we have required item
-        if (!string.IsNullOrEmpty(data.requiredInventoryItem))
-        {
-            if (!InventoryManager.Instance.HasItem(data.requiredInventoryItem))
-            {
-                Debug.Log($"Need item: {data.requiredInventoryItem}");
-                // TODO: Show required item icon (data.requiredItemIcon)
-                return;
-            }
-            
-            // Remove item from inventory after use
-            InventoryManager.Instance.RemoveItem(data.requiredInventoryItem);
-        }
-        
-        Debug.Log($"[INTERACT] {data.objectName}");
-        
         // Set world state
         if (!string.IsNullOrEmpty(data.interactResultState))
         {
@@ -198,7 +198,8 @@ public class Interactable : MonoBehaviour
         {
            // data.interactResultObject.gameObject.SetActive(true);
            Instantiate(data.interactResultObject, transform.position, Quaternion.identity);
-           FindFirstObjectByType<PlayerInputHandler>().RefreshInteractables();
+           if (PlayerInputHandler.Instance != null)
+               PlayerInputHandler.Instance.RefreshInteractables();
         }
         
         hasBeenInteracted = true;

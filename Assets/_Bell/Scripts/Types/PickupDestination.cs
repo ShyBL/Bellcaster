@@ -1,5 +1,7 @@
 ﻿public enum PickupDestination
 {
     Inventory,
-    Journal
+    Journal,
+    Souvenir,
+    Toolbelt
 }
